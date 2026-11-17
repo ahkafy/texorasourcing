@@ -512,7 +512,10 @@
                 
                 <div class="bg-brand-navy px-6 py-5 text-white flex items-center justify-between">
                     <div>
-                        <span class="text-xs uppercase font-bold tracking-widest text-brand-gold">Direct Sourcing RFQ</span>
+                        <div class="flex items-center gap-2">
+                            <x-textile-icon name="techpack" class="w-4 h-4 text-brand-gold" />
+                            <span class="text-xs uppercase font-bold tracking-widest text-brand-gold">Direct Sourcing RFQ</span>
+                        </div>
                         <h3 class="text-xl font-serif font-bold text-white mt-0.5">Request a Formal Sourcing Quote</h3>
                         <p class="text-xs text-slate-300 mt-1">Receive technical feasibility, costing & sample schedule within 24 hours.</p>
                     </div>
@@ -611,8 +614,13 @@
     </div>
 
     <!-- Corporate Footer (Wide Container) -->
-    <footer class="bg-brand-navy text-slate-300 border-t-4 border-brand-gold mt-auto">
-        <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-16">
+    <footer class="bg-brand-navy text-slate-300 border-t-4 border-brand-gold mt-auto relative overflow-hidden">
+        <!-- Atelier Textile Watermarks (Subtle White/Gold for Dark Navy) -->
+        <x-textile-watermark motif="shears" class="absolute -right-16 -bottom-16 w-96 h-96 text-white/[0.025] pointer-events-none select-none" />
+        <x-textile-watermark motif="mannequin" class="absolute -left-16 top-10 w-96 h-96 text-brand-gold/[0.025] pointer-events-none select-none" />
+        <x-textile-watermark motif="sewing-machine" class="absolute left-1/3 -top-20 w-80 h-80 text-white/[0.015] pointer-events-none select-none" />
+
+        <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-16 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
                 
                 <!-- Col 1: Logo & About -->
@@ -628,14 +636,17 @@
                     </p>
 
                     <div class="pt-2 flex flex-wrap items-center gap-2 text-xs">
-                        <span class="px-3 py-1 bg-white/10 text-brand-gold-light rounded-full border border-white/10 font-semibold">
-                            Established 2015
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 text-brand-gold-light rounded-full border border-white/10 font-semibold">
+                            <x-textile-icon name="sewing-machine" class="w-3.5 h-3.5" />
+                            <span>Established 2015</span>
                         </span>
-                        <span class="px-3 py-1 bg-white/10 text-brand-gold-light rounded-full border border-white/10 font-semibold">
-                            34 In-House Experts
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 text-brand-gold-light rounded-full border border-white/10 font-semibold">
+                            <x-textile-icon name="mannequin" class="w-3.5 h-3.5" />
+                            <span>34 In-House Experts</span>
                         </span>
-                        <span class="px-3 py-1 bg-white/10 text-brand-gold-light rounded-full border border-white/10 font-semibold">
-                            12 Full-Time QC Inspectors
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 text-brand-gold-light rounded-full border border-white/10 font-semibold">
+                            <x-textile-icon name="magnifier-fabric" class="w-3.5 h-3.5" />
+                            <span>12 Full-Time QCs</span>
                         </span>
                     </div>
 
@@ -668,12 +679,42 @@
                 <div>
                     <h3 class="text-xs font-bold uppercase tracking-widest text-brand-gold mb-4">Sourcing Categories</h3>
                     <ul class="space-y-2.5 text-sm">
-                        <li><a href="{{ route('products') }}#knit" class="hover:text-white transition-colors">Knitwear (T-Shirts, Polos, Hoodies)</a></li>
-                        <li><a href="{{ route('products') }}#woven" class="hover:text-white transition-colors">Woven (Shirts, Chinos, Pants)</a></li>
-                        <li><a href="{{ route('products') }}#sweater" class="hover:text-white transition-colors">Sweaters (Vests, Cardigans, Pullovers)</a></li>
-                        <li><a href="{{ route('products') }}#denim" class="hover:text-white transition-colors">Denim & Outerwear</a></li>
-                        <li><a href="{{ route('products') }}#workwear" class="hover:text-white transition-colors">Workwear & Uniforms</a></li>
-                        <li><a href="{{ route('products') }}#accessories" class="hover:text-white transition-colors">Accessories & Home Textiles</a></li>
+                        <li>
+                            <a href="{{ route('products') }}#knit" class="hover:text-white transition-colors inline-flex items-center gap-1.5">
+                                <x-textile-icon name="tshirt" class="w-3.5 h-3.5 text-brand-gold-light" />
+                                <span>Knitwear (T-Shirts, Polos)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('products') }}#woven" class="hover:text-white transition-colors inline-flex items-center gap-1.5">
+                                <x-textile-icon name="shirt" class="w-3.5 h-3.5 text-brand-gold-light" />
+                                <span>Woven (Shirts, Chinos, Pants)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('products') }}#sweater" class="hover:text-white transition-colors inline-flex items-center gap-1.5">
+                                <x-textile-icon name="sweater" class="w-3.5 h-3.5 text-brand-gold-light" />
+                                <span>Sweaters & Cardigans</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('products') }}#denim" class="hover:text-white transition-colors inline-flex items-center gap-1.5">
+                                <x-textile-icon name="denim-pocket" class="w-3.5 h-3.5 text-brand-gold-light" />
+                                <span>Denim & Outerwear</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('products') }}#workwear" class="hover:text-white transition-colors inline-flex items-center gap-1.5">
+                                <x-textile-icon name="jacket" class="w-3.5 h-3.5 text-brand-gold-light" />
+                                <span>Workwear & Uniforms</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('products') }}#accessories" class="hover:text-white transition-colors inline-flex items-center gap-1.5">
+                                <x-textile-icon name="button" class="w-3.5 h-3.5 text-brand-gold-light" />
+                                <span>Accessories & Home Textiles</span>
+                            </a>
+                        </li>
                     </ul>
                     <div class="mt-6 pt-4 border-t border-white/10">
                         <span class="text-xs text-brand-gold-light font-semibold block">Commercial Production Timing:</span>

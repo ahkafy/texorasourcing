@@ -65,6 +65,11 @@
         @endforeach
     </div>
 
+    <!-- Floating Atelier Fashion Watermarks -->
+    <x-textile-watermark motif="mannequin" class="hidden lg:block absolute -left-12 top-1/4 w-80 h-80 text-white/[0.04] pointer-events-none select-none z-10" />
+    <x-textile-watermark motif="shears" class="hidden lg:block absolute -right-12 top-1/3 w-80 h-80 text-brand-gold/[0.05] pointer-events-none select-none z-10" />
+    <x-textile-watermark motif="measuring-tape" class="hidden md:block absolute left-1/3 -bottom-10 w-64 h-64 text-white/[0.03] pointer-events-none select-none z-10" />
+
     <!-- Prev / Next Arrow Controls -->
     <button
         @click="slide = (slide - 1 + 5) % 5"
@@ -125,22 +130,30 @@
                 Texora Sourcing connects global retailers with world-class garment manufacturing. From concept and tech packs to lab testing, inline QC, and on-time international shipment.
             </p>
 
-            <!-- Value Highlights (Responsive 1-col on phone, 2-col on sm+) -->
+            <!-- Value Highlights (Responsive 1-col on phone, 2-col on sm+ with Bespoke Textile Icons) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 text-xs sm:text-sm text-white/90 max-w-xl mx-auto text-left">
                 <div class="flex items-center gap-2.5 bg-black/25 backdrop-blur-sm sm:bg-transparent px-3.5 py-2 sm:p-0 rounded-xl">
-                    <span class="w-5 h-5 rounded-full bg-brand-gold/30 border border-brand-gold text-brand-gold flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
+                    <span class="w-6 h-6 rounded-full bg-brand-gold/25 border border-brand-gold text-brand-gold flex items-center justify-center flex-shrink-0 shadow-sm">
+                        <x-textile-icon name="shears" class="w-3.5 h-3.5" />
+                    </span>
                     <span><strong class="text-white">Minimum Price</strong>, Maximum Quality</span>
                 </div>
                 <div class="flex items-center gap-2.5 bg-black/25 backdrop-blur-sm sm:bg-transparent px-3.5 py-2 sm:p-0 rounded-xl">
-                    <span class="w-5 h-5 rounded-full bg-brand-gold/30 border border-brand-gold text-brand-gold flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
+                    <span class="w-6 h-6 rounded-full bg-brand-gold/25 border border-brand-gold text-brand-gold flex items-center justify-center flex-shrink-0 shadow-sm">
+                        <x-textile-icon name="magnifier-fabric" class="w-3.5 h-3.5" />
+                    </span>
                     <span>12 In-House QC Controllers</span>
                 </div>
                 <div class="flex items-center gap-2.5 bg-black/25 backdrop-blur-sm sm:bg-transparent px-3.5 py-2 sm:p-0 rounded-xl">
-                    <span class="w-5 h-5 rounded-full bg-brand-gold/30 border border-brand-gold text-brand-gold flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
+                    <span class="w-6 h-6 rounded-full bg-brand-gold/25 border border-brand-gold text-brand-gold flex items-center justify-center flex-shrink-0 shadow-sm">
+                        <x-textile-icon name="measuring-tape" class="w-3.5 h-3.5" />
+                    </span>
                     <span>45 Days T/T · 60–90 Days L/C</span>
                 </div>
                 <div class="flex items-center gap-2.5 bg-black/25 backdrop-blur-sm sm:bg-transparent px-3.5 py-2 sm:p-0 rounded-xl">
-                    <span class="w-5 h-5 rounded-full bg-brand-gold/30 border border-brand-gold text-brand-gold flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
+                    <span class="w-6 h-6 rounded-full bg-brand-gold/25 border border-brand-gold text-brand-gold flex items-center justify-center flex-shrink-0 shadow-sm">
+                        <x-textile-icon name="cotton-boll" class="w-3.5 h-3.5" />
+                    </span>
                     <span>Accord, BSCI &amp; WRAP Certified</span>
                 </div>
             </div>
@@ -150,23 +163,20 @@
                 <button @click="rfqModalOpen = true"
                         type="button"
                         class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-brand-gold to-amber-500 hover:from-amber-300 hover:to-amber-400 text-brand-navy font-bold uppercase tracking-wider text-xs shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-0.5 inline-flex items-center justify-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
+                    <x-textile-icon name="techpack" class="w-4 h-4" />
                     Request Sourcing Quote (RFQ)
                 </button>
 
                 <a href="{{ route('products') }}"
-                   class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold text-xs uppercase tracking-wider border border-white/40 backdrop-blur-md transition-all text-center">
-                    Browse Products &rarr;
+                   class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold text-xs uppercase tracking-wider border border-white/40 backdrop-blur-md transition-all text-center inline-flex items-center justify-center gap-2">
+                    <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold" />
+                    <span>Browse Products &rarr;</span>
                 </a>
 
                 <a href="{{ asset('files/TEXORA_SOURCING_PROFILE.pdf') }}"
                    download="TEXORA_SOURCING_PROFILE.pdf"
                    class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-brand-gold hover:text-amber-300 transition-colors underline underline-offset-4 py-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a2 2 0 002 2h14a2 2 0 002-2v-3"/>
-                    </svg>
+                    <x-textile-icon name="fabric-roll" class="w-4 h-4" />
                     Download Company Profile (PDF)
                 </a>
             </div>
@@ -174,31 +184,49 @@
     </div>
 </section>
 
-<!-- Key Stats Counter Strip (Crisp White with Luxury Metric Cards) -->
+<!-- Key Stats Counter Strip (Crisp White with Luxury Textile Metric Cards) -->
 <section class="bg-white border-b border-slate-200/80 shadow-sm relative z-20">
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-8">
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 text-center">
-            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300">
+            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300 group">
+                <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-navy mx-auto mb-2.5 flex items-center justify-center group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
+                    <x-textile-icon name="sewing-machine" class="w-5 h-5" />
+                </div>
                 <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-navy">2015</div>
                 <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Established in Dhaka</div>
             </div>
-            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300">
+            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300 group">
+                <div class="w-10 h-10 rounded-xl bg-brand-gold/10 text-brand-gold-dark mx-auto mb-2.5 flex items-center justify-center group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
+                    <x-textile-icon name="mannequin" class="w-5 h-5" />
+                </div>
                 <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-gold-dark">34</div>
                 <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">In-House Professionals</div>
             </div>
-            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300">
+            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300 group">
+                <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-navy mx-auto mb-2.5 flex items-center justify-center group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
+                    <x-textile-icon name="magnifier-fabric" class="w-5 h-5" />
+                </div>
                 <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-navy">12</div>
                 <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Quality Controllers (QC)</div>
             </div>
-            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300">
+            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300 group">
+                <div class="w-10 h-10 rounded-xl bg-brand-gold/10 text-brand-gold-dark mx-auto mb-2.5 flex items-center justify-center group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
+                    <x-textile-icon name="techpack" class="w-5 h-5" />
+                </div>
                 <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-gold-dark">6</div>
                 <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Merchandisers</div>
             </div>
-            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300">
+            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300 group">
+                <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-navy mx-auto mb-2.5 flex items-center justify-center group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
+                    <x-textile-icon name="thread-spool" class="w-5 h-5" />
+                </div>
                 <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-navy">45–90</div>
                 <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Days Delivery Cycles</div>
             </div>
-            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300">
+            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300 group">
+                <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 mx-auto mb-2.5 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                    <x-textile-icon name="cotton-boll" class="w-5 h-5" />
+                </div>
                 <div class="text-2xl sm:text-3xl font-serif font-bold text-emerald-600">100%</div>
                 <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Compliant Factories</div>
             </div>
@@ -208,19 +236,11 @@
 
 <!-- Core Value Proposition: Minimum Price, Maximum Quality (Off-White Section with Watermarks) -->
 <section class="py-20 sm:py-24 bg-slate-50 border-b border-slate-200/80 relative overflow-hidden">
-    <!-- Background Watermark Icons: Craftsmanship Shears & Fabric Grid -->
-    <div class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-navy/[0.03] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879a3 3 0 11-4.242-4.242 3 3 0 014.242 0L12 10.586zm0 0L9.121 7.707a3 3 0 10-4.242 4.242 3 3 0 004.242 0L12 14.828z" />
-        </svg>
-    </div>
-    <div class="absolute -left-12 -top-12 w-80 h-80 text-brand-gold/[0.04] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75">
-            <circle cx="12" cy="12" r="9"/>
-            <path d="M12 3v18M3 12h18"/>
-            <path d="M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/>
-        </svg>
-    </div>
+    <!-- Background Watermark Icons: Craftsmanship Shears, Loom Weave, Mannequin & Bobbin -->
+    <x-textile-watermark motif="shears" class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-navy/[0.035] pointer-events-none select-none" />
+    <x-textile-watermark motif="weave" class="absolute -left-12 -top-12 w-80 h-80 text-brand-gold/[0.04] pointer-events-none select-none" />
+    <x-textile-watermark motif="mannequin" class="hidden md:block absolute right-1/4 -top-10 w-72 h-72 text-brand-gold/[0.03] pointer-events-none select-none" />
+    <x-textile-watermark motif="thread-spool" class="hidden md:block absolute left-10 -bottom-10 w-72 h-72 text-brand-navy/[0.025] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
@@ -234,14 +254,12 @@
             </p>
         </div>
 
-        <!-- 5 Buyer Benefits Grid (Slide 9) -->
+        <!-- 5 Buyer Benefits Grid (Slide 9 with Textile & Fashion Icons) -->
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
             
             <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
                 <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold-dark flex items-center justify-center font-bold text-lg mb-4 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
+                    <x-textile-icon name="shears" class="w-6 h-6" />
                 </div>
                 <h3 class="text-base font-bold text-brand-navy mb-2">Sharper Company Focus</h3>
                 <p class="text-xs text-slate-600 leading-relaxed">
@@ -251,9 +269,7 @@
 
             <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
                 <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold-dark flex items-center justify-center font-bold text-lg mb-4 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" />
-                    </svg>
+                    <x-textile-icon name="sewing-machine" class="w-6 h-6" />
                 </div>
                 <h3 class="text-base font-bold text-brand-navy mb-2">World-Class Capabilities</h3>
                 <p class="text-xs text-slate-600 leading-relaxed">
@@ -263,9 +279,7 @@
 
             <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
                 <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold-dark flex items-center justify-center font-bold text-lg mb-4 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
+                    <x-textile-icon name="cotton-boll" class="w-6 h-6" />
                 </div>
                 <h3 class="text-base font-bold text-brand-navy mb-2">Unmatched Resources</h3>
                 <p class="text-xs text-slate-600 leading-relaxed">
@@ -275,9 +289,7 @@
 
             <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
                 <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold-dark flex items-center justify-center font-bold text-lg mb-4 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
-                    </svg>
+                    <x-textile-icon name="fabric-roll" class="w-6 h-6" />
                 </div>
                 <h3 class="text-base font-bold text-brand-navy mb-2">Multi-Country Sourcing</h3>
                 <p class="text-xs text-slate-600 leading-relaxed">
@@ -287,9 +299,7 @@
 
             <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
                 <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold-dark flex items-center justify-center font-bold text-lg mb-4 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                    <x-textile-icon name="measuring-tape" class="w-6 h-6" />
                 </div>
                 <h3 class="text-base font-bold text-brand-navy mb-2">Fast Trend Reaction</h3>
                 <p class="text-xs text-slate-600 leading-relaxed">
@@ -311,10 +321,22 @@
                     "Digitization and automation are built into our processes for smarter decisions and faster response, while strong design sensibility and deep industry experience keep our products aligned with fast-changing consumer preferences."
                 </p>
                 <div class="flex flex-wrap items-center gap-2 pt-3">
-                    <span class="px-3.5 py-1 bg-slate-100 rounded-full text-xs font-semibold text-brand-navy border border-slate-200">Apparel</span>
-                    <span class="px-3.5 py-1 bg-slate-100 rounded-full text-xs font-semibold text-brand-navy border border-slate-200">Footwear</span>
-                    <span class="px-3.5 py-1 bg-slate-100 rounded-full text-xs font-semibold text-brand-navy border border-slate-200">Accessories</span>
-                    <span class="px-3.5 py-1 bg-slate-100 rounded-full text-xs font-semibold text-brand-navy border border-slate-200">Home Textiles</span>
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1 bg-slate-100 rounded-full text-xs font-semibold text-brand-navy border border-slate-200">
+                        <x-textile-icon name="tshirt" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                        Apparel
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1 bg-slate-100 rounded-full text-xs font-semibold text-brand-navy border border-slate-200">
+                        <x-textile-icon name="hanger" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                        Outerwear
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1 bg-slate-100 rounded-full text-xs font-semibold text-brand-navy border border-slate-200">
+                        <x-textile-icon name="button" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                        Accessories
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1 bg-slate-100 rounded-full text-xs font-semibold text-brand-navy border border-slate-200">
+                        <x-textile-icon name="weave" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                        Home Textiles
+                    </span>
                 </div>
             </div>
         </div>
@@ -323,17 +345,11 @@
 
 <!-- Product Portfolio Section: What We Source (Crisp White Section with Watermarks) -->
 <section class="py-20 sm:py-24 bg-white border-b border-slate-200/80 relative overflow-hidden">
-    <!-- Background Watermark Icons: Garment Hanger & Textile Loom Weave -->
-    <div class="absolute -right-20 top-24 w-[460px] h-[460px] text-brand-gold/[0.035] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4a2 2 0 10-2 2c1.5 0 2 .5 2 2v2L3.5 15.5A1.5 1.5 0 004.5 18h15a1.5 1.5 0 001-2.5L12 10"/>
-        </svg>
-    </div>
-    <div class="absolute -left-20 bottom-16 w-[400px] h-[400px] text-brand-navy/[0.025] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
-            <path d="M4 6h16M4 10h16M4 14h16M4 18h16M6 4v16M10 4v16M14 4v16M18 4v16"/>
-        </svg>
-    </div>
+    <!-- Background Watermark Icons: Garment Hanger, Textile Weave, Dress Form & Shears -->
+    <x-textile-watermark motif="hanger" class="absolute -right-20 top-24 w-[460px] h-[460px] text-brand-gold/[0.035] pointer-events-none select-none" />
+    <x-textile-watermark motif="weave" class="absolute -left-20 bottom-16 w-[400px] h-[400px] text-brand-navy/[0.025] pointer-events-none select-none" />
+    <x-textile-watermark motif="shears" class="hidden md:block absolute -left-12 top-20 w-80 h-80 text-brand-gold/[0.03] pointer-events-none select-none" />
+    <x-textile-watermark motif="mannequin" class="hidden md:block absolute right-10 -bottom-10 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
@@ -393,8 +409,9 @@
 
                     <button @click="rfqModalOpen = true; selectedCategory = 'Knitwear'" 
                             type="button" 
-                            class="w-full py-2.5 px-4 rounded-xl text-xs uppercase font-bold tracking-wider text-brand-navy bg-slate-100 hover:bg-brand-navy hover:text-white transition-colors text-center shadow-sm">
-                        Inquire Knitwear Sourcing &rarr;
+                            class="w-full py-2.5 px-4 rounded-xl text-xs uppercase font-bold tracking-wider text-brand-navy bg-slate-100 hover:bg-brand-navy hover:text-white transition-colors text-center shadow-sm inline-flex items-center justify-center gap-1.5">
+                        <x-textile-icon name="tshirt" class="w-4 h-4 text-brand-gold-dark" />
+                        <span>Inquire Knitwear Sourcing &rarr;</span>
                     </button>
                 </div>
             </div>
@@ -439,8 +456,9 @@
 
                     <button @click="rfqModalOpen = true; selectedCategory = 'Woven'" 
                             type="button" 
-                            class="w-full py-2.5 px-4 rounded-xl text-xs uppercase font-bold tracking-wider text-brand-navy bg-slate-100 hover:bg-brand-navy hover:text-white transition-colors text-center shadow-sm">
-                        Inquire Woven Sourcing &rarr;
+                            class="w-full py-2.5 px-4 rounded-xl text-xs uppercase font-bold tracking-wider text-brand-navy bg-slate-100 hover:bg-brand-navy hover:text-white transition-colors text-center shadow-sm inline-flex items-center justify-center gap-1.5">
+                        <x-textile-icon name="shirt" class="w-4 h-4 text-brand-gold-dark" />
+                        <span>Inquire Woven Sourcing &rarr;</span>
                     </button>
                 </div>
             </div>
@@ -485,8 +503,9 @@
 
                     <button @click="rfqModalOpen = true; selectedCategory = 'Sweaters'" 
                             type="button" 
-                            class="w-full py-2.5 px-4 rounded-xl text-xs uppercase font-bold tracking-wider text-brand-navy bg-slate-100 hover:bg-brand-navy hover:text-white transition-colors text-center shadow-sm">
-                        Inquire Sweater Sourcing &rarr;
+                            class="w-full py-2.5 px-4 rounded-xl text-xs uppercase font-bold tracking-wider text-brand-navy bg-slate-100 hover:bg-brand-navy hover:text-white transition-colors text-center shadow-sm inline-flex items-center justify-center gap-1.5">
+                        <x-textile-icon name="sweater" class="w-4 h-4 text-brand-gold-dark" />
+                        <span>Inquire Sweater Sourcing &rarr;</span>
                     </button>
                 </div>
             </div>
@@ -531,8 +550,9 @@
 
                     <button @click="rfqModalOpen = true; selectedCategory = 'Denim'" 
                             type="button" 
-                            class="w-full py-2.5 px-4 rounded-xl text-xs uppercase font-bold tracking-wider text-brand-navy bg-slate-100 hover:bg-brand-navy hover:text-white transition-colors text-center shadow-sm">
-                        Inquire Denim Sourcing &rarr;
+                            class="w-full py-2.5 px-4 rounded-xl text-xs uppercase font-bold tracking-wider text-brand-navy bg-slate-100 hover:bg-brand-navy hover:text-white transition-colors text-center shadow-sm inline-flex items-center justify-center gap-1.5">
+                        <x-textile-icon name="denim-pocket" class="w-4 h-4 text-brand-gold-dark" />
+                        <span>Inquire Denim Sourcing &rarr;</span>
                     </button>
                 </div>
             </div>
@@ -577,8 +597,9 @@
 
                     <button @click="rfqModalOpen = true; selectedCategory = 'Outerwear'" 
                             type="button" 
-                            class="w-full py-2.5 px-4 rounded-xl text-xs uppercase font-bold tracking-wider text-brand-navy bg-slate-100 hover:bg-brand-navy hover:text-white transition-colors text-center shadow-sm">
-                        Inquire Outerwear Sourcing &rarr;
+                            class="w-full py-2.5 px-4 rounded-xl text-xs uppercase font-bold tracking-wider text-brand-navy bg-slate-100 hover:bg-brand-navy hover:text-white transition-colors text-center shadow-sm inline-flex items-center justify-center gap-1.5">
+                        <x-textile-icon name="jacket" class="w-4 h-4 text-brand-gold-dark" />
+                        <span>Inquire Outerwear Sourcing &rarr;</span>
                     </button>
                 </div>
             </div>
@@ -623,8 +644,9 @@
 
                     <button @click="rfqModalOpen = true; selectedCategory = 'Workwear'" 
                             type="button" 
-                            class="w-full py-2.5 px-4 rounded-xl text-xs uppercase font-bold tracking-wider text-brand-navy bg-slate-100 hover:bg-brand-navy hover:text-white transition-colors text-center shadow-sm">
-                        Inquire Workwear Sourcing &rarr;
+                            class="w-full py-2.5 px-4 rounded-xl text-xs uppercase font-bold tracking-wider text-brand-navy bg-slate-100 hover:bg-brand-navy hover:text-white transition-colors text-center shadow-sm inline-flex items-center justify-center gap-1.5">
+                        <x-textile-icon name="sewing-machine" class="w-4 h-4 text-brand-gold-dark" />
+                        <span>Inquire Workwear Sourcing &rarr;</span>
                     </button>
                 </div>
             </div>
@@ -649,18 +671,11 @@
 
 <!-- Sourcing Process: From Sample to Shipment (Off-White Section with Watermarks) -->
 <section class="py-20 sm:py-24 bg-slate-50 border-b border-slate-200/80 relative overflow-hidden">
-    <!-- Background Watermark Icons: Sourcing Compass & International Logistics -->
-    <div class="absolute -right-16 top-10 w-96 h-96 text-brand-navy/[0.03] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
-            <circle cx="12" cy="12" r="10"/>
-            <polygon points="12 4 14 11 21 12 14 13 12 20 10 13 3 12 10 11 12 4" fill="currentColor" fill-opacity="0.3"/>
-        </svg>
-    </div>
-    <div class="absolute -left-12 -bottom-10 w-80 h-80 text-brand-gold/[0.04] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
-        </svg>
-    </div>
+    <!-- Background Watermark Icons: Measuring Tape, Sewing Machine, Mannequin & Shears -->
+    <x-textile-watermark motif="measuring-tape" class="absolute -right-16 top-10 w-96 h-96 text-brand-navy/[0.03] pointer-events-none select-none" />
+    <x-textile-watermark motif="sewing-machine" class="absolute -left-12 -bottom-10 w-80 h-80 text-brand-gold/[0.04] pointer-events-none select-none" />
+    <x-textile-watermark motif="mannequin" class="hidden md:block absolute -left-16 top-10 w-72 h-72 text-brand-navy/[0.025] pointer-events-none select-none" />
+    <x-textile-watermark motif="shears" class="hidden md:block absolute right-10 -bottom-10 w-72 h-72 text-brand-gold/[0.035] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
@@ -674,15 +689,13 @@
             </p>
         </div>
 
-        <!-- 3 Primary Milestones (Slide 10) -->
+        <!-- 3 Primary Milestones (Slide 10 with Textile & Fashion Icons) -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             
             <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden group hover:border-brand-gold transition-colors">
                 <span class="text-5xl font-serif font-bold text-brand-gold/15 absolute top-4 right-6 group-hover:text-brand-gold/30 transition-colors">01</span>
-                <div class="w-12 h-12 rounded-2xl bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center mb-6">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
+                <div class="w-12 h-12 rounded-2xl bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center mb-6 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
+                    <x-textile-icon name="sewing-machine" class="w-6 h-6" />
                 </div>
                 <h3 class="text-xl font-serif font-bold text-brand-navy mb-3">Supplier Credibility</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">
@@ -692,10 +705,8 @@
 
             <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden group hover:border-brand-gold transition-colors">
                 <span class="text-5xl font-serif font-bold text-brand-gold/15 absolute top-4 right-6 group-hover:text-brand-gold/30 transition-colors">02</span>
-                <div class="w-12 h-12 rounded-2xl bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center mb-6">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                    </svg>
+                <div class="w-12 h-12 rounded-2xl bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center mb-6 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
+                    <x-textile-icon name="fabric-roll" class="w-6 h-6" />
                 </div>
                 <h3 class="text-xl font-serif font-bold text-brand-navy mb-3">Sourcing</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">
@@ -705,10 +716,8 @@
 
             <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden group hover:border-brand-gold transition-colors">
                 <span class="text-5xl font-serif font-bold text-brand-gold/15 absolute top-4 right-6 group-hover:text-brand-gold/30 transition-colors">03</span>
-                <div class="w-12 h-12 rounded-2xl bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center mb-6">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                    </svg>
+                <div class="w-12 h-12 rounded-2xl bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center mb-6 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
+                    <x-textile-icon name="hanger" class="w-6 h-6" />
                 </div>
                 <h3 class="text-xl font-serif font-bold text-brand-navy mb-3">Sampling</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">
@@ -718,31 +727,39 @@
 
         </div>
 
-        <!-- 4 Supporting Pillars (White Card with Subtle Gold Border) -->
+        <!-- 4 Supporting Pillars (White Card with Subtle Gold Border & Textile Icons) -->
         <div class="bg-white rounded-3xl p-6 sm:p-8 text-slate-800 border-2 border-brand-gold/30 shadow-md grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div class="flex items-start space-x-3">
-                <div class="w-6 h-6 rounded-full bg-brand-gold/20 text-brand-gold-dark flex-shrink-0 flex items-center justify-center font-bold text-xs mt-0.5">✓</div>
+                <div class="w-7 h-7 rounded-full bg-brand-gold/20 text-brand-gold-dark flex-shrink-0 flex items-center justify-center font-bold text-xs mt-0.5">
+                    <x-textile-icon name="mannequin" class="w-3.5 h-3.5" />
+                </div>
                 <div>
                     <h4 class="text-sm font-bold text-brand-navy">Sample Designs & Styling</h4>
                     <p class="text-xs text-slate-600 mt-0.5">Rapid styling and counter-sample development on request.</p>
                 </div>
             </div>
             <div class="flex items-start space-x-3">
-                <div class="w-6 h-6 rounded-full bg-brand-gold/20 text-brand-gold-dark flex-shrink-0 flex items-center justify-center font-bold text-xs mt-0.5">✓</div>
+                <div class="w-7 h-7 rounded-full bg-brand-gold/20 text-brand-gold-dark flex-shrink-0 flex items-center justify-center font-bold text-xs mt-0.5">
+                    <x-textile-icon name="weave" class="w-3.5 h-3.5" />
+                </div>
                 <div>
                     <h4 class="text-sm font-bold text-brand-navy">Open to Developments</h4>
                     <p class="text-xs text-slate-600 mt-0.5">Flexible handling of new enquiries, washes, and novel fabrics.</p>
                 </div>
             </div>
             <div class="flex items-start space-x-3">
-                <div class="w-6 h-6 rounded-full bg-brand-gold/20 text-brand-gold-dark flex-shrink-0 flex items-center justify-center font-bold text-xs mt-0.5">✓</div>
+                <div class="w-7 h-7 rounded-full bg-brand-gold/20 text-brand-gold-dark flex-shrink-0 flex items-center justify-center font-bold text-xs mt-0.5">
+                    <x-textile-icon name="measuring-tape" class="w-3.5 h-3.5" />
+                </div>
                 <div>
                     <h4 class="text-sm font-bold text-brand-navy">Strict Order Discipline</h4>
                     <p class="text-xs text-slate-600 mt-0.5">Milestone management from L/C receipt to port container loading.</p>
                 </div>
             </div>
             <div class="flex items-start space-x-3">
-                <div class="w-6 h-6 rounded-full bg-brand-gold/20 text-brand-gold-dark flex-shrink-0 flex items-center justify-center font-bold text-xs mt-0.5">✓</div>
+                <div class="w-7 h-7 rounded-full bg-brand-gold/20 text-brand-gold-dark flex-shrink-0 flex items-center justify-center font-bold text-xs mt-0.5">
+                    <x-textile-icon name="needle-thread" class="w-3.5 h-3.5" />
+                </div>
                 <div>
                     <h4 class="text-sm font-bold text-brand-navy">Skilled Operators & QA</h4>
                     <p class="text-xs text-slate-600 mt-0.5">Modern equipment backed by our 12 full-time QA controllers.</p>
@@ -760,18 +777,11 @@
 
 <!-- Quality Assurance: Quality You Can Rely On (Crisp White Section with Watermarks) -->
 <section class="py-20 sm:py-24 bg-white border-b border-slate-200/80 relative overflow-hidden">
-    <!-- Background Watermark Icons: Quality Assurance Shield & Rosette -->
-    <div class="absolute -right-24 top-16 w-[450px] h-[450px] text-brand-gold/[0.035] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-        </svg>
-    </div>
-    <div class="absolute -left-20 bottom-10 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M12 6v6l4 2"/>
-        </svg>
-    </div>
+    <!-- Background Watermark Icons: Fabric Roll, Shears, Mannequin & Needle -->
+    <x-textile-watermark motif="fabric-roll" class="absolute -right-24 top-16 w-[450px] h-[450px] text-brand-gold/[0.035] pointer-events-none select-none" />
+    <x-textile-watermark motif="shears" class="absolute -left-20 bottom-10 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none" />
+    <x-textile-watermark motif="mannequin" class="hidden md:block absolute -left-12 top-20 w-80 h-80 text-brand-gold/[0.03] pointer-events-none select-none" />
+    <x-textile-watermark motif="needle-thread" class="hidden md:block absolute right-16 -bottom-10 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -793,7 +803,7 @@
                 </div>
             </div>
 
-            <!-- Right: 5 Quality Pillars (Slide 8) -->
+            <!-- Right: 5 Quality Pillars (Slide 8 with Textile Icons) -->
             <div class="lg:col-span-7 space-y-6">
                 <div>
                     <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">Quality Assurance</span>
@@ -805,43 +815,68 @@
                 </div>
 
                 <div class="space-y-3.5">
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                        <span class="w-8 h-8 rounded-xl bg-brand-navy/5 text-brand-gold-dark font-bold text-sm flex items-center justify-center flex-shrink-0">1</span>
+                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold/60 transition-colors group">
+                        <div class="w-9 h-9 rounded-xl bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center flex-shrink-0 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
+                            <x-textile-icon name="techpack" class="w-4 h-4" />
+                        </div>
                         <div>
-                            <h4 class="text-sm font-bold text-brand-navy">Quality Policy</h4>
-                            <p class="text-xs text-slate-600 mt-0.5">Maintained and shared with each buyer for optimum quality assurance as per their specific brand requirements.</p>
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs font-bold px-2 py-0.5 bg-brand-navy/5 text-brand-navy rounded">Pillar 1</span>
+                                <h4 class="text-sm font-bold text-brand-navy">Quality Policy</h4>
+                            </div>
+                            <p class="text-xs text-slate-600 mt-1">Maintained and shared with each buyer for optimum quality assurance as per their specific brand requirements.</p>
                         </div>
                     </div>
 
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                        <span class="w-8 h-8 rounded-xl bg-brand-navy/5 text-brand-gold-dark font-bold text-sm flex items-center justify-center flex-shrink-0">2</span>
+                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold/60 transition-colors group">
+                        <div class="w-9 h-9 rounded-xl bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center flex-shrink-0 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
+                            <x-textile-icon name="magnifier-fabric" class="w-4 h-4" />
+                        </div>
                         <div>
-                            <h4 class="text-sm font-bold text-brand-navy">Dedicated Quality Team</h4>
-                            <p class="text-xs text-slate-600 mt-0.5">A skilled team of 12 full-time quality assurance specialists, academically qualified in textile engineering with extensive hands-on experience.</p>
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs font-bold px-2 py-0.5 bg-brand-navy/5 text-brand-navy rounded">Pillar 2</span>
+                                <h4 class="text-sm font-bold text-brand-navy">Dedicated Quality Team</h4>
+                            </div>
+                            <p class="text-xs text-slate-600 mt-1">A skilled team of 12 full-time quality assurance specialists, academically qualified in textile engineering with extensive hands-on experience.</p>
                         </div>
                     </div>
 
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                        <span class="w-8 h-8 rounded-xl bg-brand-navy/5 text-brand-gold-dark font-bold text-sm flex items-center justify-center flex-shrink-0">3</span>
+                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold/60 transition-colors group">
+                        <div class="w-9 h-9 rounded-xl bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center flex-shrink-0 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
+                            <x-textile-icon name="sewing-machine" class="w-4 h-4" />
+                        </div>
                         <div>
-                            <h4 class="text-sm font-bold text-brand-navy">Quality Control Circles (QCC)</h4>
-                            <p class="text-xs text-slate-600 mt-0.5">Adopted inside partner production facilities, dedicated to proactive troubleshooting and eliminating defects at root level.</p>
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs font-bold px-2 py-0.5 bg-brand-navy/5 text-brand-navy rounded">Pillar 3</span>
+                                <h4 class="text-sm font-bold text-brand-navy">Quality Control Circles (QCC)</h4>
+                            </div>
+                            <p class="text-xs text-slate-600 mt-1">Adopted inside partner production facilities, dedicated to proactive troubleshooting and eliminating defects at root level.</p>
                         </div>
                     </div>
 
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                        <span class="w-8 h-8 rounded-xl bg-brand-navy/5 text-brand-gold-dark font-bold text-sm flex items-center justify-center flex-shrink-0">4</span>
+                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold/60 transition-colors group">
+                        <div class="w-9 h-9 rounded-xl bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center flex-shrink-0 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
+                            <x-textile-icon name="measuring-tape" class="w-4 h-4" />
+                        </div>
                         <div>
-                            <h4 class="text-sm font-bold text-brand-navy">Checking & Maintenance</h4>
-                            <p class="text-xs text-slate-600 mt-0.5">All goods checked before shipment, yarn lab-tested for count/strength, shrinkage controlled, with daily in-line and final AQL inspection.</p>
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs font-bold px-2 py-0.5 bg-brand-navy/5 text-brand-navy rounded">Pillar 4</span>
+                                <h4 class="text-sm font-bold text-brand-navy">Checking & Maintenance</h4>
+                            </div>
+                            <p class="text-xs text-slate-600 mt-1">All goods checked before shipment, yarn lab-tested for count/strength, shrinkage controlled, with daily in-line and final AQL inspection.</p>
                         </div>
                     </div>
 
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                        <span class="w-8 h-8 rounded-xl bg-brand-navy/5 text-brand-gold-dark font-bold text-sm flex items-center justify-center flex-shrink-0">5</span>
+                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold/60 transition-colors group">
+                        <div class="w-9 h-9 rounded-xl bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center flex-shrink-0 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
+                            <x-textile-icon name="hanger" class="w-4 h-4" />
+                        </div>
                         <div>
-                            <h4 class="text-sm font-bold text-brand-navy">In-House Inspection & Tech Pack Adherence</h4>
-                            <p class="text-xs text-slate-600 mt-0.5">Full compliance with buyer tech packs, approved golden samples, color fastness ratings, and international workmanship standards in bulk production.</p>
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs font-bold px-2 py-0.5 bg-brand-navy/5 text-brand-navy rounded">Pillar 5</span>
+                                <h4 class="text-sm font-bold text-brand-navy">In-House Inspection & Tech Pack Adherence</h4>
+                            </div>
+                            <p class="text-xs text-slate-600 mt-1">Full compliance with buyer tech packs, approved golden samples, color fastness ratings, and international workmanship standards in bulk production.</p>
                         </div>
                     </div>
                 </div>
@@ -859,19 +894,11 @@
 
 <!-- Clients & Certifications: Trusted by Global Retailers (Off-White Section with Watermarks) -->
 <section class="py-20 sm:py-24 bg-slate-50 border-b border-slate-200/80 relative overflow-hidden">
-    <!-- Background Watermark Icons: Global Retail Network & World Map Weave -->
-    <div class="absolute left-1/2 -translate-x-1/2 -bottom-20 w-[580px] h-[580px] text-brand-navy/[0.025] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="2" y1="12" x2="22" y2="12"/>
-            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-        </svg>
-    </div>
-    <div class="absolute -right-10 top-10 w-72 h-72 text-brand-gold/[0.035] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-    </div>
+    <!-- Background Watermark Icons: Cotton Boll, Garment Hanger, Textile Loom Weave & Shears -->
+    <x-textile-watermark motif="cotton-boll" class="absolute -right-10 top-10 w-80 h-80 text-brand-gold/[0.04] pointer-events-none select-none" />
+    <x-textile-watermark motif="hanger" class="absolute -left-10 bottom-10 w-80 h-80 text-brand-navy/[0.03] pointer-events-none select-none" />
+    <x-textile-watermark motif="weave" class="absolute left-1/2 -translate-x-1/2 -bottom-20 w-[580px] h-[580px] text-brand-navy/[0.025] pointer-events-none select-none" />
+    <x-textile-watermark motif="shears" class="hidden md:block absolute -left-12 top-10 w-72 h-72 text-brand-gold/[0.03] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
@@ -896,22 +923,34 @@
 
                 <div class="space-y-3">
                     <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
-                        <span class="font-bold text-base text-brand-navy">YM INC</span>
+                        <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
+                            <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
+                            YM INC
+                        </span>
                         <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">🇨🇦 Canada</span>
                     </div>
 
                     <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
-                        <span class="font-bold text-base text-brand-navy">ARDENE</span>
+                        <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
+                            <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
+                            ARDENE
+                        </span>
                         <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">🇨🇦 Canada</span>
                     </div>
 
                     <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
-                        <span class="font-bold text-base text-brand-navy">SUZY SHIER</span>
+                        <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
+                            <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
+                            SUZY SHIER
+                        </span>
                         <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">🇨🇦 Canada</span>
                     </div>
 
                     <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
-                        <span class="font-bold text-base text-brand-navy">SUN ASIA</span>
+                        <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
+                            <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
+                            SUN ASIA
+                        </span>
                         <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">🇧🇷 Brazil</span>
                     </div>
                 </div>
@@ -924,7 +963,10 @@
             <!-- Certifications Box (Slide 11 right) -->
             <div class="lg:col-span-7 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
                 <div>
-                    <span class="text-xs uppercase font-bold tracking-wider text-brand-gold-dark">Compliance & Safety</span>
+                    <span class="inline-flex items-center gap-1.5 text-xs uppercase font-bold tracking-wider text-brand-gold-dark">
+                        <x-textile-icon name="cotton-boll" class="w-4 h-4 text-emerald-600" />
+                        Compliance & Safety
+                    </span>
                     <h3 class="text-xl font-serif font-bold text-brand-navy mt-1">Certified Partner Factories</h3>
                     <p class="text-xs text-slate-600 mt-1 leading-relaxed">
                         We only allocate buyer orders to factories that have undergone thorough audits for structural integrity, electrical safety, fair labor practices, environmental emissions, and chemical restrictions.
@@ -956,12 +998,10 @@
 
 <!-- Leadership Quote: Message from MD & CEO (Luminous Off-White & Ivory Section with Watermarks) -->
 <section class="py-20 sm:py-24 bg-white border-b border-slate-200/80 relative overflow-hidden">
-    <!-- Background Watermark: Quotation & Textile Monogram Motif -->
-    <div class="absolute right-6 -bottom-10 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-        </svg>
-    </div>
+    <!-- Background Watermark: Shears, Mannequin & Needle Motifs -->
+    <x-textile-watermark motif="shears" class="absolute right-6 -bottom-10 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none" />
+    <x-textile-watermark motif="mannequin" class="hidden md:block absolute -left-12 -top-10 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none" />
+    <x-textile-watermark motif="needle-thread" class="hidden md:block absolute left-1/3 -bottom-12 w-64 h-64 text-brand-gold/[0.03] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -1005,11 +1045,13 @@
                 </p>
 
                 <div class="pt-4 flex flex-wrap items-center gap-4">
-                    <a href="{{ route('about') }}" class="px-5 py-2.5 rounded-xl bg-brand-navy text-white font-bold text-xs uppercase tracking-wider hover:bg-brand-navy-light transition-colors shadow">
-                        Learn More About Our Team & Mission
+                    <a href="{{ route('about') }}" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-navy text-white font-bold text-xs uppercase tracking-wider hover:bg-brand-navy-light transition-colors shadow">
+                        <x-textile-icon name="mannequin" class="w-3.5 h-3.5 text-brand-gold" />
+                        <span>Learn More About Our Team & Mission</span>
                     </a>
-                    <a href="{{ route('contact') }}#visit" class="px-5 py-2.5 rounded-xl bg-white text-brand-navy font-semibold text-xs border border-slate-300 hover:bg-slate-100 transition-colors">
-                        Plan a Factory Visit to Dhaka
+                    <a href="{{ route('contact') }}#visit" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-brand-navy font-semibold text-xs border border-slate-300 hover:bg-slate-100 transition-colors">
+                        <x-textile-icon name="sewing-machine" class="w-3.5 h-3.5 text-brand-navy" />
+                        <span>Plan a Factory Visit to Dhaka</span>
                     </a>
                 </div>
             </div>
@@ -1020,18 +1062,10 @@
 
 <!-- Sourcing Lead-Time & Banking Due Diligence (Off-White Section with Watermarks) -->
 <section class="py-20 sm:py-24 bg-slate-50 border-b border-slate-200/80 relative overflow-hidden">
-    <!-- Background Watermark Icons: Commercial Vault & Production Timing Clock -->
-    <div class="absolute -right-12 top-6 w-80 h-80 text-brand-navy/[0.03] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
-            <circle cx="12" cy="12" r="10"/>
-            <polyline points="12 6 12 12 16 14"/>
-        </svg>
-    </div>
-    <div class="absolute -left-12 -bottom-10 w-80 h-80 text-brand-gold/[0.035] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/>
-        </svg>
-    </div>
+    <!-- Background Watermark Icons: Measuring Tape, Fabric Roll & Thread Spool -->
+    <x-textile-watermark motif="measuring-tape" class="absolute -right-12 top-6 w-80 h-80 text-brand-navy/[0.03] pointer-events-none select-none" />
+    <x-textile-watermark motif="fabric-roll" class="absolute -left-12 -bottom-10 w-80 h-80 text-brand-gold/[0.035] pointer-events-none select-none" />
+    <x-textile-watermark motif="thread-spool" class="hidden md:block absolute right-1/3 -bottom-10 w-64 h-64 text-brand-navy/[0.02] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
@@ -1048,8 +1082,11 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- Lead Time Card 1 -->
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between group hover:border-brand-gold/60 transition-colors">
                 <div>
+                    <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-navy mb-4 flex items-center justify-center group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
+                        <x-textile-icon name="fabric-roll" class="w-5 h-5" />
+                    </div>
                     <span class="text-xs font-bold uppercase tracking-wider text-brand-gold-dark">Standard Mode</span>
                     <h3 class="text-2xl font-serif font-bold text-brand-navy mt-1">Letter of Credit (L/C)</h3>
                     <div class="text-4xl font-serif font-bold text-brand-navy mt-4 mb-2">
@@ -1065,8 +1102,11 @@
             </div>
 
             <!-- Lead Time Card 2 -->
-            <div class="bg-white p-8 rounded-3xl border-2 border-brand-gold/40 shadow-lg flex flex-col justify-between relative overflow-hidden">
+            <div class="bg-white p-8 rounded-3xl border-2 border-brand-gold/40 shadow-lg flex flex-col justify-between relative overflow-hidden group">
                 <div class="relative z-10">
+                    <div class="w-10 h-10 rounded-xl bg-brand-gold/15 text-brand-gold-dark mb-4 flex items-center justify-center group-hover:bg-brand-gold group-hover:text-brand-navy transition-colors">
+                        <x-textile-icon name="measuring-tape" class="w-5 h-5" />
+                    </div>
                     <span class="text-xs font-bold uppercase tracking-wider text-brand-gold-dark">Express Replenishment</span>
                     <h3 class="text-2xl font-serif font-bold text-brand-navy mt-1">Telegraphic Transfer (T/T)</h3>
                     <div class="text-4xl font-serif font-bold text-brand-gold-dark mt-4 mb-2">
@@ -1082,8 +1122,11 @@
             </div>
 
             <!-- Due Diligence / Bank Details Card (Slide 5) -->
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between group hover:border-brand-gold/60 transition-colors">
                 <div>
+                    <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-navy mb-4 flex items-center justify-center group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
+                        <x-textile-icon name="techpack" class="w-5 h-5" />
+                    </div>
                     <span class="text-xs font-bold uppercase tracking-wider text-brand-gold-dark">Buyer Due Diligence</span>
                     <h3 class="text-2xl font-serif font-bold text-brand-navy mt-1">Banking Information</h3>
                     
@@ -1118,17 +1161,10 @@
 
 <!-- Direct Sourcing Quote (RFQ) Section (Crisp White and Off-White Blend with Watermarks) -->
 <section id="rfq" class="py-20 sm:py-24 bg-gradient-to-b from-white via-slate-50 to-white text-slate-800 relative overflow-hidden">
-    <!-- Background Watermark: RFQ Contract & Wax Seal Motif -->
-    <div class="absolute -left-12 -bottom-12 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-        </svg>
-    </div>
-    <div class="absolute -right-16 top-12 w-80 h-80 text-brand-navy/[0.03] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-    </div>
+    <!-- Background Watermark: Mannequin, Sewing Machine, Shears & Thread -->
+    <x-textile-watermark motif="mannequin" class="absolute -left-12 -bottom-12 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none" />
+    <x-textile-watermark motif="sewing-machine" class="absolute -right-16 top-12 w-80 h-80 text-brand-navy/[0.03] pointer-events-none select-none" />
+    <x-textile-watermark motif="shears" class="hidden md:block absolute right-1/4 -bottom-10 w-72 h-72 text-brand-gold/[0.03] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -1145,15 +1181,21 @@
 
                 <div class="space-y-4 pt-2 text-xs text-slate-700">
                     <div class="flex items-center space-x-3">
-                        <div class="w-8 h-8 rounded-xl bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center font-bold">1</div>
+                        <div class="w-8 h-8 rounded-xl bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center font-bold flex-shrink-0">
+                            <x-textile-icon name="thread-spool" class="w-4 h-4" />
+                        </div>
                         <span>Fast price breakdown & costing sheets based on current yarn indices</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                        <div class="w-8 h-8 rounded-xl bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center font-bold">2</div>
+                        <div class="w-8 h-8 rounded-xl bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center font-bold flex-shrink-0">
+                            <x-textile-icon name="mannequin" class="w-4 h-4" />
+                        </div>
                         <span>Rapid prototype & counter-sample development with lab dip approvals</span>
                     </div>
                     <div class="flex items-center space-x-3">
-                        <div class="w-8 h-8 rounded-xl bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center font-bold">3</div>
+                        <div class="w-8 h-8 rounded-xl bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center font-bold flex-shrink-0">
+                            <x-textile-icon name="cotton-boll" class="w-4 h-4" />
+                        </div>
                         <span>Full factory audit reports & compliance certification packages</span>
                     </div>
                 </div>

@@ -6,12 +6,9 @@
 @section('content')
 <!-- Header Banner (White & Off-White Blend with Watermarks) -->
 <section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 sm:py-20 text-slate-900 border-b border-slate-200/80 relative overflow-hidden">
-    <!-- Watermark: Contact Envelope & Location Marker Motif -->
-    <div class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-    </div>
+    <!-- Textile Watermarks -->
+    <x-textile-watermark motif="fabric-roll" class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none" />
+    <x-textile-watermark motif="shears" class="absolute -left-12 -top-12 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="max-w-3xl">
@@ -32,13 +29,9 @@
 
 <!-- Main Contact & Inquiry Section (Off-White with Watermark) -->
 <section class="py-20 bg-slate-50 relative overflow-hidden">
-    <!-- Watermark: Location Pin -->
-    <div class="absolute -left-16 bottom-10 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-    </div>
+    <!-- Watermarks: Multi-Motif Atelier Theme -->
+    <x-textile-watermark motif="mannequin" class="absolute -left-16 bottom-10 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none" />
+    <x-textile-watermark motif="sewing-machine" class="absolute -right-16 top-10 w-96 h-96 text-brand-gold/[0.035] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -47,20 +40,18 @@
             <div class="lg:col-span-5 space-y-6">
                 
                 <!-- Contact Card -->
-                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-                    <div>
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6 relative overflow-hidden">
+                    <x-textile-watermark motif="cotton-boll" class="absolute -right-8 -bottom-8 w-48 h-48 text-brand-gold/[0.03] pointer-events-none select-none" />
+                    <div class="relative z-10">
                         <span class="text-xs font-bold uppercase tracking-wider text-brand-gold">Headquarters</span>
                         <h2 class="text-2xl font-serif font-bold text-brand-navy mt-1">Corporate Details</h2>
                         <p class="text-xs text-slate-500 mt-1">Conveniently located 10 minutes from Dhaka International Airport.</p>
                     </div>
 
-                    <div class="space-y-4 text-xs text-slate-700">
+                    <div class="space-y-4 text-xs text-slate-700 relative z-10">
                         <div class="flex items-start space-x-3">
                             <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
+                                <x-textile-icon name="fabric-roll" class="w-4 h-4 text-brand-gold-dark" />
                             </div>
                             <div>
                                 <span class="font-bold text-slate-900 block">Corporate Office:</span>
@@ -72,9 +63,7 @@
 
                         <div class="flex items-start space-x-3">
                             <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                </svg>
+                                <x-textile-icon name="mannequin" class="w-4 h-4 text-brand-gold-dark" />
                             </div>
                             <div>
                                 <span class="font-bold text-slate-900 block">Contact Person:</span>
@@ -129,7 +118,7 @@
                     </div>
 
                     <!-- Partnership Handshake Image -->
-                    <div class="pt-4 border-t border-slate-100">
+                    <div class="pt-4 border-t border-slate-100 relative z-10">
                         <div class="rounded-2xl overflow-hidden shadow-md">
                             <img src="{{ asset('images/extracted/partnership-handshake.jpg') }}" 
                                  alt="Partnership Handshake" 
@@ -139,14 +128,15 @@
                 </div>
 
                 <!-- Banking Credentials Card (Slide 5) -->
-                <div class="bg-white p-6 rounded-3xl border-2 border-brand-gold/40 shadow-sm space-y-3">
-                    <div class="flex items-center justify-between">
+                <div class="bg-white p-6 rounded-3xl border-2 border-brand-gold/40 shadow-sm space-y-3 relative overflow-hidden">
+                    <x-textile-watermark motif="thread-spool" class="absolute -right-8 -bottom-8 w-44 h-44 text-brand-gold/[0.03] pointer-events-none select-none" />
+                    <div class="flex items-center justify-between relative z-10">
                         <span class="text-xs uppercase font-bold tracking-wider text-brand-gold">Banking Information</span>
                         <span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 text-[10px] font-bold">Tier-1 Bank</span>
                     </div>
-                    <h3 class="text-xl font-serif font-bold text-brand-navy">BRAC Bank PLC.</h3>
+                    <h3 class="text-xl font-serif font-bold text-brand-navy relative z-10">BRAC Bank PLC.</h3>
                     
-                    <div class="space-y-1.5 text-xs text-slate-700 font-mono">
+                    <div class="space-y-1.5 text-xs text-slate-700 font-mono relative z-10">
                         <div><span class="text-slate-500 font-sans">Branch:</span> Uttara Sonargaon Janapath Branch</div>
                         <div><span class="text-slate-500 font-sans">SWIFT Code:</span> <strong class="text-brand-navy font-bold bg-amber-50 px-2 py-0.5 rounded border border-brand-gold/30">BRAKBDDH</strong></div>
                         <div><span class="text-slate-500 font-sans">Account No:</span> <strong class="bg-slate-100 px-2 py-0.5 rounded">2075560740001</strong></div>
@@ -176,18 +166,22 @@
                             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
                                 <label class="flex items-center space-x-2 p-2.5 rounded-xl border border-slate-200 cursor-pointer hover:border-brand-gold has-[:checked]:border-brand-gold has-[:checked]:bg-brand-navy/5 text-xs font-semibold text-slate-700">
                                     <input type="radio" name="inquiry_type" value="rfq" checked class="text-brand-gold focus:ring-brand-gold">
+                                    <x-textile-icon name="techpack" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                     <span>Pricing RFQ</span>
                                 </label>
                                 <label class="flex items-center space-x-2 p-2.5 rounded-xl border border-slate-200 cursor-pointer hover:border-brand-gold has-[:checked]:border-brand-gold has-[:checked]:bg-brand-navy/5 text-xs font-semibold text-slate-700">
                                     <input type="radio" name="inquiry_type" value="visit" class="text-brand-gold focus:ring-brand-gold">
+                                    <x-textile-icon name="mannequin" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                     <span>Factory Visit</span>
                                 </label>
                                 <label class="flex items-center space-x-2 p-2.5 rounded-xl border border-slate-200 cursor-pointer hover:border-brand-gold has-[:checked]:border-brand-gold has-[:checked]:bg-brand-navy/5 text-xs font-semibold text-slate-700">
                                     <input type="radio" name="inquiry_type" value="sample" class="text-brand-gold focus:ring-brand-gold">
+                                    <x-textile-icon name="shears" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                     <span>Sampling</span>
                                 </label>
                                 <label class="flex items-center space-x-2 p-2.5 rounded-xl border border-slate-200 cursor-pointer hover:border-brand-gold has-[:checked]:border-brand-gold has-[:checked]:bg-brand-navy/5 text-xs font-semibold text-slate-700">
                                     <input type="radio" name="inquiry_type" value="general" class="text-brand-gold focus:ring-brand-gold">
+                                    <x-textile-icon name="cotton-boll" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                     <span>General</span>
                                 </label>
                             </div>

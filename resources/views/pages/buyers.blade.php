@@ -6,14 +6,9 @@
 @section('content')
 <!-- Header Banner (White & Off-White Blend with Watermarks) -->
 <section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 sm:py-20 text-slate-900 border-b border-slate-200/80 relative overflow-hidden">
-    <!-- Watermark: Global World Map / Network -->
-    <div class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="2" y1="12" x2="22" y2="12"/>
-            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-        </svg>
-    </div>
+    <!-- Textile Watermarks -->
+    <x-textile-watermark motif="fabric-roll" class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none" />
+    <x-textile-watermark motif="shears" class="absolute -left-12 -top-12 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="max-w-3xl">
@@ -34,12 +29,9 @@
 
 <!-- Current Retail Partners (Slide 11) (Crisp White with Watermark) -->
 <section class="py-20 bg-white relative overflow-hidden">
-    <!-- Watermark: Handshake / Partnership Shield -->
-    <div class="absolute -left-16 bottom-10 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-    </div>
+    <!-- Watermarks: Multi-Motif Atelier Theme -->
+    <x-textile-watermark motif="mannequin" class="absolute -left-16 bottom-10 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none" />
+    <x-textile-watermark motif="cotton-boll" class="absolute -right-16 top-10 w-96 h-96 text-brand-gold/[0.035] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
@@ -67,8 +59,9 @@
                         One of North America's leading apparel retail powerhouses operating hundreds of stores with diverse private label fashion divisions.
                     </p>
                 </div>
-                <div class="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-500">
-                    Sourcing: Knitwear, Tops & Outerwear
+                <div class="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-600 flex items-center gap-1.5 font-medium">
+                    <x-textile-icon name="tshirt" class="w-4 h-4 text-brand-gold-dark" />
+                    <span>Sourcing: Knitwear, Tops & Outerwear</span>
                 </div>
             </div>
 
@@ -84,8 +77,9 @@
                         Fast-growing Canadian omnichannel retailer known for trendy, youthful apparel, casualwear essentials, and seasonal collections.
                     </p>
                 </div>
-                <div class="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-500">
-                    Sourcing: Knit Basics, Sweaters & Loungewear
+                <div class="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-600 flex items-center gap-1.5 font-medium">
+                    <x-textile-icon name="sweater" class="w-4 h-4 text-brand-gold-dark" />
+                    <span>Sourcing: Knit Basics, Sweaters & Loungewear</span>
                 </div>
             </div>
 
@@ -101,8 +95,9 @@
                         Iconic Canadian women's fashion destination catering to modern working women with tailored woven separates, blouses, and refined knits.
                     </p>
                 </div>
-                <div class="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-500">
-                    Sourcing: Blouses, Sweaters & Woven Separates
+                <div class="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-600 flex items-center gap-1.5 font-medium">
+                    <x-textile-icon name="shirt" class="w-4 h-4 text-brand-gold-dark" />
+                    <span>Sourcing: Blouses, Sweaters & Woven Separates</span>
                 </div>
             </div>
 
@@ -118,8 +113,9 @@
                         Major South American importer and apparel distributor supplying multi-store retail channels across Brazil and Latin America.
                     </p>
                 </div>
-                <div class="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-500">
-                    Sourcing: Denim, Casual Polos & Seasonal Knits
+                <div class="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-600 flex items-center gap-1.5 font-medium">
+                    <x-textile-icon name="denim-pocket" class="w-4 h-4 text-brand-gold-dark" />
+                    <span>Sourcing: Denim, Casual Polos & Seasonal Knits</span>
                 </div>
             </div>
 
@@ -128,8 +124,12 @@
 </section>
 
 <!-- Business Policy & What You Gain (Slide 9) -->
-<section class="py-20 bg-slate-50 border-t border-b border-slate-200">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<section class="py-20 bg-slate-50 border-t border-b border-slate-200 relative overflow-hidden">
+    <!-- Watermarks -->
+    <x-textile-watermark motif="thread-spool" class="absolute -left-16 bottom-10 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none" />
+    <x-textile-watermark motif="measuring-tape" class="absolute -right-16 top-10 w-96 h-96 text-brand-gold/[0.035] pointer-events-none select-none" />
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div class="lg:col-span-5 space-y-6">
@@ -152,40 +152,50 @@
             <div class="lg:col-span-7 space-y-3">
                 <h3 class="text-base font-bold text-brand-navy uppercase tracking-wider text-xs mb-4">What You Gain as an International Buyer</h3>
 
-                <div class="flex items-start space-x-3 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                    <div class="w-7 h-7 rounded-full bg-brand-gold text-brand-navy flex-shrink-0 flex items-center justify-center font-bold text-xs">1</div>
+                <div class="flex items-start space-x-3.5 p-4 bg-white rounded-xl border border-slate-200 shadow-sm hover:border-brand-gold transition-colors">
+                    <div class="w-9 h-9 rounded-xl bg-brand-gold/20 text-brand-navy flex-shrink-0 flex items-center justify-center font-bold text-xs">
+                        <x-textile-icon name="techpack" class="w-5 h-5 text-brand-navy" />
+                    </div>
                     <div>
                         <h4 class="text-sm font-bold text-brand-navy">Sharper Company Focus and Lower Operating Costs</h4>
                         <p class="text-xs text-slate-600 mt-0.5">Free up your internal team's bandwidth while our 34 in-house specialists handle Dhaka factory monitoring.</p>
                     </div>
                 </div>
 
-                <div class="flex items-start space-x-3 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                    <div class="w-7 h-7 rounded-full bg-brand-gold text-brand-navy flex-shrink-0 flex items-center justify-center font-bold text-xs">2</div>
+                <div class="flex items-start space-x-3.5 p-4 bg-white rounded-xl border border-slate-200 shadow-sm hover:border-brand-gold transition-colors">
+                    <div class="w-9 h-9 rounded-xl bg-brand-gold/20 text-brand-navy flex-shrink-0 flex items-center justify-center font-bold text-xs">
+                        <x-textile-icon name="sewing-machine" class="w-5 h-5 text-brand-navy" />
+                    </div>
                     <div>
                         <h4 class="text-sm font-bold text-brand-navy">Access to World-Class Capabilities</h4>
                         <p class="text-xs text-slate-600 mt-0.5">Benefit from automated computerized knitting, laser washing, automated spreaders, and certified QA laboratories.</p>
                     </div>
                 </div>
 
-                <div class="flex items-start space-x-3 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                    <div class="w-7 h-7 rounded-full bg-brand-gold text-brand-navy flex-shrink-0 flex items-center justify-center font-bold text-xs">3</div>
+                <div class="flex items-start space-x-3.5 p-4 bg-white rounded-xl border border-slate-200 shadow-sm hover:border-brand-gold transition-colors">
+                    <div class="w-9 h-9 rounded-xl bg-brand-gold/20 text-brand-navy flex-shrink-0 flex items-center justify-center font-bold text-xs">
+                        <x-textile-icon name="fabric-roll" class="w-5 h-5 text-brand-navy" />
+                    </div>
                     <div>
                         <h4 class="text-sm font-bold text-brand-navy">Access to Resources Not Available Internally</h4>
                         <p class="text-xs text-slate-600 mt-0.5">Leverage direct mill allocations for specialty cottons, sustainable fibers, and imported technical trims.</p>
                     </div>
                 </div>
 
-                <div class="flex items-start space-x-3 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                    <div class="w-7 h-7 rounded-full bg-brand-gold text-brand-navy flex-shrink-0 flex items-center justify-center font-bold text-xs">4</div>
+                <div class="flex items-start space-x-3.5 p-4 bg-white rounded-xl border border-slate-200 shadow-sm hover:border-brand-gold transition-colors">
+                    <div class="w-9 h-9 rounded-xl bg-brand-gold/20 text-brand-navy flex-shrink-0 flex items-center justify-center font-bold text-xs">
+                        <x-textile-icon name="weave" class="w-5 h-5 text-brand-navy" />
+                    </div>
                     <div>
                         <h4 class="text-sm font-bold text-brand-navy">Diversified Range Through Multi-Country Sourcing</h4>
                         <p class="text-xs text-slate-600 mt-0.5">Flexibility to blend local fabrics with nominated overseas yarns and accessories for brand consistency.</p>
                     </div>
                 </div>
 
-                <div class="flex items-start space-x-3 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                    <div class="w-7 h-7 rounded-full bg-brand-gold text-brand-navy flex-shrink-0 flex items-center justify-center font-bold text-xs">5</div>
+                <div class="flex items-start space-x-3.5 p-4 bg-white rounded-xl border border-slate-200 shadow-sm hover:border-brand-gold transition-colors">
+                    <div class="w-9 h-9 rounded-xl bg-brand-gold/20 text-brand-navy flex-shrink-0 flex items-center justify-center font-bold text-xs">
+                        <x-textile-icon name="measuring-tape" class="w-5 h-5 text-brand-navy" />
+                    </div>
                     <div>
                         <h4 class="text-sm font-bold text-brand-navy">Quick Reaction to Changing Consumer Demand</h4>
                         <p class="text-xs text-slate-600 mt-0.5">Rapid sampling turnaround and 45-day express T/T replenishment to capture in-season selling peaks.</p>
@@ -198,8 +208,12 @@
 </section>
 
 <!-- Commercial Terms & Bank Due Diligence (Slide 5 & 9) -->
-<section class="py-20 bg-white">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<section class="py-20 bg-white relative overflow-hidden">
+    <!-- Watermarks -->
+    <x-textile-watermark motif="button" class="absolute -left-16 bottom-10 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none" />
+    <x-textile-watermark motif="hanger" class="absolute -right-16 top-10 w-96 h-96 text-brand-gold/[0.035] pointer-events-none select-none" />
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span class="text-xs uppercase font-bold tracking-widest text-brand-gold">Financial Security</span>
             <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy mt-1">
@@ -219,11 +233,17 @@
                 
                 <div class="space-y-4 text-xs text-slate-700 pt-2">
                     <div class="p-4 bg-white rounded-xl border">
-                        <strong class="text-brand-navy block text-sm font-bold mb-1">1. Irrevocable Letter of Credit (L/C) at Sight</strong>
+                        <strong class="text-brand-navy block text-sm font-bold mb-1 flex items-center gap-1.5">
+                            <x-textile-icon name="fabric-roll" class="w-4 h-4 text-brand-gold-dark" />
+                            <span>1. Irrevocable Letter of Credit (L/C) at Sight</span>
+                        </strong>
                         <p class="text-slate-600">Standard international trade method. Bulk production lead time is <strong>60 to 90 days</strong> after receipt of operative L/C.</p>
                     </div>
                     <div class="p-4 bg-white rounded-xl border">
-                        <strong class="text-brand-navy block text-sm font-bold mb-1">2. Telegraphic Transfer (T/T)</strong>
+                        <strong class="text-brand-navy block text-sm font-bold mb-1 flex items-center gap-1.5">
+                            <x-textile-icon name="measuring-tape" class="w-4 h-4 text-brand-gold-dark" />
+                            <span>2. Telegraphic Transfer (T/T)</span>
+                        </strong>
                         <p class="text-slate-600">Accelerated production cycle. Bulk export lead time is <strong>45 days</strong> for fast replenishment and capsule collections.</p>
                     </div>
                 </div>

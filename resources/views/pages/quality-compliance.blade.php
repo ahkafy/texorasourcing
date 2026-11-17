@@ -6,12 +6,9 @@
 @section('content')
 <!-- Header Banner (White & Off-White Blend with Watermarks) -->
 <section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 sm:py-20 text-slate-900 border-b border-slate-200/80 relative overflow-hidden">
-    <!-- Watermark: Quality Assurance Shield -->
-    <div class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-        </svg>
-    </div>
+    <!-- Textile Watermarks -->
+    <x-textile-watermark motif="cotton-boll" class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none" />
+    <x-textile-watermark motif="shears" class="absolute -left-12 -top-12 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="max-w-3xl">
@@ -32,12 +29,9 @@
 
 <!-- 5-Tier Quality Assurance Framework (Slide 8) (Crisp White with Watermark) -->
 <section class="py-20 bg-white relative overflow-hidden">
-    <!-- Watermark: Certified Quality Rosette -->
-    <div class="absolute -left-16 bottom-12 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-        </svg>
-    </div>
+    <!-- Watermarks: Multi-Motif Atelier Theme -->
+    <x-textile-watermark motif="fabric-roll" class="absolute -left-16 bottom-12 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none" />
+    <x-textile-watermark motif="measuring-tape" class="absolute -right-16 top-10 w-96 h-96 text-brand-gold/[0.035] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -70,60 +64,75 @@
                 </div>
 
                 <div class="space-y-4">
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                        <div class="w-9 h-9 rounded-xl bg-brand-navy text-brand-gold font-bold text-sm flex items-center justify-center flex-shrink-0">
-                            1
+                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold transition-colors">
+                        <div class="w-10 h-10 rounded-xl bg-brand-navy text-brand-gold flex items-center justify-center flex-shrink-0 shadow-sm">
+                            <x-textile-icon name="techpack" class="w-5 h-5 text-brand-gold" />
                         </div>
                         <div>
-                            <h3 class="text-sm font-bold text-brand-navy">Quality Policy Alignment</h3>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[11px] font-bold text-brand-gold-dark uppercase tracking-wider">Tier 01</span>
+                                <h3 class="text-sm font-bold text-brand-navy">Quality Policy Alignment</h3>
+                            </div>
                             <p class="text-xs text-slate-600 mt-0.5">
                                 Maintained and shared with each buyer for optimum quality assurance as per their individual brand manuals, tolerances, and packaging requirements.
                             </p>
                         </div>
                     </div>
 
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                        <div class="w-9 h-9 rounded-xl bg-brand-navy text-brand-gold font-bold text-sm flex items-center justify-center flex-shrink-0">
-                            2
+                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold transition-colors">
+                        <div class="w-10 h-10 rounded-xl bg-brand-navy text-brand-gold flex items-center justify-center flex-shrink-0 shadow-sm">
+                            <x-textile-icon name="magnifier-fabric" class="w-5 h-5 text-brand-gold" />
                         </div>
                         <div>
-                            <h3 class="text-sm font-bold text-brand-navy">Academically Qualified Quality Team</h3>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[11px] font-bold text-brand-gold-dark uppercase tracking-wider">Tier 02</span>
+                                <h3 class="text-sm font-bold text-brand-navy">Academically Qualified Quality Team</h3>
+                            </div>
                             <p class="text-xs text-slate-600 mt-0.5">
                                 A skilled quality assurance team of 12 full-time inspectors with formal degrees in Textile Engineering and extensive apparel manufacturing experience.
                             </p>
                         </div>
                     </div>
 
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                        <div class="w-9 h-9 rounded-xl bg-brand-navy text-brand-gold font-bold text-sm flex items-center justify-center flex-shrink-0">
-                            3
+                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold transition-colors">
+                        <div class="w-10 h-10 rounded-xl bg-brand-navy text-brand-gold flex items-center justify-center flex-shrink-0 shadow-sm">
+                            <x-textile-icon name="sewing-machine" class="w-5 h-5 text-brand-gold" />
                         </div>
                         <div>
-                            <h3 class="text-sm font-bold text-brand-navy">Quality Control Circles (QCC)</h3>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[11px] font-bold text-brand-gold-dark uppercase tracking-wider">Tier 03</span>
+                                <h3 class="text-sm font-bold text-brand-navy">Quality Control Circles (QCC)</h3>
+                            </div>
                             <p class="text-xs text-slate-600 mt-0.5">
                                 Continuous feedback loops adopted on factory production lines, dedicated to solving workplace problems, identifying bottlenecks, and eliminating seam defects.
                             </p>
                         </div>
                     </div>
 
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                        <div class="w-9 h-9 rounded-xl bg-brand-navy text-brand-gold font-bold text-sm flex items-center justify-center flex-shrink-0">
-                            4
+                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold transition-colors">
+                        <div class="w-10 h-10 rounded-xl bg-brand-navy text-brand-gold flex items-center justify-center flex-shrink-0 shadow-sm">
+                            <x-textile-icon name="measuring-tape" class="w-5 h-5 text-brand-gold" />
                         </div>
                         <div>
-                            <h3 class="text-sm font-bold text-brand-navy">Checking & Maintenance</h3>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[11px] font-bold text-brand-gold-dark uppercase tracking-wider">Tier 04</span>
+                                <h3 class="text-sm font-bold text-brand-navy">Checking & Maintenance</h3>
+                            </div>
                             <p class="text-xs text-slate-600 mt-0.5">
                                 All goods checked before shipment, yarn lab-tested, daily in-line inspection (SPI, measurements, tension), and final inspection with metal/needle detection.
                             </p>
                         </div>
                     </div>
 
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                        <div class="w-9 h-9 rounded-xl bg-brand-navy text-brand-gold font-bold text-sm flex items-center justify-center flex-shrink-0">
-                            5
+                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold transition-colors">
+                        <div class="w-10 h-10 rounded-xl bg-brand-navy text-brand-gold flex items-center justify-center flex-shrink-0 shadow-sm">
+                            <x-textile-icon name="hanger" class="w-5 h-5 text-brand-gold" />
                         </div>
                         <div>
-                            <h3 class="text-sm font-bold text-brand-navy">In-House Inspection & Tech Pack Adherence</h3>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[11px] font-bold text-brand-gold-dark uppercase tracking-wider">Tier 05</span>
+                                <h3 class="text-sm font-bold text-brand-navy">In-House Inspection & Tech Pack Adherence</h3>
+                            </div>
                             <p class="text-xs text-slate-600 mt-0.5">
                                 Full compliance with tech packs, approved golden counter-samples, and international workmanship standards in bulk production.
                             </p>
@@ -137,8 +146,12 @@
 </section>
 
 <!-- Laboratory Testing Protocols -->
-<section class="py-16 bg-slate-50 border-t border-b border-slate-200">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<section class="py-16 bg-slate-50 border-t border-b border-slate-200 relative overflow-hidden">
+    <!-- Watermarks -->
+    <x-textile-watermark motif="weave" class="absolute -left-16 bottom-8 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none" />
+    <x-textile-watermark motif="thread-spool" class="absolute -right-16 top-8 w-80 h-80 text-brand-gold/[0.03] pointer-events-none select-none" />
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-12">
             <span class="text-xs uppercase font-bold tracking-widest text-brand-gold">Physical & Chemical Testing</span>
             <h2 class="text-3xl font-serif font-bold text-brand-navy mt-1">
@@ -150,36 +163,52 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-xs text-slate-700">
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-                <span class="font-bold text-brand-navy text-sm block">Color Fastness</span>
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
+                <div class="flex items-center gap-2">
+                    <x-textile-icon name="thread-spool" class="w-4 h-4 text-brand-gold-dark" />
+                    <span class="font-bold text-brand-navy text-sm block">Color Fastness</span>
+                </div>
                 <p class="text-slate-500">ISO 105 / AATCC 61 tested for fastness to home washing, perspiration, rubbing (wet & dry crocking), water, and artificial light.</p>
-                <span class="text-brand-gold font-semibold block text-[11px]">Rating: Minimum Grade 4.0</span>
+                <span class="text-brand-gold-dark font-semibold block text-[11px]">Rating: Minimum Grade 4.0</span>
             </div>
 
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-                <span class="font-bold text-brand-navy text-sm block">Dimensional Stability</span>
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
+                <div class="flex items-center gap-2">
+                    <x-textile-icon name="measuring-tape" class="w-4 h-4 text-brand-gold-dark" />
+                    <span class="font-bold text-brand-navy text-sm block">Dimensional Stability</span>
+                </div>
                 <p class="text-slate-500">Shrinkage testing after 3 home washes (ISO 6330), torque/spirality verification, and stretch recovery retention.</p>
-                <span class="text-brand-gold font-semibold block text-[11px]">Tolerance: Max ±3% to ±5%</span>
+                <span class="text-brand-gold-dark font-semibold block text-[11px]">Tolerance: Max ±3% to ±5%</span>
             </div>
 
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-                <span class="font-bold text-brand-navy text-sm block">Fabric Physical Tests</span>
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
+                <div class="flex items-center gap-2">
+                    <x-textile-icon name="fabric-roll" class="w-4 h-4 text-brand-gold-dark" />
+                    <span class="font-bold text-brand-navy text-sm block">Fabric Physical Tests</span>
+                </div>
                 <p class="text-slate-500">Bursting strength for knits, tensile & tear strength for woven garments, seam slippage, and Martindale pilling resistance.</p>
-                <span class="text-brand-gold font-semibold block text-[11px]">Rating: Grade 3–4 after 2000 revs</span>
+                <span class="text-brand-gold-dark font-semibold block text-[11px]">Rating: Grade 3–4 after 2000 revs</span>
             </div>
 
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-                <span class="font-bold text-brand-navy text-sm block">Safety & Chemical Limits</span>
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
+                <div class="flex items-center gap-2">
+                    <x-textile-icon name="care-label" class="w-4 h-4 text-brand-gold-dark" />
+                    <span class="font-bold text-brand-navy text-sm block">Safety & Chemical Limits</span>
+                </div>
                 <p class="text-slate-500">OEKO-TEX 100 Class I/II limits: formaldehyde-free, azo dye-free, nickel-free metal snaps, lead-free zipper pulls, 9-point needle scan.</p>
-                <span class="text-brand-gold font-semibold block text-[11px]">Standard: 100% Calibrated Needle Scan</span>
+                <span class="text-brand-gold-dark font-semibold block text-[11px]">Standard: 100% Calibrated Needle Scan</span>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Partner Factory Accreditations (Slide 11) -->
-<section class="py-20 bg-white">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<section class="py-20 bg-white relative overflow-hidden">
+    <!-- Watermarks -->
+    <x-textile-watermark motif="cotton-boll" class="absolute -right-16 bottom-10 w-96 h-96 text-brand-gold/[0.035] pointer-events-none select-none" />
+    <x-textile-watermark motif="mannequin" class="absolute -left-16 top-10 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none" />
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span class="text-xs uppercase font-bold tracking-widest text-brand-gold">Global Compliance Standards</span>
             <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy mt-1">
@@ -200,9 +229,12 @@
         <!-- Detailed Breakdown of 8 Key Certifications -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center justify-between">
-                    <span class="font-bold text-brand-navy text-base">ACCORD / RSC</span>
+                    <span class="font-bold text-brand-navy text-base flex items-center gap-1.5">
+                        <x-textile-icon name="sewing-machine" class="w-4 h-4 text-brand-gold-dark" />
+                        <span>ACCORD / RSC</span>
+                    </span>
                     <span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[10px] font-bold rounded">Safety</span>
                 </div>
                 <p class="text-xs text-slate-600 leading-relaxed">
@@ -210,9 +242,12 @@
                 </p>
             </div>
 
-            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center justify-between">
-                    <span class="font-bold text-brand-navy text-base">WRAP</span>
+                    <span class="font-bold text-brand-navy text-base flex items-center gap-1.5">
+                        <x-textile-icon name="mannequin" class="w-4 h-4 text-brand-gold-dark" />
+                        <span>WRAP</span>
+                    </span>
                     <span class="px-2 py-0.5 bg-blue-100 text-blue-800 text-[10px] font-bold rounded">Social</span>
                 </div>
                 <p class="text-xs text-slate-600 leading-relaxed">
@@ -220,9 +255,12 @@
                 </p>
             </div>
 
-            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center justify-between">
-                    <span class="font-bold text-brand-navy text-base">Sedex SMETA</span>
+                    <span class="font-bold text-brand-navy text-base flex items-center gap-1.5">
+                        <x-textile-icon name="care-label" class="w-4 h-4 text-brand-gold-dark" />
+                        <span>Sedex SMETA</span>
+                    </span>
                     <span class="px-2 py-0.5 bg-purple-100 text-purple-800 text-[10px] font-bold rounded">Ethical</span>
                 </div>
                 <p class="text-xs text-slate-600 leading-relaxed">
@@ -230,9 +268,12 @@
                 </p>
             </div>
 
-            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center justify-between">
-                    <span class="font-bold text-brand-navy text-base">BSCI & C-TPAT</span>
+                    <span class="font-bold text-brand-navy text-base flex items-center gap-1.5">
+                        <x-textile-icon name="techpack" class="w-4 h-4 text-brand-gold-dark" />
+                        <span>BSCI & C-TPAT</span>
+                    </span>
                     <span class="px-2 py-0.5 bg-indigo-100 text-indigo-800 text-[10px] font-bold rounded">Security</span>
                 </div>
                 <p class="text-xs text-slate-600 leading-relaxed">
@@ -240,9 +281,12 @@
                 </p>
             </div>
 
-            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center justify-between">
-                    <span class="font-bold text-brand-navy text-base">OEKO-TEX 100</span>
+                    <span class="font-bold text-brand-navy text-base flex items-center gap-1.5">
+                        <x-textile-icon name="cotton-boll" class="w-4 h-4 text-brand-gold-dark" />
+                        <span>OEKO-TEX 100</span>
+                    </span>
                     <span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[10px] font-bold rounded">Eco</span>
                 </div>
                 <p class="text-xs text-slate-600 leading-relaxed">
@@ -250,9 +294,12 @@
                 </p>
             </div>
 
-            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center justify-between">
-                    <span class="font-bold text-brand-navy text-base">GOTS & GRS</span>
+                    <span class="font-bold text-brand-navy text-base flex items-center gap-1.5">
+                        <x-textile-icon name="fabric-roll" class="w-4 h-4 text-brand-gold-dark" />
+                        <span>GOTS & GRS</span>
+                    </span>
                     <span class="px-2 py-0.5 bg-teal-100 text-teal-800 text-[10px] font-bold rounded">Sustainable</span>
                 </div>
                 <p class="text-xs text-slate-600 leading-relaxed">
@@ -260,9 +307,12 @@
                 </p>
             </div>
 
-            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center justify-between">
-                    <span class="font-bold text-brand-navy text-base">Higg Index</span>
+                    <span class="font-bold text-brand-navy text-base flex items-center gap-1.5">
+                        <x-textile-icon name="measuring-tape" class="w-4 h-4 text-brand-gold-dark" />
+                        <span>Higg Index</span>
+                    </span>
                     <span class="px-2 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-bold rounded">Verification</span>
                 </div>
                 <p class="text-xs text-slate-600 leading-relaxed">
@@ -270,15 +320,22 @@
                 </p>
             </div>
 
-            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center justify-between">
-                    <span class="font-bold text-brand-navy text-base">ISO 9001 & 14001</span>
+                    <span class="font-bold text-brand-navy text-base flex items-center gap-1.5">
+                        <x-textile-icon name="shears" class="w-4 h-4 text-brand-gold-dark" />
+                        <span>ISO 9001 & 14001</span>
+                    </span>
                     <span class="px-2 py-0.5 bg-slate-100 text-slate-800 text-[10px] font-bold rounded">QMS</span>
                 </div>
                 <p class="text-xs text-slate-600 leading-relaxed">
                     Certified Quality Management and Environmental Management Systems delivering consistent process repeatability and waste reduction.
                 </p>
             </div>
+
+        </div>
+    </div>
+</section>
 
         </div>
     </div>

@@ -7,12 +7,10 @@
 <!-- Page Header (White & Off-White Blend with Watermarks) -->
 <section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 sm:py-20 text-slate-900 relative overflow-hidden border-b border-slate-200/80">
     <div class="absolute inset-0 opacity-25 pointer-events-none" style="background-image: radial-gradient(#c7972d 0.75px, transparent 0.75px); background-size: 24px 24px;"></div>
-    <!-- Watermark: Garment Hanger & Fashion Crest -->
-    <div class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4a2 2 0 10-2 2c1.5 0 2 .5 2 2v2L3.5 15.5A1.5 1.5 0 004.5 18h15a1.5 1.5 0 001-2.5L12 10"/>
-        </svg>
-    </div>
+    
+    <!-- Textile Watermarks -->
+    <x-textile-watermark motif="hanger" class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none" />
+    <x-textile-watermark motif="shears" class="absolute -left-12 -top-12 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="max-w-3xl">
@@ -30,12 +28,10 @@
 
 <!-- Product Category Filter & Portfolio Showcase (Alpine.js) (Off-White Blend with Watermark) -->
 <section class="py-20 bg-slate-50 relative overflow-hidden" x-data="{ activeTab: 'all' }">
-    <!-- Watermark: Fabric Loom Weave -->
-    <div class="absolute -left-16 bottom-10 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none">
-        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
-            <path d="M4 6h16M4 10h16M4 14h16M4 18h16M6 4v16M10 4v16M14 4v16M18 4v16"/>
-        </svg>
-    </div>
+    <!-- Watermarks: Textile Atelier Ambiance -->
+    <x-textile-watermark motif="weave" class="absolute -left-16 bottom-10 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none" />
+    <x-textile-watermark motif="fabric-roll" class="absolute -right-16 top-16 w-96 h-96 text-brand-gold/[0.035] pointer-events-none select-none" />
+    <x-textile-watermark motif="thread-spool" class="absolute right-1/3 -bottom-20 w-80 h-80 text-brand-navy/[0.02] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         
@@ -43,42 +39,50 @@
         <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
             <button @click="activeTab = 'all'" 
                     :class="activeTab === 'all' ? 'bg-brand-navy text-white shadow-md' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'"
-                    class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all">
-                All Categories
+                    class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all">
+                <x-textile-icon name="mannequin" class="w-3.5 h-3.5" />
+                <span>All Categories</span>
             </button>
             <button @click="activeTab = 'knit'" 
                     :class="activeTab === 'knit' ? 'bg-brand-navy text-white shadow-md' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'"
-                    class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all">
-                Knitwear
+                    class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all">
+                <x-textile-icon name="tshirt" class="w-3.5 h-3.5" />
+                <span>Knitwear</span>
             </button>
             <button @click="activeTab = 'woven'" 
                     :class="activeTab === 'woven' ? 'bg-brand-navy text-white shadow-md' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'"
-                    class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all">
-                Woven & Shirts
+                    class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all">
+                <x-textile-icon name="shirt" class="w-3.5 h-3.5" />
+                <span>Woven & Shirts</span>
             </button>
             <button @click="activeTab = 'sweater'" 
                     :class="activeTab === 'sweater' ? 'bg-brand-navy text-white shadow-md' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'"
-                    class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all">
-                Sweaters & Cardigans
+                    class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all">
+                <x-textile-icon name="sweater" class="w-3.5 h-3.5" />
+                <span>Sweaters & Cardigans</span>
             </button>
             <button @click="activeTab = 'denim'" 
                     :class="activeTab === 'denim' ? 'bg-brand-navy text-white shadow-md' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'"
-                    class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all">
-                Denim & Outerwear
+                    class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all">
+                <x-textile-icon name="denim-pocket" class="w-3.5 h-3.5" />
+                <span>Denim & Outerwear</span>
             </button>
             <button @click="activeTab = 'workwear'" 
                     :class="activeTab === 'workwear' ? 'bg-brand-navy text-white shadow-md' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'"
-                    class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all">
-                Workwear & Seasonal
+                    class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all">
+                <x-textile-icon name="jacket" class="w-3.5 h-3.5" />
+                <span>Workwear & Seasonal</span>
             </button>
         </div>
 
         <!-- Knitwear Detailed Section (Slide 7) -->
-        <div id="knit" x-show="activeTab === 'all' || activeTab === 'knit'" class="mb-16 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div id="knit" x-show="activeTab === 'all' || activeTab === 'knit'" class="mb-16 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm relative overflow-hidden">
+            <x-textile-watermark motif="cotton-boll" class="absolute -right-10 -bottom-10 w-72 h-72 text-brand-gold/[0.03] pointer-events-none select-none" />
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                 <div class="lg:col-span-5 space-y-4">
                     <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-gold/10 text-brand-gold-dark rounded-full text-xs font-bold uppercase tracking-wider">
-                        High Volume & Rapid Replenishment
+                        <x-textile-icon name="tshirt" class="w-3.5 h-3.5" />
+                        <span>High Volume & Rapid Replenishment</span>
                     </div>
                     <h2 class="text-3xl font-serif font-bold text-brand-navy">Knitwear Collection</h2>
                     <p class="text-sm text-slate-600 leading-relaxed">
@@ -91,29 +95,45 @@
                              class="w-full h-64 object-cover object-center">
                     </div>
 
-                    <button @click="rfqModalOpen = true; selectedCategory = 'Knitwear'" class="px-6 py-2.5 rounded-xl bg-brand-gold text-brand-navy font-bold uppercase tracking-wider text-xs hover:bg-brand-gold-light transition-all shadow">
-                        Request Knitwear Sourcing Quote &rarr;
+                    <button @click="rfqModalOpen = true; selectedCategory = 'Knitwear'" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-brand-gold text-brand-navy font-bold uppercase tracking-wider text-xs hover:bg-brand-gold-light transition-all shadow">
+                        <x-textile-icon name="tshirt" class="w-4 h-4" />
+                        <span>Request Knitwear Sourcing Quote &rarr;</span>
                     </button>
                 </div>
 
                 <div class="lg:col-span-7 space-y-4">
-                    <h3 class="text-base font-bold text-brand-navy border-b pb-2">Technical Specifications & Capabilities</h3>
+                    <h3 class="text-base font-bold text-brand-navy border-b pb-2 flex items-center justify-between">
+                        <span>Technical Specifications & Capabilities</span>
+                        <x-textile-icon name="techpack" class="w-4 h-4 text-brand-gold-dark" />
+                    </h3>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                         <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-1">Product Lines:</h4>
+                            <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <x-textile-icon name="hanger" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                                <span>Product Lines:</span>
+                            </h4>
                             <p class="text-slate-600">Basic & Fashion T-Shirts, Polo Shirts with Flat-Knit Collars, Pullover Hoodies, Zip Sweatshirts, Henley Tops, Tank Tops, Jogger Pants, Long Sleeve Tops.</p>
                         </div>
                         <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-1">Fabric Compositions:</h4>
+                            <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <x-textile-icon name="cotton-boll" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                                <span>Fabric Compositions:</span>
+                            </h4>
                             <p class="text-slate-600">100% Combed/Carded Cotton, CVC (60/40), TC (65/35), 95/5 Cotton Spandex, Viscose, Modal, Recycled Polyester (GRS), Organic Cotton (GOTS).</p>
                         </div>
                         <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-1">Fabric Weights (GSM):</h4>
+                            <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <x-textile-icon name="fabric-roll" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                                <span>Fabric Weights (GSM):</span>
+                            </h4>
                             <p class="text-slate-600">Single Jersey (130–220 GSM), Pique (180–240 GSM), Interlock (200–260 GSM), French Terry (240–320 GSM), Heavy Fleece (300–420 GSM).</p>
                         </div>
                         <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-1">Washes & Finishes:</h4>
+                            <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <x-textile-icon name="care-label" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                                <span>Washes & Finishes:</span>
+                            </h4>
                             <p class="text-slate-600">Enzyme bio-wash, Silicon softener, Acid wash, Pigment garment dye, Carbon peach finish, Anti-pilling, Moisture-wicking finish.</p>
                         </div>
                     </div>
@@ -127,11 +147,13 @@
         </div>
 
         <!-- Woven Detailed Section (Slide 7) -->
-        <div id="woven" x-show="activeTab === 'all' || activeTab === 'woven'" class="mb-16 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div id="woven" x-show="activeTab === 'all' || activeTab === 'woven'" class="mb-16 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm relative overflow-hidden">
+            <x-textile-watermark motif="shears" class="absolute -right-10 -bottom-10 w-72 h-72 text-brand-gold/[0.03] pointer-events-none select-none" />
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                 <div class="lg:col-span-5 space-y-4">
                     <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-gold/10 text-brand-gold-dark rounded-full text-xs font-bold uppercase tracking-wider">
-                        Tailored Precision & Durability
+                        <x-textile-icon name="shirt" class="w-3.5 h-3.5" />
+                        <span>Tailored Precision & Durability</span>
                     </div>
                     <h2 class="text-3xl font-serif font-bold text-brand-navy">Woven Garments</h2>
                     <p class="text-sm text-slate-600 leading-relaxed">
@@ -144,29 +166,45 @@
                              class="w-full h-64 object-cover object-center">
                     </div>
 
-                    <button @click="rfqModalOpen = true; selectedCategory = 'Woven'" class="px-6 py-2.5 rounded-xl bg-brand-gold text-brand-navy font-bold uppercase tracking-wider text-xs hover:bg-brand-gold-light transition-all shadow">
-                        Request Woven Sourcing Quote &rarr;
+                    <button @click="rfqModalOpen = true; selectedCategory = 'Woven'" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-brand-gold text-brand-navy font-bold uppercase tracking-wider text-xs hover:bg-brand-gold-light transition-all shadow">
+                        <x-textile-icon name="shirt" class="w-4 h-4" />
+                        <span>Request Woven Sourcing Quote &rarr;</span>
                     </button>
                 </div>
 
                 <div class="lg:col-span-7 space-y-4">
-                    <h3 class="text-base font-bold text-brand-navy border-b pb-2">Technical Specifications & Capabilities</h3>
+                    <h3 class="text-base font-bold text-brand-navy border-b pb-2 flex items-center justify-between">
+                        <span>Technical Specifications & Capabilities</span>
+                        <x-textile-icon name="sewing-machine" class="w-4 h-4 text-brand-gold-dark" />
+                    </h3>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                         <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-1">Product Lines:</h4>
+                            <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <x-textile-icon name="hanger" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                                <span>Product Lines:</span>
+                            </h4>
                             <p class="text-slate-600">Formal Dress Shirts, Casual Oxford Button-Downs, Chino Pants, Cargo Trousers, Bermuda Shorts, Work Trousers, Lightweight Beach Shirts.</p>
                         </div>
                         <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-1">Woven Fabric Base:</h4>
+                            <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <x-textile-icon name="weave" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                                <span>Woven Fabric Base:</span>
+                            </h4>
                             <p class="text-slate-600">100% Cotton Poplin, Oxford Weave, Cotton Twill, Cotton/Linen blends, Flannel yarn-dyed checks, Dobby structures, Stretch Twill (98/2).</p>
                         </div>
                         <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-1">Sewing & Stitching:</h4>
+                            <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <x-textile-icon name="needle-thread" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                                <span>Sewing & Stitching:</span>
+                            </h4>
                             <p class="text-slate-600">18–20 SPI dress shirt precision, clean french seams, reinforced pocket corners, non-iron taped seams, pearlized buttons.</p>
                         </div>
                         <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-1">Garment Finishes:</h4>
+                            <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <x-textile-icon name="care-label" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                                <span>Garment Finishes:</span>
+                            </h4>
                             <p class="text-slate-600">Garment enzyme wash, Vintage pigment wash, Wrinkle-resistant finish, Teflon water/stain repellent treatment.</p>
                         </div>
                     </div>
@@ -180,11 +218,13 @@
         </div>
 
         <!-- Sweaters Detailed Section (Slide 7) -->
-        <div id="sweater" x-show="activeTab === 'all' || activeTab === 'sweater'" class="mb-16 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div id="sweater" x-show="activeTab === 'all' || activeTab === 'sweater'" class="mb-16 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm relative overflow-hidden">
+            <x-textile-watermark motif="thread-spool" class="absolute -right-10 -bottom-10 w-72 h-72 text-brand-gold/[0.03] pointer-events-none select-none" />
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                 <div class="lg:col-span-5 space-y-4">
                     <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-gold/10 text-brand-gold-dark rounded-full text-xs font-bold uppercase tracking-wider">
-                        Fine to Heavy Gauge Knitting
+                        <x-textile-icon name="sweater" class="w-3.5 h-3.5" />
+                        <span>Fine to Heavy Gauge Knitting</span>
                     </div>
                     <h2 class="text-3xl font-serif font-bold text-brand-navy">Sweater Collection</h2>
                     <p class="text-sm text-slate-600 leading-relaxed">
@@ -197,29 +237,45 @@
                              class="w-full h-64 object-cover object-center">
                     </div>
 
-                    <button @click="rfqModalOpen = true; selectedCategory = 'Sweaters'" class="px-6 py-2.5 rounded-xl bg-brand-gold text-brand-navy font-bold uppercase tracking-wider text-xs hover:bg-brand-gold-light transition-all shadow">
-                        Request Sweater Sourcing Quote &rarr;
+                    <button @click="rfqModalOpen = true; selectedCategory = 'Sweaters'" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-brand-gold text-brand-navy font-bold uppercase tracking-wider text-xs hover:bg-brand-gold-light transition-all shadow">
+                        <x-textile-icon name="sweater" class="w-4 h-4" />
+                        <span>Request Sweater Sourcing Quote &rarr;</span>
                     </button>
                 </div>
 
                 <div class="lg:col-span-7 space-y-4">
-                    <h3 class="text-base font-bold text-brand-navy border-b pb-2">Technical Specifications & Capabilities</h3>
+                    <h3 class="text-base font-bold text-brand-navy border-b pb-2 flex items-center justify-between">
+                        <span>Technical Specifications & Capabilities</span>
+                        <x-textile-icon name="thread-spool" class="w-4 h-4 text-brand-gold-dark" />
+                    </h3>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                         <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-1">Product Lines:</h4>
+                            <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <x-textile-icon name="hanger" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                                <span>Product Lines:</span>
+                            </h4>
                             <p class="text-slate-600">Crewneck Pullovers, V-Neck Jumpers, Buttoned Cardigans, Knitted Vests, Turtlenecks, Cable Knits, Patterned Fair Isle Sweaters, Ponchos.</p>
                         </div>
                         <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-1">Knitting Gauges:</h4>
+                            <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <x-textile-icon name="measuring-tape" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                                <span>Knitting Gauges:</span>
+                            </h4>
                             <p class="text-slate-600">3GG, 5GG, 7GG (Chunky / Heavy knits), 12GG, 14GG (Fine gauge retail sweaters) on computerized Shima Seiki / Stoll machines.</p>
                         </div>
                         <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-1">Yarn Types:</h4>
+                            <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <x-textile-icon name="cotton-boll" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                                <span>Yarn Types:</span>
+                            </h4>
                             <p class="text-slate-600">100% Combed Cotton, Acrylic (Regular / Cashmilon), Cotton/Acrylic blends, Lambswool blends, Viscose/Nylon, Chenille, Bouclé yarns.</p>
                         </div>
                         <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-1">Stitch Structures:</h4>
+                            <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <x-textile-icon name="button" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                                <span>Stitch Structures:</span>
+                            </h4>
                             <p class="text-slate-600">Intarsia, Multi-color Jacquard, Cable stitch, Rib knit, Ottoman stitch, Rice stitch, Milano rib, Drop-needle styling.</p>
                         </div>
                     </div>
@@ -233,11 +289,13 @@
         </div>
 
         <!-- Denim & Outerwear -->
-        <div id="denim" x-show="activeTab === 'all' || activeTab === 'denim'" class="mb-16 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div id="denim" x-show="activeTab === 'all' || activeTab === 'denim'" class="mb-16 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm relative overflow-hidden">
+            <x-textile-watermark motif="fabric-roll" class="absolute -right-10 -bottom-10 w-72 h-72 text-brand-gold/[0.03] pointer-events-none select-none" />
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                 <div class="lg:col-span-5 space-y-4">
                     <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-gold/10 text-brand-gold-dark rounded-full text-xs font-bold uppercase tracking-wider">
-                        Specialized Laundry & Wet Processing
+                        <x-textile-icon name="denim-pocket" class="w-3.5 h-3.5" />
+                        <span>Specialized Laundry & Wet Processing</span>
                     </div>
                     <h2 class="text-3xl font-serif font-bold text-brand-navy">Denim & Outerwear</h2>
                     <p class="text-sm text-slate-600 leading-relaxed">
@@ -265,29 +323,45 @@
                         </div>
                     </div>
 
-                    <button @click="rfqModalOpen = true; selectedCategory = 'Denim'" class="px-6 py-2.5 rounded-xl bg-brand-gold text-brand-navy font-bold uppercase tracking-wider text-xs hover:bg-brand-gold-light transition-all shadow">
-                        Inquire Denim & Jackets &rarr;
+                    <button @click="rfqModalOpen = true; selectedCategory = 'Denim'" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-brand-gold text-brand-navy font-bold uppercase tracking-wider text-xs hover:bg-brand-gold-light transition-all shadow">
+                        <x-textile-icon name="denim-pocket" class="w-4 h-4" />
+                        <span>Inquire Denim & Jackets &rarr;</span>
                     </button>
                 </div>
 
                 <div class="lg:col-span-7 space-y-4">
-                    <h3 class="text-base font-bold text-brand-navy border-b pb-2">Denim Fits, Washes & Outerwear Construction</h3>
+                    <h3 class="text-base font-bold text-brand-navy border-b pb-2 flex items-center justify-between">
+                        <span>Denim Fits, Washes & Outerwear Construction</span>
+                        <x-textile-icon name="zipper" class="w-4 h-4 text-brand-gold-dark" />
+                    </h3>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                         <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-1">Denim Fits & Styles:</h4>
+                            <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <x-textile-icon name="hanger" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                                <span>Denim Fits & Styles:</span>
+                            </h4>
                             <p class="text-slate-600">Skinny, Slim, Regular, Relaxed, Wide-leg, Cargo denim, Mom jeans, Trucker denim jackets, Distressed denim shorts.</p>
                         </div>
                         <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-1">Wet & Dry Processing:</h4>
+                            <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <x-textile-icon name="care-label" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                                <span>Wet & Dry Processing:</span>
+                            </h4>
                             <p class="text-slate-600">Stone wash, Enzyme bleach, Hand scraping whiskers, Chevron effects, PP spray, 3D resin oven baking, Tinting, Laser patterning.</p>
                         </div>
                         <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-1">Outerwear Shells:</h4>
+                            <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <x-textile-icon name="jacket" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                                <span>Outerwear Shells:</span>
+                            </h4>
                             <p class="text-slate-600">Polyester micro-ripstop, Taslan nylon, Memory fabric, Sherpa fleece linings, TPU waterproof breathable membranes.</p>
                         </div>
                         <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-1">Hardware & Trims:</h4>
+                            <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <x-textile-icon name="button" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                                <span>Hardware & Trims:</span>
+                            </h4>
                             <p class="text-slate-600">Nickel-free antique brass shank buttons, YKK/SBS zippers, custom leather back patches, copper rivets.</p>
                         </div>
                     </div>
@@ -301,11 +375,13 @@
         </div>
 
         <!-- Workwear & Seasonal Collections -->
-        <div id="workwear" x-show="activeTab === 'all' || activeTab === 'workwear'" class="mb-16 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div id="workwear" x-show="activeTab === 'all' || activeTab === 'workwear'" class="mb-16 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm relative overflow-hidden">
+            <x-textile-watermark motif="sewing-machine" class="absolute -right-10 -bottom-10 w-72 h-72 text-brand-gold/[0.03] pointer-events-none select-none" />
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                 <div class="lg:col-span-5 space-y-4">
                     <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-gold/10 text-brand-gold-dark rounded-full text-xs font-bold uppercase tracking-wider">
-                        Workwear, Weekend & Seasonal
+                        <x-textile-icon name="jacket" class="w-3.5 h-3.5" />
+                        <span>Workwear, Weekend & Seasonal</span>
                     </div>
                     <h2 class="text-3xl font-serif font-bold text-brand-navy">Workwear & Uniforms</h2>
                     <p class="text-sm text-slate-600 leading-relaxed">
@@ -318,19 +394,26 @@
                              class="w-full h-64 object-cover object-center">
                     </div>
 
-                    <button @click="rfqModalOpen = true; selectedCategory = 'Workwear'" class="px-6 py-2.5 rounded-xl bg-brand-gold text-brand-navy font-bold uppercase tracking-wider text-xs hover:bg-brand-gold-light transition-all shadow">
-                        Inquire Workwear & Corporate Uniforms &rarr;
+                    <button @click="rfqModalOpen = true; selectedCategory = 'Workwear'" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-brand-gold text-brand-navy font-bold uppercase tracking-wider text-xs hover:bg-brand-gold-light transition-all shadow">
+                        <x-textile-icon name="jacket" class="w-4 h-4" />
+                        <span>Inquire Workwear & Corporate Uniforms &rarr;</span>
                     </button>
                 </div>
 
                 <div class="lg:col-span-7 space-y-4">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                         <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-1">Workwear Items:</h4>
+                            <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <x-textile-icon name="hanger" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                                <span>Workwear Items:</span>
+                            </h4>
                             <p class="text-slate-600">Heavy Twill Cargo Work Pants, Industrial Coveralls, High-Vis Reflective Vests (EN 20471), Medical Scrubs, Hospitality Aprons, Security Jackets.</p>
                         </div>
                         <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-1">Technical Finishes:</h4>
+                            <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <x-textile-icon name="care-label" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                                <span>Technical Finishes:</span>
+                            </h4>
                             <p class="text-slate-600">Flame-retardant (FR), Oil & water repellent (Teflon), Anti-static, High tensile tear strength, Triple needle felled seams.</p>
                         </div>
                     </div>
@@ -364,7 +447,10 @@
                 </thead>
                 <tbody class="divide-y divide-slate-100 bg-white">
                     <tr class="hover:bg-slate-50">
-                        <td class="py-4 px-6 font-bold text-brand-navy">Knitwear</td>
+                        <td class="py-4 px-6 font-bold text-brand-navy flex items-center gap-2">
+                            <x-textile-icon name="tshirt" class="w-4 h-4 text-brand-gold-dark" />
+                            <span>Knitwear</span>
+                        </td>
                         <td class="py-4 px-6">T-Shirts, Polos, Hoodies, Tanks, Joggers</td>
                         <td class="py-4 px-6">130–380 GSM Single Jersey, Pique, Fleece</td>
                         <td class="py-4 px-6 font-semibold text-slate-800">5–7 Days</td>
@@ -374,7 +460,10 @@
                         </td>
                     </tr>
                     <tr class="hover:bg-slate-50">
-                        <td class="py-4 px-6 font-bold text-brand-navy">Woven Garments</td>
+                        <td class="py-4 px-6 font-bold text-brand-navy flex items-center gap-2">
+                            <x-textile-icon name="shirt" class="w-4 h-4 text-brand-gold-dark" />
+                            <span>Woven Garments</span>
+                        </td>
                         <td class="py-4 px-6">Dress Shirts, Casual Shirts, Chinos, Cargo Pants</td>
                         <td class="py-4 px-6">Poplin, Oxford, Twill, Linen, Flannel</td>
                         <td class="py-4 px-6 font-semibold text-slate-800">7–10 Days</td>
@@ -384,7 +473,10 @@
                         </td>
                     </tr>
                     <tr class="hover:bg-slate-50">
-                        <td class="py-4 px-6 font-bold text-brand-navy">Sweaters & Cardigans</td>
+                        <td class="py-4 px-6 font-bold text-brand-navy flex items-center gap-2">
+                            <x-textile-icon name="sweater" class="w-4 h-4 text-brand-gold-dark" />
+                            <span>Sweaters & Cardigans</span>
+                        </td>
                         <td class="py-4 px-6">Pullovers, Vests, Cardigans, Turtlenecks</td>
                         <td class="py-4 px-6">3GG, 5GG, 7GG, 12GG, 14GG (Cotton, Acrylic, Wool)</td>
                         <td class="py-4 px-6 font-semibold text-slate-800">7–10 Days</td>
@@ -394,7 +486,10 @@
                         </td>
                     </tr>
                     <tr class="hover:bg-slate-50">
-                        <td class="py-4 px-6 font-bold text-brand-navy">Denim & Outerwear</td>
+                        <td class="py-4 px-6 font-bold text-brand-navy flex items-center gap-2">
+                            <x-textile-icon name="denim-pocket" class="w-4 h-4 text-brand-gold-dark" />
+                            <span>Denim & Outerwear</span>
+                        </td>
                         <td class="py-4 px-6">Jeans, Denim Jackets, Puffers, Parkas</td>
                         <td class="py-4 px-6">8.5–14.5 oz Denim, Micro-ripstop Nylon, Taslan</td>
                         <td class="py-4 px-6 font-semibold text-slate-800">10–14 Days (wash approval)</td>

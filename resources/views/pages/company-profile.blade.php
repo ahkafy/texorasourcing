@@ -5,13 +5,16 @@
 
 @section('content')
 <!-- Header Banner -->
-<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-12 text-slate-900 border-b border-slate-200/80">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-12 text-slate-900 border-b border-slate-200/80 relative overflow-hidden">
+    <x-textile-watermark motif="fabric-roll" class="absolute -right-16 -bottom-16 w-80 h-80 text-brand-gold/[0.04] pointer-events-none select-none" />
+    <x-textile-watermark motif="shears" class="absolute -left-12 -top-12 w-64 h-64 text-brand-navy/[0.025] pointer-events-none select-none" />
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div>
                 <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-brand-gold/30 text-xs uppercase font-bold tracking-widest text-brand-navy">
-                    <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
-                    Official Corporate Presentation
+                    <x-textile-icon name="techpack" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                    <span>Official Corporate Presentation</span>
                 </span>
                 <h1 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy mt-3">
                     Texora Sourcing Company Profile
@@ -21,8 +24,9 @@
                 </p>
             </div>
             <div class="flex items-center gap-3">
-                <button @click="rfqModalOpen = true" class="px-5 py-2.5 rounded-xl bg-brand-navy text-brand-gold font-bold uppercase tracking-wider text-xs hover:bg-brand-navy-light transition-all shadow-md">
-                    Request Sourcing Quote
+                <button @click="rfqModalOpen = true" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-navy text-brand-gold font-bold uppercase tracking-wider text-xs hover:bg-brand-navy-light transition-all shadow-md">
+                    <x-textile-icon name="techpack" class="w-4 h-4" />
+                    <span>Request Sourcing Quote</span>
                 </button>
             </div>
         </div>
@@ -109,24 +113,33 @@
 
         <!-- Quick Summary Cards from the Slides -->
         <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-                <span class="text-xs uppercase font-bold text-brand-gold">Leadership (Slide 12)</span>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
+                <div class="flex items-center gap-1.5 text-brand-gold font-bold text-xs uppercase">
+                    <x-textile-icon name="mannequin" class="w-4 h-4 text-brand-gold-dark" />
+                    <span>Leadership (Slide 12)</span>
+                </div>
                 <h3 class="text-lg font-serif font-bold text-brand-navy">Md. Ataul Hai, CEO</h3>
                 <p class="text-xs text-slate-600 leading-relaxed">
                     19+ years of hands-on technical understanding of garment manufacturing, bridging global buyers and local manufacturing excellence.
                 </p>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-                <span class="text-xs uppercase font-bold text-brand-gold">Capacity & QA (Slide 4 & 8)</span>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
+                <div class="flex items-center gap-1.5 text-brand-gold font-bold text-xs uppercase">
+                    <x-textile-icon name="magnifier-fabric" class="w-4 h-4 text-brand-gold-dark" />
+                    <span>Capacity & QA (Slide 4 & 8)</span>
+                </div>
                 <h3 class="text-lg font-serif font-bold text-brand-navy">34 Staff & 12 QCs</h3>
                 <p class="text-xs text-slate-600 leading-relaxed">
                     Complete in-house structure comprising Merchandising, Technical & Quality, and HR/Compliance with daily on-line quality circles.
                 </p>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-                <span class="text-xs uppercase font-bold text-brand-gold">Commercial Delivery (Slide 9)</span>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
+                <div class="flex items-center gap-1.5 text-brand-gold font-bold text-xs uppercase">
+                    <x-textile-icon name="fabric-roll" class="w-4 h-4 text-brand-gold-dark" />
+                    <span>Commercial Delivery (Slide 9)</span>
+                </div>
                 <h3 class="text-lg font-serif font-bold text-brand-navy">45 Days T/T • 60–90 Days L/C</h3>
                 <p class="text-xs text-slate-600 leading-relaxed">
                     Transparent, reliable delivery cycles backed by BRAC Bank PLC (SWIFT BRAKBDDH) and long-standing international retail trust.
