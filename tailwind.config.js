@@ -27,9 +27,10 @@ export default {
                 },
             },
             fontFamily: {
-                sans: ['"Plus Jakarta Sans"', 'Figtree', ...defaultTheme.fontFamily.sans],
-                serif: ['"Cinzel"', '"Cormorant Garamond"', '"Playfair Display"', 'Georgia', 'serif'],
-                display: ['"Cinzel"', 'serif'],
+                sans: ['"Inter"', ...defaultTheme.fontFamily.sans],
+                serif: ['"Inter"', ...defaultTheme.fontFamily.sans],
+                display: ['"Inter"', ...defaultTheme.fontFamily.sans],
+                mono: ['"Inter"', ...defaultTheme.fontFamily.sans],
             },
             boxShadow: {
                 'brand': '0 10px 30px -10px rgba(12, 38, 54, 0.15)',

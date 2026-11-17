@@ -4,23 +4,31 @@
 @section('meta_description', 'Contact Texora Sourcing corporate office in Uttara, Dhaka, Bangladesh. Inquire about apparel sourcing, book factory visits, or contact Managing Director & CEO Md. Ataul Hai on WhatsApp (+88 01711234725).')
 
 @section('content')
-<!-- Header Banner (White & Off-White Blend with Watermarks) -->
-<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 sm:py-20 text-slate-900 border-b border-slate-200/80 relative overflow-hidden">
+<!-- Header Banner (Full-Bleed Luxury Editorial Hero with Background Image) -->
+<section class="relative py-24 sm:py-28 bg-brand-navy text-white border-b border-brand-gold/30 overflow-hidden">
+    <!-- Full-Bleed Executive Consultation Lounge Background -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="{{ asset('images/luxury/executive-atelier-office.jpg') }}"
+             alt="Texora Sourcing Corporate Office Lounge Dhaka"
+             class="w-full h-full object-cover object-center opacity-35">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/85 to-brand-navy/60"></div>
+    </div>
+
     <!-- Textile Watermarks -->
-    <x-textile-watermark motif="fabric-roll" class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none" />
-    <x-textile-watermark motif="shears" class="absolute -left-12 -top-12 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none" />
+    <x-textile-watermark motif="fabric-roll" class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-gold/[0.06] pointer-events-none select-none z-0" />
+    <x-textile-watermark motif="shears" class="absolute -left-12 -top-12 w-80 h-80 text-white/[0.03] pointer-events-none select-none z-0" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="max-w-3xl">
-            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50/80 border border-brand-gold/30 text-xs uppercase font-bold tracking-[0.2em] text-brand-navy shadow-sm">
-                <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/30 backdrop-blur-md border border-brand-gold/40 text-xs uppercase font-bold tracking-[0.2em] text-brand-gold shadow-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse"></span>
                 Get In Touch
             </span>
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-navy mt-3">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4 tracking-tight">
                 Let's Build Your Next Collection Together
             </h1>
-            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mt-3 rounded-full"></div>
-            <p class="text-base text-slate-600 mt-3 leading-relaxed">
+            <div class="w-14 h-0.5 bg-gradient-to-r from-brand-gold via-amber-300 to-brand-gold mt-4 rounded-full"></div>
+            <p class="text-base sm:text-lg text-slate-200 mt-4 leading-relaxed">
                 Connect directly with our corporate office in Uttara, Dhaka. We provide rapid price quotations, sample development, and foreign buyer visit coordination.
             </p>
         </div>
@@ -117,12 +125,15 @@
                         </div>
                     </div>
 
-                    <!-- Partnership Handshake Image -->
+                    <!-- Luxury Atelier Showroom Image -->
                     <div class="pt-4 border-t border-slate-100 relative z-10">
-                        <div class="rounded-2xl overflow-hidden shadow-md">
-                            <img src="{{ asset('images/extracted/partnership-handshake.jpg') }}" 
-                                 alt="Partnership Handshake" 
-                                 class="w-full h-44 object-cover">
+                        <div class="relative rounded-2xl overflow-hidden shadow-lg group">
+                            <img src="{{ asset('images/luxury/atelier-showroom.jpg') }}" 
+                                 alt="Texora Sourcing Corporate Showroom Uttara Dhaka" 
+                                 class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/85 via-transparent to-transparent flex items-end p-4">
+                                <span class="text-xs font-semibold text-white">Uttara Sample Showroom & Consultation Lounge</span>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -15,10 +15,10 @@
     <meta property="og:description" content="Your strategic apparel sourcing partner in Dhaka, Bangladesh. End-to-end garment manufacturing from sample to shipment.">
     <meta property="og:image" content="{{ asset('images/logo.png') }}">
 
-    <!-- Google Fonts: Cinzel (Matching Texora Logo), Cormorant Garamond & Plus Jakarta Sans -->
+    <!-- Google Fonts: Inter (Primary Typography Across Entire Site) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..900;1,14..32,300..900&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
@@ -615,10 +615,15 @@
 
     <!-- Corporate Footer (Wide Container) -->
     <footer class="bg-brand-navy text-slate-300 border-t-4 border-brand-gold mt-auto relative overflow-hidden">
+        <!-- Subtle Tactile Fabric Background Texture -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <img src="{{ asset('images/luxury/fabric-swatches-macro.jpg') }}" alt="" aria-hidden="true" class="w-full h-full object-cover object-center opacity-[0.07]">
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-navy/90 via-brand-navy/95 to-brand-navy-dark"></div>
+        </div>
         <!-- Atelier Textile Watermarks (Subtle White/Gold for Dark Navy) -->
-        <x-textile-watermark motif="shears" class="absolute -right-16 -bottom-16 w-96 h-96 text-white/[0.025] pointer-events-none select-none" />
-        <x-textile-watermark motif="mannequin" class="absolute -left-16 top-10 w-96 h-96 text-brand-gold/[0.025] pointer-events-none select-none" />
-        <x-textile-watermark motif="sewing-machine" class="absolute left-1/3 -top-20 w-80 h-80 text-white/[0.015] pointer-events-none select-none" />
+        <x-textile-watermark motif="shears" class="absolute -right-16 -bottom-16 w-96 h-96 text-white/[0.025] pointer-events-none select-none z-0" />
+        <x-textile-watermark motif="mannequin" class="absolute -left-16 top-10 w-96 h-96 text-brand-gold/[0.025] pointer-events-none select-none z-0" />
+        <x-textile-watermark motif="sewing-machine" class="absolute left-1/3 -top-20 w-80 h-80 text-white/[0.015] pointer-events-none select-none z-0" />
 
         <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-16 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">

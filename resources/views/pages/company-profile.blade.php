@@ -4,27 +4,33 @@
 @section('meta_description', 'View and download the official company profile presentation of Texora Sourcing Bangladesh. Complete 13-slide overview covering manufacturing capabilities, leadership, quality assurance, and global retail clients.')
 
 @section('content')
-<!-- Header Banner -->
-<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-12 text-slate-900 border-b border-slate-200/80 relative overflow-hidden">
-    <x-textile-watermark motif="fabric-roll" class="absolute -right-16 -bottom-16 w-80 h-80 text-brand-gold/[0.04] pointer-events-none select-none" />
-    <x-textile-watermark motif="shears" class="absolute -left-12 -top-12 w-64 h-64 text-brand-navy/[0.025] pointer-events-none select-none" />
+<!-- Header Banner (Full-Bleed Luxury Editorial Hero) -->
+<section class="relative py-20 bg-brand-navy text-white border-b border-brand-gold/30 overflow-hidden">
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="{{ asset('images/luxury/atelier-showroom.jpg') }}"
+             alt="Texora Sourcing Company Profile"
+             class="w-full h-full object-cover object-center opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/70"></div>
+    </div>
+    <x-textile-watermark motif="fabric-roll" class="absolute -right-16 -bottom-16 w-80 h-80 text-brand-gold/[0.06] pointer-events-none select-none z-0" />
+    <x-textile-watermark motif="shears" class="absolute -left-12 -top-12 w-64 h-64 text-white/[0.03] pointer-events-none select-none z-0" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div>
-                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-brand-gold/30 text-xs uppercase font-bold tracking-widest text-brand-navy">
-                    <x-textile-icon name="techpack" class="w-3.5 h-3.5 text-brand-gold-dark" />
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/30 backdrop-blur-md border border-brand-gold/40 text-xs uppercase font-bold tracking-[0.2em] text-brand-gold">
+                    <x-textile-icon name="techpack" class="w-3.5 h-3.5 text-brand-gold" />
                     <span>Official Corporate Presentation</span>
                 </span>
-                <h1 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy mt-3">
+                <h1 class="text-3xl sm:text-4xl font-bold text-white mt-4 tracking-tight">
                     Texora Sourcing Company Profile
                 </h1>
-                <p class="text-sm text-slate-600 mt-2">
+                <p class="text-sm text-slate-200 mt-2">
                     Established 2015 • Dhaka, Bangladesh • Comprehensive 13-Slide Executive Sourcing Deck
                 </p>
             </div>
             <div class="flex items-center gap-3">
-                <button @click="rfqModalOpen = true" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-navy text-brand-gold font-bold uppercase tracking-wider text-xs hover:bg-brand-navy-light transition-all shadow-md">
+                <button @click="rfqModalOpen = true" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-amber-400 via-brand-gold to-amber-500 text-brand-navy font-bold uppercase tracking-wider text-xs hover:from-amber-300 hover:to-amber-400 transition-all shadow-lg">
                     <x-textile-icon name="techpack" class="w-4 h-4" />
                     <span>Request Sourcing Quote</span>
                 </button>

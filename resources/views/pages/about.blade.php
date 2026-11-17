@@ -4,22 +4,31 @@
 @section('meta_description', 'Learn about Texora Sourcing, founded in 2015 in Dhaka, Bangladesh. Led by Md. Ataul Hai with 19+ years of apparel experience and 34 in-house textile professionals.')
 
 @section('content')
-<!-- Page Header Banner (White & Off-White Blend with Watermark) -->
-<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 sm:py-20 text-slate-900 relative overflow-hidden border-b border-slate-200/80">
-    <div class="absolute inset-0 opacity-25 pointer-events-none" style="background-image: radial-gradient(#c7972d 0.75px, transparent 0.75px); background-size: 24px 24px;"></div>
-    
+<!-- Page Header Banner (Full-Bleed Luxury Editorial Hero with Background Image) -->
+<section class="relative py-24 sm:py-28 bg-brand-navy text-white overflow-hidden border-b border-brand-gold/30">
+    <!-- Full-Bleed Architectural Background -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="{{ asset('images/luxury/atelier-showroom.jpg') }}"
+             alt="Texora Sourcing Dhaka Fashion Atelier"
+             class="w-full h-full object-cover object-center opacity-35">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/85 to-brand-navy/65"></div>
+    </div>
+
     <!-- Textile Watermarks -->
-    <x-textile-watermark motif="mannequin" class="absolute -right-10 -bottom-10 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none" />
-    <x-textile-watermark motif="shears" class="absolute -left-12 -top-12 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none" />
+    <x-textile-watermark motif="mannequin" class="absolute -right-10 -bottom-10 w-96 h-96 text-brand-gold/[0.06] pointer-events-none select-none z-0" />
+    <x-textile-watermark motif="shears" class="absolute -left-12 -top-12 w-80 h-80 text-white/[0.03] pointer-events-none select-none z-0" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="max-w-3xl">
-            <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">About Texora Sourcing</span>
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-navy mt-1">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/30 backdrop-blur-md border border-brand-gold/40 text-xs uppercase font-bold tracking-[0.2em] text-brand-gold">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+                About Texora Sourcing
+            </span>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4 tracking-tight">
                 Your Trusted Global-Local Partner in Garment Sourcing
             </h1>
-            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mt-3 rounded-full"></div>
-            <p class="text-base text-slate-600 mt-3 leading-relaxed">
+            <div class="w-14 h-0.5 bg-gradient-to-r from-brand-gold via-amber-300 to-brand-gold mt-4 rounded-full"></div>
+            <p class="text-base sm:text-lg text-slate-200 mt-4 leading-relaxed">
                 Founded in 2015 in Dhaka, Bangladesh, Texora Sourcing has built a legacy of technical precision, strict compliance, and collaborative retail partnerships.
             </p>
         </div>
@@ -85,18 +94,32 @@
                 </div>
             </div>
 
-            <div class="lg:col-span-6">
-                <div class="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200">
-                    <img src="{{ asset('images/extracted/knitwear-fabrics.jpg') }}" 
-                         alt="Apparel Textiles Texora Sourcing" 
-                         class="w-full h-96 object-cover object-center">
+            <div class="lg:col-span-6 space-y-4">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 group">
+                    <img src="{{ asset('images/luxury/atelier-showroom.jpg') }}" 
+                         alt="Apparel Textiles Showroom Texora Sourcing" 
+                         class="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-700">
                     
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-8">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/20 to-transparent flex items-end p-8">
                         <div class="text-white">
-                            <blockquote class="font-serif italic text-base text-brand-gold-light">
+                            <blockquote class="italic text-base sm:text-lg font-medium text-brand-gold-light">
                                 "Our ultimate target is quality product and customer satisfaction!"
                             </blockquote>
                             <p class="text-xs text-slate-300 mt-1">Established 2015 • Dhaka, Bangladesh</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="relative rounded-2xl overflow-hidden h-36 border border-slate-200 shadow-md group">
+                        <img src="{{ asset('images/luxury/tailoring-craft.jpg') }}" alt="Tailoring Craftsmanship" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent flex items-end p-3.5">
+                            <span class="text-xs font-semibold text-white">Pattern & Craft Mastery</span>
+                        </div>
+                    </div>
+                    <div class="relative rounded-2xl overflow-hidden h-36 border border-slate-200 shadow-md group">
+                        <img src="{{ asset('images/luxury/modern-factory-floor.jpg') }}" alt="Compliant Partner Factories" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent flex items-end p-3.5">
+                            <span class="text-xs font-semibold text-white">Certified Production Units</span>
                         </div>
                     </div>
                 </div>
@@ -106,20 +129,28 @@
     </div>
 </section>
 
-<!-- Mission, Vision & Values (Off-White Blend Section with Watermarks) -->
-<section id="mission" class="py-20 bg-slate-50 border-t border-b border-slate-200/80 relative overflow-hidden">
+<!-- Mission, Vision & Values (Full-Bleed Dark Textile Luxury Backdrop) -->
+<section id="mission" class="py-24 bg-brand-navy border-t border-b border-brand-gold/30 relative overflow-hidden">
+    <!-- Full-Bleed Luxury Fabric Background -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="{{ asset('images/luxury/fabric-swatches-macro.jpg') }}"
+             alt="Luxury Apparel Textile Swatches"
+             class="w-full h-full object-cover object-center opacity-25">
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-navy/90 via-brand-navy/85 to-brand-navy/95"></div>
+    </div>
+
     <!-- Watermarks: Guiding Principles -->
-    <x-textile-watermark motif="weave" class="absolute -right-16 -top-16 w-96 h-96 text-brand-gold/[0.035] pointer-events-none select-none" />
-    <x-textile-watermark motif="thread-spool" class="absolute -left-12 -bottom-12 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none" />
+    <x-textile-watermark motif="weave" class="absolute -right-16 -top-16 w-96 h-96 text-brand-gold/[0.05] pointer-events-none select-none z-0" />
+    <x-textile-watermark motif="thread-spool" class="absolute -left-12 -bottom-12 w-80 h-80 text-white/[0.03] pointer-events-none select-none z-0" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">Guiding Principles</span>
-            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy mt-1">
+            <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold">Guiding Principles</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">
                 Mission, Vision & Core Values
             </h2>
-            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mx-auto mt-3 rounded-full"></div>
-            <p class="text-sm text-slate-600 mt-2">
+            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold via-amber-300 to-brand-gold mx-auto mt-3 rounded-full"></div>
+            <p class="text-sm text-slate-300 mt-3">
                 A culture grounded in trust, human dignity, and long-term sustainable partnership.
             </p>
         </div>
@@ -208,36 +239,42 @@
     <x-textile-watermark motif="shears" class="absolute -left-16 -top-16 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
-        <div class="bg-slate-50 rounded-3xl p-8 sm:p-12 text-slate-800 relative overflow-hidden shadow-md border-2 border-brand-gold/30">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="bg-brand-navy rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden shadow-2xl border border-brand-gold/40">
+            <div class="absolute inset-0 z-0 pointer-events-none">
+                <img src="{{ asset('images/luxury/executive-atelier-office.jpg') }}"
+                     alt="Executive Consultation Studio"
+                     class="w-full h-full object-cover object-center opacity-20">
+                <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/75"></div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
                 
                 <div class="lg:col-span-4 text-center lg:text-left space-y-4">
-                    <span class="text-xs uppercase font-bold tracking-widest text-brand-gold-dark">Executive Leadership</span>
-                    <div class="text-7xl font-serif font-bold text-brand-navy">19+</div>
-                    <div class="text-sm text-slate-600 font-medium">
+                    <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold">Executive Leadership</span>
+                    <div class="text-7xl font-bold text-white tracking-tight">19+</div>
+                    <div class="text-sm text-slate-300 font-medium">
                         Years of Hands-On Experience in Textiles and Apparel
                     </div>
-                    <div class="pt-4 border-t border-slate-200">
-                        <h3 class="text-2xl font-serif font-bold text-brand-navy">Md. Ataul Hai</h3>
-                        <p class="text-xs text-brand-gold-dark uppercase tracking-wider font-bold">Managing Director & CEO</p>
-                        <p class="text-xs text-slate-500 mt-1">Texora Sourcing Bangladesh</p>
+                    <div class="pt-4 border-t border-white/15">
+                        <h3 class="text-2xl font-bold text-white">Md. Ataul Hai</h3>
+                        <p class="text-xs text-brand-gold uppercase tracking-wider font-bold">Managing Director & CEO</p>
+                        <p class="text-xs text-slate-400 mt-1">Texora Sourcing Bangladesh</p>
                     </div>
                     <div class="pt-2">
-                        <a href="https://wa.me/8801711234725" target="_blank" class="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-600 hover:bg-emerald-500 rounded-xl text-xs font-bold text-white transition-colors shadow">
+                        <a href="https://wa.me/8801711234725" target="_blank" class="inline-flex items-center gap-1.5 px-4 py-2.5 bg-emerald-600 hover:bg-emerald-500 rounded-xl text-xs font-bold text-white transition-colors shadow-lg">
                             <x-textile-icon name="mannequin" class="w-3.5 h-3.5" />
                             <span>WhatsApp: +88 01711234725</span>
                         </a>
                     </div>
                 </div>
 
-                <div class="lg:col-span-8 bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-                    <blockquote class="text-xl sm:text-2xl font-serif italic text-brand-navy leading-relaxed">
+                <div class="lg:col-span-8 bg-white/10 backdrop-blur-xl p-8 sm:p-10 rounded-2xl border border-brand-gold/30 shadow-xl space-y-4">
+                    <blockquote class="text-xl sm:text-2xl font-semibold italic text-white leading-relaxed">
                         "My journey has been built on precision, partnership and a deep technical understanding of garment manufacturing."
                     </blockquote>
-                    <p class="text-sm text-slate-600 leading-relaxed">
+                    <p class="text-sm text-slate-200 leading-relaxed">
                         "At Texora Sourcing, we bridge the gap between global buyers and local manufacturing excellence. Apparel sourcing is not merely transactional; it is built on collaborative partnerships, uncompromised quality, strict compliance and reliable execution."
                     </p>
-                    <p class="text-sm text-slate-600 leading-relaxed">
+                    <p class="text-sm text-slate-200 leading-relaxed">
                         "Whether you are seeking high-quality knitwear, premium sweaters or comprehensive apparel solutions, we welcome you to partner with us and experience garment manufacturing delivered with integrity and excellence."
                     </p>
                 </div>
@@ -398,24 +435,33 @@
     </div>
 </section>
 
-<!-- Call to Action (Crisp White & Off-White) -->
-<section class="py-16 bg-white text-slate-800 text-center border-t border-slate-200 relative overflow-hidden">
+<!-- Call to Action (Full-Bleed Luxury Editorial Banner) -->
+<section class="relative py-20 bg-brand-navy text-white text-center border-t border-brand-gold/30 overflow-hidden">
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="{{ asset('images/luxury/global-retail-boutique.jpg') }}"
+             alt="Global Retail Fashion Partners"
+             class="w-full h-full object-cover object-center opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/85 to-brand-navy/80"></div>
+    </div>
     <!-- Watermarks -->
-    <x-textile-watermark motif="cotton-boll" class="absolute -left-12 -bottom-12 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none" />
-    <x-textile-watermark motif="sewing-machine" class="absolute -right-12 -top-12 w-80 h-80 text-brand-gold/[0.03] pointer-events-none select-none" />
+    <x-textile-watermark motif="cotton-boll" class="absolute -left-12 -bottom-12 w-80 h-80 text-white/[0.03] pointer-events-none select-none z-0" />
+    <x-textile-watermark motif="sewing-machine" class="absolute -right-12 -top-12 w-80 h-80 text-brand-gold/[0.05] pointer-events-none select-none z-0" />
 
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
-        <h2 class="text-3xl font-serif font-bold text-brand-navy">Partner with Our Dhaka Merchandising Team</h2>
-        <p class="text-slate-600 text-sm max-w-2xl mx-auto">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/30 backdrop-blur-md border border-brand-gold/40 text-xs uppercase font-bold tracking-[0.2em] text-brand-gold">
+            Start Your Sourcing Partnership
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Partner with Our Dhaka Merchandising Team</h2>
+        <p class="text-slate-200 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
             Whether you want to audit our partner factories in person or submit a test order for sampling, we are ready to assist.
         </p>
         <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <button @click="rfqModalOpen = true" class="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-brand-gold text-brand-navy font-bold text-xs uppercase tracking-wider hover:bg-brand-gold-light transition-all shadow-md">
+            <button @click="rfqModalOpen = true" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-brand-gold to-amber-500 text-brand-navy font-bold text-xs uppercase tracking-wider hover:from-amber-300 hover:to-amber-400 transition-all shadow-xl">
                 <x-textile-icon name="techpack" class="w-4 h-4" />
                 <span>Request a Sourcing Quote</span>
             </button>
-            <a href="{{ route('contact') }}#visit" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-100 text-brand-navy font-semibold text-xs border border-slate-200 hover:bg-slate-200 transition-all">
-                <x-textile-icon name="mannequin" class="w-4 h-4 text-brand-gold-dark" />
+            <a href="{{ route('contact') }}#visit" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/25 backdrop-blur-md transition-all">
+                <x-textile-icon name="mannequin" class="w-4 h-4 text-brand-gold" />
                 <span>Schedule Dhaka Factory Visit</span>
             </a>
         </div>

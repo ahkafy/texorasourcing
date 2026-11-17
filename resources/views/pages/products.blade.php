@@ -4,22 +4,31 @@
 @section('meta_description', 'Explore Texora Sourcing apparel product categories: Knitwear (T-Shirts, Polos, Hoodies), Woven (Shirts, Chinos, Denim, Outerwear), and Sweaters (Cardigans, Pullovers, Vests).')
 
 @section('content')
-<!-- Page Header (White & Off-White Blend with Watermarks) -->
-<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 sm:py-20 text-slate-900 relative overflow-hidden border-b border-slate-200/80">
-    <div class="absolute inset-0 opacity-25 pointer-events-none" style="background-image: radial-gradient(#c7972d 0.75px, transparent 0.75px); background-size: 24px 24px;"></div>
+<!-- Page Header (Full-Bleed Luxury Editorial Hero with Background Image) -->
+<section class="relative py-24 sm:py-28 bg-brand-navy text-white overflow-hidden border-b border-brand-gold/30">
+    <!-- Full-Bleed Macro Textile Background -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="{{ asset('images/luxury/fabric-swatches-macro.jpg') }}"
+             alt="Luxury Combed Cotton, Cashmere & Woven Apparel Fabrics"
+             class="w-full h-full object-cover object-center opacity-40">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/85 to-brand-navy/60"></div>
+    </div>
     
     <!-- Textile Watermarks -->
-    <x-textile-watermark motif="hanger" class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none" />
-    <x-textile-watermark motif="shears" class="absolute -left-12 -top-12 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none" />
+    <x-textile-watermark motif="hanger" class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-gold/[0.06] pointer-events-none select-none z-0" />
+    <x-textile-watermark motif="shears" class="absolute -left-12 -top-12 w-80 h-80 text-white/[0.03] pointer-events-none select-none z-0" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="max-w-3xl">
-            <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">Apparel Product Portfolio</span>
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-navy mt-1">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/30 backdrop-blur-md border border-brand-gold/40 text-xs uppercase font-bold tracking-[0.2em] text-brand-gold">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+                Apparel Product Portfolio
+            </span>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4 tracking-tight">
                 Precision Manufacturing Across Knit, Woven & Sweater
             </h1>
-            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mt-3 rounded-full"></div>
-            <p class="text-base text-slate-600 mt-3 leading-relaxed">
+            <div class="w-14 h-0.5 bg-gradient-to-r from-brand-gold via-amber-300 to-brand-gold mt-4 rounded-full"></div>
+            <p class="text-base sm:text-lg text-slate-200 mt-4 leading-relaxed">
                 From lightweight summer jerseys to heavy gauge winter knits and technical denim washes, we engineer apparel to your tech pack specifications.
             </p>
         </div>
@@ -504,16 +513,26 @@
     </div>
 </section>
 
-<!-- Bottom CTA (Off-White) -->
-<section class="py-16 bg-slate-50 text-slate-800 text-center border-t border-slate-200">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-        <h2 class="text-3xl font-serif font-bold text-brand-navy">Have a Specific Tech Pack or Garment Target?</h2>
-        <p class="text-slate-600 text-sm max-w-xl mx-auto">
+<!-- Bottom CTA (Full-Bleed Luxury Tailoring Banner) -->
+<section class="relative py-20 bg-brand-navy text-white text-center border-t border-brand-gold/30 overflow-hidden">
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="{{ asset('images/luxury/tailoring-craft.jpg') }}"
+             alt="Bespoke Garment Pattern Drafting & Tech Pack Development"
+             class="w-full h-full object-cover object-center opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/85 to-brand-navy/80"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 relative z-10">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/30 backdrop-blur-md border border-brand-gold/40 text-xs uppercase font-bold tracking-[0.2em] text-brand-gold">
+            Custom Development & OEM
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Have a Specific Tech Pack or Garment Target?</h2>
+        <p class="text-slate-200 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
             Our patternmakers and merchandising team in Uttara, Dhaka are ready to evaluate your CAD designs, bill of materials, and target cost.
         </p>
         <div class="pt-2">
-            <button @click="rfqModalOpen = true" class="px-8 py-3.5 rounded-xl bg-brand-gold text-brand-navy font-bold uppercase tracking-wider text-xs hover:bg-brand-gold-light transition-all shadow-md">
-                Submit Tech Pack for Costing
+            <button @click="rfqModalOpen = true" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-brand-gold to-amber-500 text-brand-navy font-bold uppercase tracking-wider text-xs hover:from-amber-300 hover:to-amber-400 transition-all shadow-xl">
+                <x-textile-icon name="techpack" class="w-4 h-4" />
+                <span>Submit Tech Pack for Costing</span>
             </button>
         </div>
     </div>

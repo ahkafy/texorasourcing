@@ -10,6 +10,10 @@
         slide: 0,
         slides: [
             {
+                img: '{{ asset('images/luxury/atelier-showroom.jpg') }}',
+                label: 'Dhaka Sourcing Atelier — Bespoke Apparel Solutions'
+            },
+            {
                 img: '{{ asset('images/categories/knitwear.jpg') }}',
                 label: 'Knitwear — T-Shirts, Polos & Hoodies'
             },
@@ -34,12 +38,13 @@
             setInterval(() => { this.slide = (this.slide + 1) % this.slides.length; }, 5000);
         }
     }"
-    class="relative min-h-[80vh] lg:min-h-[85vh] flex items-center justify-center overflow-hidden bg-brand-navy text-white"
+    class="relative min-h-[82vh] lg:min-h-[88vh] flex items-center justify-center overflow-hidden bg-brand-navy text-white"
 >
     <!-- Background Slides (Blade Pre-rendered with Alpine Transitions) -->
     <div class="absolute inset-0 z-0 pointer-events-none">
         @php
             $heroSlides = [
+                ['img' => asset('images/luxury/atelier-showroom.jpg'), 'label' => 'Dhaka Sourcing Atelier — Bespoke Apparel Solutions'],
                 ['img' => asset('images/categories/knitwear.jpg'), 'label' => 'Knitwear — T-Shirts, Polos & Hoodies'],
                 ['img' => asset('images/categories/woven.jpg'), 'label' => 'Woven — Shirts, Pants & Chinos'],
                 ['img' => asset('images/categories/sweater.jpg'), 'label' => 'Sweaters — Premium Knitwear'],
@@ -59,8 +64,8 @@
                 class="absolute inset-0"
                 @if ($idx > 0) style="display: none;" @endif
             >
-                <img src="{{ $s['img'] }}" alt="{{ $s['label'] }}" class="w-full h-full object-cover object-center" />
-                <div class="absolute inset-0 bg-brand-navy/65"></div>
+                <img src="{{ $s['img'] }}" alt="{{ $s['label'] }}" class="w-full h-full object-cover object-center scale-105 transition-transform duration-[6000ms]" />
+                <div class="absolute inset-0 bg-gradient-to-b from-brand-navy/75 via-brand-navy/55 to-brand-navy/85"></div>
             </div>
         @endforeach
     </div>
@@ -72,7 +77,7 @@
 
     <!-- Prev / Next Arrow Controls -->
     <button
-        @click="slide = (slide - 1 + 5) % 5"
+        @click="slide = (slide - 1 + slides.length) % slides.length"
         class="hidden sm:flex absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/30 hover:bg-brand-gold text-white hover:text-brand-navy backdrop-blur-md items-center justify-center transition-all duration-200 border border-white/20 shadow-xl"
         aria-label="Previous slide"
     >
@@ -81,7 +86,7 @@
         </svg>
     </button>
     <button
-        @click="slide = (slide + 1) % 5"
+        @click="slide = (slide + 1) % slides.length"
         class="hidden sm:flex absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/30 hover:bg-brand-gold text-white hover:text-brand-navy backdrop-blur-md items-center justify-center transition-all duration-200 border border-white/20 shadow-xl"
         aria-label="Next slide"
     >
@@ -309,34 +314,45 @@
 
         </div>
 
-        <!-- Banner: End-to-End Statement (Refined Ivory/White Card) -->
-        <div class="mt-12 bg-white rounded-3xl p-8 sm:p-10 text-slate-800 border-2 border-brand-gold/30 shadow-lg relative overflow-hidden">
-            <div class="absolute right-0 top-0 bottom-0 w-1/3 opacity-15 pointer-events-none">
-                <img src="{{ asset('images/extracted/knitwear-fabrics.jpg') }}" class="w-full h-full object-cover" alt="Fabrics">
-            </div>
-            <div class="relative z-10 max-w-2xl space-y-2">
-                <span class="text-brand-gold-dark text-xs font-bold uppercase tracking-widest">Introduction</span>
-                <h3 class="text-2xl font-serif font-bold text-brand-navy">Your End-to-End Sourcing Partner</h3>
-                <p class="text-sm text-slate-600 leading-relaxed">
+        <!-- Banner: End-to-End Statement (Luxury 2-Column Editorial Split Showcase) -->
+        <div class="mt-14 bg-white rounded-3xl overflow-hidden text-slate-800 border border-brand-gold/35 shadow-xl grid grid-cols-1 lg:grid-cols-12">
+            <div class="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-center space-y-4">
+                <span class="inline-flex items-center gap-2 text-brand-gold-dark text-xs font-bold uppercase tracking-[0.2em]">
+                    <span class="w-6 h-px bg-brand-gold"></span>
+                    Introduction
+                </span>
+                <h3 class="text-2xl sm:text-3xl font-bold text-brand-navy tracking-tight">Your End-to-End Sourcing Partner</h3>
+                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
                     "Digitization and automation are built into our processes for smarter decisions and faster response, while strong design sensibility and deep industry experience keep our products aligned with fast-changing consumer preferences."
                 </p>
-                <div class="flex flex-wrap items-center gap-2 pt-3">
-                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1 bg-slate-100 rounded-full text-xs font-semibold text-brand-navy border border-slate-200">
+                <div class="flex flex-wrap items-center gap-2.5 pt-2">
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-slate-50 rounded-full text-xs font-semibold text-brand-navy border border-slate-200">
                         <x-textile-icon name="tshirt" class="w-3.5 h-3.5 text-brand-gold-dark" />
                         Apparel
                     </span>
-                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1 bg-slate-100 rounded-full text-xs font-semibold text-brand-navy border border-slate-200">
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-slate-50 rounded-full text-xs font-semibold text-brand-navy border border-slate-200">
                         <x-textile-icon name="hanger" class="w-3.5 h-3.5 text-brand-gold-dark" />
                         Outerwear
                     </span>
-                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1 bg-slate-100 rounded-full text-xs font-semibold text-brand-navy border border-slate-200">
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-slate-50 rounded-full text-xs font-semibold text-brand-navy border border-slate-200">
                         <x-textile-icon name="button" class="w-3.5 h-3.5 text-brand-gold-dark" />
                         Accessories
                     </span>
-                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1 bg-slate-100 rounded-full text-xs font-semibold text-brand-navy border border-slate-200">
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-slate-50 rounded-full text-xs font-semibold text-brand-navy border border-slate-200">
                         <x-textile-icon name="weave" class="w-3.5 h-3.5 text-brand-gold-dark" />
                         Home Textiles
                     </span>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative min-h-[280px] lg:min-h-full overflow-hidden group">
+                <img src="{{ asset('images/luxury/atelier-showroom.jpg') }}"
+                     alt="Texora Sourcing Luxury Dhaka Atelier Showroom"
+                     class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-brand-navy/15 to-transparent flex items-end p-6">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-4 py-3 text-white w-full">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold block">Dhaka Buying Atelier</span>
+                        <span class="text-xs font-medium text-white/95">Curated Showroom, Live Patternmaking & Mill Sourcing</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -689,40 +705,79 @@
             </p>
         </div>
 
-        <!-- 3 Primary Milestones (Slide 10 with Textile & Fashion Icons) -->
+        <!-- 3 Primary Milestones (Slide 10 with Luxury Editorial Photography & Textile Icons) -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             
-            <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden group hover:border-brand-gold transition-colors">
-                <span class="text-5xl font-serif font-bold text-brand-gold/15 absolute top-4 right-6 group-hover:text-brand-gold/30 transition-colors">01</span>
-                <div class="w-12 h-12 rounded-2xl bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center mb-6 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
-                    <x-textile-icon name="sewing-machine" class="w-6 h-6" />
+            <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm relative group hover:border-brand-gold hover:shadow-xl transition-all duration-300 flex flex-col">
+                <div class="relative h-52 overflow-hidden bg-slate-100">
+                    <img src="{{ asset('images/luxury/modern-factory-floor.jpg') }}"
+                         alt="Compliant Modern Garment Factory Floor"
+                         class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-brand-navy/20 to-transparent"></div>
+                    <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-brand-navy/80 backdrop-blur-md border border-brand-gold/50 text-brand-gold font-bold text-sm flex items-center justify-center shadow-lg">
+                        01
+                    </div>
+                    <div class="absolute bottom-4 left-6 flex items-center gap-2.5">
+                        <div class="w-10 h-10 rounded-xl bg-brand-gold text-brand-navy flex items-center justify-center shadow-md">
+                            <x-textile-icon name="sewing-machine" class="w-5 h-5" />
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-white drop-shadow">Factory Vetting</span>
+                    </div>
                 </div>
-                <h3 class="text-xl font-serif font-bold text-brand-navy mb-3">Supplier Credibility</h3>
-                <p class="text-sm text-slate-600 leading-relaxed">
-                    We evaluate each factory's capacity and capability, plus environmental control, safety and labor practices, and confirm it can meet the buyer's schedule.
-                </p>
+                <div class="p-7 flex-grow">
+                    <h3 class="text-xl font-bold text-brand-navy mb-2.5">Supplier Credibility</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        We evaluate each factory's capacity and capability, plus environmental control, safety and labor practices, and confirm it can meet the buyer's schedule.
+                    </p>
+                </div>
             </div>
 
-            <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden group hover:border-brand-gold transition-colors">
-                <span class="text-5xl font-serif font-bold text-brand-gold/15 absolute top-4 right-6 group-hover:text-brand-gold/30 transition-colors">02</span>
-                <div class="w-12 h-12 rounded-2xl bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center mb-6 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
-                    <x-textile-icon name="fabric-roll" class="w-6 h-6" />
+            <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm relative group hover:border-brand-gold hover:shadow-xl transition-all duration-300 flex flex-col">
+                <div class="relative h-52 overflow-hidden bg-slate-100">
+                    <img src="{{ asset('images/luxury/fabric-swatches-macro.jpg') }}"
+                         alt="Luxury Combed Cotton, Cashmere & Twill Fabrics"
+                         class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-brand-navy/20 to-transparent"></div>
+                    <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-brand-navy/80 backdrop-blur-md border border-brand-gold/50 text-brand-gold font-bold text-sm flex items-center justify-center shadow-lg">
+                        02
+                    </div>
+                    <div class="absolute bottom-4 left-6 flex items-center gap-2.5">
+                        <div class="w-10 h-10 rounded-xl bg-brand-gold text-brand-navy flex items-center justify-center shadow-md">
+                            <x-textile-icon name="fabric-roll" class="w-5 h-5" />
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-white drop-shadow">Mill & Trim Control</span>
+                    </div>
                 </div>
-                <h3 class="text-xl font-serif font-bold text-brand-navy mb-3">Sourcing</h3>
-                <p class="text-sm text-slate-600 leading-relaxed">
-                    On order placement we check and control yarn, fabric, accessories and labels, coordinate procurement timing, and let buyers choose accessories and labels.
-                </p>
+                <div class="p-7 flex-grow">
+                    <h3 class="text-xl font-bold text-brand-navy mb-2.5">Material Sourcing</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        On order placement we check and control yarn, fabric, accessories and labels, coordinate procurement timing, and let buyers choose accessories and labels.
+                    </p>
+                </div>
             </div>
 
-            <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden group hover:border-brand-gold transition-colors">
-                <span class="text-5xl font-serif font-bold text-brand-gold/15 absolute top-4 right-6 group-hover:text-brand-gold/30 transition-colors">03</span>
-                <div class="w-12 h-12 rounded-2xl bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center mb-6 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
-                    <x-textile-icon name="hanger" class="w-6 h-6" />
+            <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm relative group hover:border-brand-gold hover:shadow-xl transition-all duration-300 flex flex-col">
+                <div class="relative h-52 overflow-hidden bg-slate-100">
+                    <img src="{{ asset('images/luxury/tailoring-craft.jpg') }}"
+                         alt="Bespoke Garment Pattern Drafting & Sampling"
+                         class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-brand-navy/20 to-transparent"></div>
+                    <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-brand-navy/80 backdrop-blur-md border border-brand-gold/50 text-brand-gold font-bold text-sm flex items-center justify-center shadow-lg">
+                        03
+                    </div>
+                    <div class="absolute bottom-4 left-6 flex items-center gap-2.5">
+                        <div class="w-10 h-10 rounded-xl bg-brand-gold text-brand-navy flex items-center justify-center shadow-md">
+                            <x-textile-icon name="hanger" class="w-5 h-5" />
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-white drop-shadow">Golden Sample Approval</span>
+                    </div>
                 </div>
-                <h3 class="text-xl font-serif font-bold text-brand-navy mb-3">Sampling</h3>
-                <p class="text-sm text-slate-600 leading-relaxed">
-                    Samples follow the buyer's design, fabric, weight, shrinkage and color fastness, and are approved before production begins.
-                </p>
+                <div class="p-7 flex-grow">
+                    <h3 class="text-xl font-bold text-brand-navy mb-2.5">Precision Sampling</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Samples follow the buyer's design, fabric, weight, shrinkage and color fastness, and are approved before production begins.
+                    </p>
+                </div>
             </div>
 
         </div>
@@ -786,18 +841,39 @@
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            <!-- Left: Sewing Machine Inspection Photo -->
-            <div class="lg:col-span-5 relative">
-                <div class="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200">
-                    <img src="{{ asset('images/extracted/quality-sewing-inspection.jpg') }}" 
-                         alt="Quality Assurance Sewing Inspection Texora Sourcing" 
-                         class="w-full h-96 object-cover object-center">
+            <!-- Left: Editorial Luxury QA Lab Composition -->
+            <div class="lg:col-span-5 relative space-y-4">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 group">
+                    <img src="{{ asset('images/luxury/quality-lab-inspection.jpg') }}" 
+                         alt="Quality Assurance Textile Laboratory Inspection Texora Sourcing" 
+                         class="w-full h-[420px] sm:h-[460px] object-cover object-center group-hover:scale-105 transition-transform duration-700">
                     
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-6">
-                        <div class="text-white">
-                            <span class="text-xs font-bold uppercase tracking-wider text-brand-gold">In-Line & Final Inspection</span>
-                            <h4 class="text-lg font-serif font-bold text-white">AQL 2.5 Workmanship Standards</h4>
-                            <p class="text-xs text-slate-200 mt-1">Daily in-line audits and full pre-shipment validation on behalf of foreign buyers.</p>
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/20 to-transparent flex items-end p-6 sm:p-8">
+                        <div class="text-white space-y-1">
+                            <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-brand-gold">
+                                <x-textile-icon name="magnifier-fabric" class="w-3.5 h-3.5" />
+                                In-Line & Final Inspection
+                            </span>
+                            <h4 class="text-xl font-bold text-white">AQL 2.5 Workmanship Standards</h4>
+                            <p class="text-xs text-slate-200 leading-relaxed">Daily in-line audits and full pre-shipment validation on behalf of international buyers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="relative rounded-2xl overflow-hidden h-32 border border-slate-200 shadow-md group">
+                        <img src="{{ asset('images/extracted/quality-sewing-inspection.jpg') }}"
+                             alt="In-Line Sewing Floor Audit"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent flex items-end p-3">
+                            <span class="text-[11px] font-semibold text-white">Sewing Line QC</span>
+                        </div>
+                    </div>
+                    <div class="relative rounded-2xl overflow-hidden h-32 border border-slate-200 shadow-md group">
+                        <img src="{{ asset('images/luxury/tailoring-craft.jpg') }}"
+                             alt="Precision Measurement & Pattern Check"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent flex items-end p-3">
+                            <span class="text-[11px] font-semibold text-white">Spec Tolerance Check</span>
                         </div>
                     </div>
                 </div>
@@ -912,145 +988,177 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <!-- Buyers Box (Slide 11 left) -->
-            <div class="lg:col-span-5 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-                <div class="border-b border-slate-100 pb-4">
-                    <span class="text-xs uppercase font-bold tracking-wider text-brand-gold-dark">Direct Experience</span>
-                    <h3 class="text-xl font-serif font-bold text-brand-navy mt-1">Current Retail Buyers</h3>
-                    <p class="text-xs text-slate-500 mt-1">Delivering seasonal collections to major department stores and fashion chains:</p>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            <!-- Buyers Box (Slide 11 left with Luxury Retail Boutique Visual) -->
+            <div class="lg:col-span-5 bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="relative h-44 overflow-hidden">
+                        <img src="{{ asset('images/luxury/global-retail-boutique.jpg') }}"
+                             alt="Global Retail Flagship Fashion Boutiques"
+                             class="w-full h-full object-cover object-center">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="text-[11px] uppercase font-bold tracking-[0.2em] text-brand-gold block">Direct Experience</span>
+                                <h3 class="text-xl font-bold text-white mt-0.5">Current Retail Buyers</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 sm:p-8 space-y-3">
+                        <p class="text-xs text-slate-500 pb-1">Delivering seasonal collections to major department stores and fashion chains:</p>
+
+                        <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
+                            <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
+                                <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
+                                YM INC
+                            </span>
+                            <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">🇨🇦 Canada</span>
+                        </div>
+
+                        <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
+                            <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
+                                <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
+                                ARDENE
+                            </span>
+                            <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">🇨🇦 Canada</span>
+                        </div>
+
+                        <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
+                            <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
+                                <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
+                                SUZY SHIER
+                            </span>
+                            <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">🇨🇦 Canada</span>
+                        </div>
+
+                        <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
+                            <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
+                                <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
+                                SUN ASIA
+                            </span>
+                            <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">🇧🇷 Brazil</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="space-y-3">
-                    <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
-                        <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
-                            <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
-                            YM INC
-                        </span>
-                        <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">🇨🇦 Canada</span>
-                    </div>
-
-                    <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
-                        <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
-                            <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
-                            ARDENE
-                        </span>
-                        <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">🇨🇦 Canada</span>
-                    </div>
-
-                    <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
-                        <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
-                            <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
-                            SUZY SHIER
-                        </span>
-                        <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">🇨🇦 Canada</span>
-                    </div>
-
-                    <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
-                        <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
-                            <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
-                            SUN ASIA
-                        </span>
-                        <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">🇧🇷 Brazil</span>
-                    </div>
-                </div>
-
-                <div class="pt-2 text-xs text-slate-500 italic">
+                <div class="px-6 sm:px-8 pb-6 text-xs text-slate-500 italic">
                     Also fulfilling volume inquiries for private label fashion brands across the United States, UK, and European Union.
                 </div>
             </div>
 
             <!-- Certifications Box (Slide 11 right) -->
-            <div class="lg:col-span-7 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-                <div>
-                    <span class="inline-flex items-center gap-1.5 text-xs uppercase font-bold tracking-wider text-brand-gold-dark">
-                        <x-textile-icon name="cotton-boll" class="w-4 h-4 text-emerald-600" />
-                        Compliance & Safety
-                    </span>
-                    <h3 class="text-xl font-serif font-bold text-brand-navy mt-1">Certified Partner Factories</h3>
-                    <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-                        We only allocate buyer orders to factories that have undergone thorough audits for structural integrity, electrical safety, fair labor practices, environmental emissions, and chemical restrictions.
-                    </p>
+            <div class="lg:col-span-7 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6 flex flex-col justify-between">
+                <div class="space-y-6">
+                    <div>
+                        <span class="inline-flex items-center gap-1.5 text-xs uppercase font-bold tracking-wider text-brand-gold-dark">
+                            <x-textile-icon name="cotton-boll" class="w-4 h-4 text-emerald-600" />
+                            Compliance & Safety
+                        </span>
+                        <h3 class="text-xl font-bold text-brand-navy mt-1">Certified Partner Factories</h3>
+                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                            We only allocate buyer orders to factories that have undergone thorough audits for structural integrity, electrical safety, fair labor practices, environmental emissions, and chemical restrictions.
+                        </p>
+                    </div>
+
+                    <!-- Extracted Certifications Image from Slide 11 -->
+                    <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-center justify-center">
+                        <img src="{{ asset('images/extracted/certifications-card-v2.png') }}" 
+                             alt="Certified Partner Factories Logos: Accord, RSC, WRAP, Sedex, Higg Index, ISO, OEKO-TEX, GOTS" 
+                             class="w-full max-h-36 object-contain">
+                    </div>
+
+                    <!-- Accreditation Badges -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-[11px] font-semibold text-slate-700">
+                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200/80">ACCORD / RSC</div>
+                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200/80">WRAP Gold/Platinum</div>
+                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200/80">Sedex SMETA 4-Pillar</div>
+                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200/80">BSCI Audited</div>
+                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200/80">OEKO-TEX Standard 100</div>
+                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200/80">GOTS Organic</div>
+                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200/80">GRS Recycled Standard</div>
+                        <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200/80">Higg Index FEM/FSLM</div>
+                    </div>
                 </div>
 
-                <!-- Extracted Certifications Image from Slide 11 -->
-                <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-center justify-center">
-                    <img src="{{ asset('images/extracted/certifications-card-v2.png') }}" 
-                         alt="Certified Partner Factories Logos: Accord, RSC, WRAP, Sedex, Higg Index, ISO, OEKO-TEX, GOTS" 
-                         class="w-full max-h-36 object-contain">
-                </div>
-
-                <!-- Accreditation Badges -->
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-[11px] font-semibold text-slate-700">
-                    <div class="p-2 bg-slate-50 rounded-lg border">ACCORD / RSC</div>
-                    <div class="p-2 bg-slate-50 rounded-lg border">WRAP Gold/Platinum</div>
-                    <div class="p-2 bg-slate-50 rounded-lg border">Sedex SMETA 4-Pillar</div>
-                    <div class="p-2 bg-slate-50 rounded-lg border">BSCI Audited</div>
-                    <div class="p-2 bg-slate-50 rounded-lg border">OEKO-TEX Standard 100</div>
-                    <div class="p-2 bg-slate-50 rounded-lg border">GOTS Organic</div>
-                    <div class="p-2 bg-slate-50 rounded-lg border">GRS Recycled Standard</div>
-                    <div class="p-2 bg-slate-50 rounded-lg border">Higg Index FEM/FSLM</div>
+                <!-- Factory Compliance Preview Strip -->
+                <div class="relative rounded-2xl overflow-hidden h-36 border border-slate-200 group">
+                    <img src="{{ asset('images/luxury/modern-factory-floor.jpg') }}"
+                         alt="Green Certified Compliant Factory Partners"
+                         class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-r from-brand-navy/85 via-brand-navy/50 to-transparent flex items-center p-6">
+                        <div class="max-w-md text-white">
+                            <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold block">100% Audited Network</span>
+                            <p class="text-sm font-semibold text-white mt-0.5">Modern, sunlit, eco-compliant production units verified for global retail standards.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Leadership Quote: Message from MD & CEO (Luminous Off-White & Ivory Section with Watermarks) -->
-<section class="py-20 sm:py-24 bg-white border-b border-slate-200/80 relative overflow-hidden">
+<!-- Leadership Quote: Message from MD & CEO (Full-Bleed Atmospheric Luxury Midnight-Navy Section) -->
+<section class="py-24 sm:py-28 bg-brand-navy text-white border-b border-brand-gold/30 relative overflow-hidden">
+    <!-- Full-Bleed Architectural Background Image -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="{{ asset('images/luxury/executive-atelier-office.jpg') }}"
+             alt="Texora Sourcing Executive Consultation Lounge"
+             class="w-full h-full object-cover object-center opacity-25">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/75"></div>
+    </div>
+
     <!-- Background Watermark: Shears, Mannequin & Needle Motifs -->
-    <x-textile-watermark motif="shears" class="absolute right-6 -bottom-10 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none" />
-    <x-textile-watermark motif="mannequin" class="hidden md:block absolute -left-12 -top-10 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none" />
-    <x-textile-watermark motif="needle-thread" class="hidden md:block absolute left-1/3 -bottom-12 w-64 h-64 text-brand-gold/[0.03] pointer-events-none select-none" />
+    <x-textile-watermark motif="shears" class="absolute right-6 -bottom-10 w-96 h-96 text-brand-gold/[0.06] pointer-events-none select-none z-0" />
+    <x-textile-watermark motif="mannequin" class="hidden md:block absolute -left-12 -top-10 w-80 h-80 text-white/[0.03] pointer-events-none select-none z-0" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
             <!-- Left: Stat & Bio -->
             <div class="lg:col-span-4 space-y-4">
-                <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">Leadership</span>
-                <div class="text-6xl font-serif font-bold text-brand-navy">19+</div>
-                <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 rounded-full"></div>
-                <div class="text-base text-slate-600 font-medium">
+                <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold">Executive Leadership</span>
+                <div class="text-6xl sm:text-7xl font-bold text-white tracking-tight">19+</div>
+                <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold via-amber-300 to-brand-gold rounded-full"></div>
+                <div class="text-base text-slate-300 font-medium leading-relaxed">
                     years of hands-on experience in textiles and apparel manufacturing.
                 </div>
                 
-                <div class="pt-4 border-t border-slate-200">
-                    <h3 class="text-xl font-serif font-bold text-brand-navy">Md. Ataul Hai</h3>
-                    <div class="text-xs text-brand-gold-dark uppercase tracking-wider font-semibold">Managing Director & CEO</div>
-                    <div class="text-xs text-slate-500 mt-1">Texora Sourcing Bangladesh</div>
+                <div class="pt-4 border-t border-white/15">
+                    <h3 class="text-xl font-bold text-white">Md. Ataul Hai</h3>
+                    <div class="text-xs text-brand-gold uppercase tracking-wider font-semibold mt-0.5">Managing Director & CEO</div>
+                    <div class="text-xs text-slate-400 mt-1">Texora Sourcing Bangladesh</div>
                 </div>
 
                 <div class="pt-2">
                     <a href="https://wa.me/8801711234725?text=Hello%20Mr.%20Md.%20Ataul%20Hai,%20I%20would%20like%20to%20discuss%20apparel%20sourcing." 
                        target="_blank"
-                       class="inline-flex items-center text-xs text-emerald-700 hover:text-emerald-600 font-bold">
+                       class="inline-flex items-center text-xs text-emerald-400 hover:text-emerald-300 font-bold">
                         Direct WhatsApp with MD: +88 01711234725 &rarr;
                     </a>
                 </div>
             </div>
 
-            <!-- Right: Statement Card (White Ivory Card with Gold Border) -->
-            <div class="lg:col-span-8 bg-slate-50 rounded-3xl p-8 sm:p-10 border-2 border-brand-gold/30 shadow-md space-y-5">
-                <blockquote class="text-lg sm:text-xl font-serif italic text-brand-navy leading-relaxed">
+            <!-- Right: Statement Card (Frosted Luxury Glass Card with Champagne Gold Border) -->
+            <div class="lg:col-span-8 bg-white/10 backdrop-blur-xl rounded-3xl p-8 sm:p-10 border border-brand-gold/40 shadow-2xl space-y-5">
+                <blockquote class="text-lg sm:text-2xl font-semibold italic text-white leading-relaxed">
                     "My journey has been built on precision, partnership and a deep technical understanding of garment manufacturing."
                 </blockquote>
 
-                <p class="text-sm text-slate-600 leading-relaxed">
+                <p class="text-sm text-slate-200 leading-relaxed">
                     At Texora Sourcing, we bridge the gap between global buyers and local manufacturing excellence. Apparel sourcing is not merely transactional; it is built on collaborative partnerships, uncompromised quality, strict compliance and reliable execution.
                 </p>
 
-                <p class="text-sm text-slate-600 leading-relaxed">
+                <p class="text-sm text-slate-200 leading-relaxed">
                     Whether you are seeking high-quality knitwear, premium sweaters or comprehensive apparel solutions, we welcome you to partner with us and experience garment manufacturing delivered with integrity and excellence.
                 </p>
 
                 <div class="pt-4 flex flex-wrap items-center gap-4">
-                    <a href="{{ route('about') }}" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-navy text-white font-bold text-xs uppercase tracking-wider hover:bg-brand-navy-light transition-colors shadow">
-                        <x-textile-icon name="mannequin" class="w-3.5 h-3.5 text-brand-gold" />
+                    <a href="{{ route('about') }}" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-amber-400 via-brand-gold to-amber-500 text-brand-navy font-bold text-xs uppercase tracking-wider hover:from-amber-300 hover:to-amber-400 transition-all shadow-lg">
+                        <x-textile-icon name="mannequin" class="w-3.5 h-3.5 text-brand-navy" />
                         <span>Learn More About Our Team & Mission</span>
                     </a>
-                    <a href="{{ route('contact') }}#visit" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-brand-navy font-semibold text-xs border border-slate-300 hover:bg-slate-100 transition-colors">
-                        <x-textile-icon name="sewing-machine" class="w-3.5 h-3.5 text-brand-navy" />
+                    <a href="{{ route('contact') }}#visit" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/25 backdrop-blur-md transition-colors">
+                        <x-textile-icon name="sewing-machine" class="w-3.5 h-3.5 text-brand-gold" />
                         <span>Plan a Factory Visit to Dhaka</span>
                     </a>
                 </div>
@@ -1077,6 +1185,25 @@
             <p class="text-sm text-slate-600 mt-2">
                 We know the value of time and keep our commitment. Full commercial terms designed for international trade security.
             </p>
+        </div>
+
+        <!-- Editorial Export Readiness Visual Strip -->
+        <div class="mb-10 relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 h-56 sm:h-64 group">
+            <img src="{{ asset('images/luxury/export-logistics-garments.jpg') }}"
+                 alt="Export-Ready Garments on Brass Rolling Racks"
+                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-navy/90 via-brand-navy/60 to-transparent flex items-center p-8 sm:p-12">
+                <div class="max-w-lg text-white space-y-2">
+                    <span class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-brand-gold">
+                        <span class="w-5 h-px bg-brand-gold"></span>
+                        Export Precision & Port Logistics
+                    </span>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">On-Time Container Dispatch Worldwide</h3>
+                    <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                        Pressed, poly-packed, needle-scanned, and dispatched directly from Chittagong Port or Dhaka Air Cargo with full FOB / CFR / CIF export compliance.
+                    </p>
+                </div>
+            </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1200,12 +1327,18 @@
                     </div>
                 </div>
 
-                <!-- Handshake Photo from Slide 13 -->
+                <!-- Luxury Consultation Lounge Photo -->
                 <div class="pt-4">
-                    <div class="rounded-3xl overflow-hidden border border-slate-200 shadow-md max-w-sm">
-                        <img src="{{ asset('images/extracted/partnership-handshake.jpg') }}" 
-                             alt="Partnership Handshake Texora Sourcing" 
-                             class="w-full h-44 object-cover">
+                    <div class="relative rounded-3xl overflow-hidden border border-slate-200 shadow-lg max-w-md group">
+                        <img src="{{ asset('images/luxury/executive-atelier-office.jpg') }}" 
+                             alt="Texora Sourcing Executive Consultation Lounge Dhaka" 
+                             class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/85 via-brand-navy/15 to-transparent flex items-end p-5">
+                            <div class="text-white">
+                                <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold block">Direct Merchandising Desk</span>
+                                <span class="text-xs font-medium text-white/95">24-Hour Costing, Fabric Sourcing & Sample Feasibility</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

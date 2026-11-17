@@ -4,23 +4,31 @@
 @section('meta_description', 'Discover how Texora Sourcing serves leading retail buyers across Canada (YM INC, Ardene, Suzy Shier), Brazil (Sun Asia), and worldwide with transparent 45-90 day lead times and bank credentials.')
 
 @section('content')
-<!-- Header Banner (White & Off-White Blend with Watermarks) -->
-<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 sm:py-20 text-slate-900 border-b border-slate-200/80 relative overflow-hidden">
+<!-- Header Banner (Full-Bleed Luxury Editorial Hero with Background Image) -->
+<section class="relative py-24 sm:py-28 bg-brand-navy text-white border-b border-brand-gold/30 overflow-hidden">
+    <!-- Full-Bleed International Flagship Boutique Background -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="{{ asset('images/luxury/global-retail-boutique.jpg') }}"
+             alt="Global Luxury Fashion Retail Flagship Store"
+             class="w-full h-full object-cover object-center opacity-35">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/85 to-brand-navy/60"></div>
+    </div>
+
     <!-- Textile Watermarks -->
-    <x-textile-watermark motif="fabric-roll" class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none" />
-    <x-textile-watermark motif="shears" class="absolute -left-12 -top-12 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none" />
+    <x-textile-watermark motif="fabric-roll" class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-gold/[0.06] pointer-events-none select-none z-0" />
+    <x-textile-watermark motif="shears" class="absolute -left-12 -top-12 w-80 h-80 text-white/[0.03] pointer-events-none select-none z-0" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="max-w-3xl">
-            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50/80 border border-brand-gold/30 text-xs uppercase font-bold tracking-[0.2em] text-brand-navy shadow-sm">
-                <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/30 backdrop-blur-md border border-brand-gold/40 text-xs uppercase font-bold tracking-[0.2em] text-brand-gold shadow-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse"></span>
                 Global Footprint & Commercial Policy
             </span>
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-navy mt-3">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4 tracking-tight">
                 Trusted by Global Retailers
             </h1>
-            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mt-3 rounded-full"></div>
-            <p class="text-base text-slate-600 mt-3 leading-relaxed">
+            <div class="w-14 h-0.5 bg-gradient-to-r from-brand-gold via-amber-300 to-brand-gold mt-4 rounded-full"></div>
+            <p class="text-base sm:text-lg text-slate-200 mt-4 leading-relaxed">
                 Discover our present retail buyers across North and South America, our "Minimum Price, Maximum Quality" business policy, and transparent commercial banking credentials.
             </p>
         </div>
@@ -146,6 +154,19 @@
                 <p class="text-xs text-slate-600 leading-relaxed">
                     By eliminating unnecessary intermediary layers, consolidating raw material yarn purchasing, and utilizing automated production cells in Dhaka, we pass direct margin savings back to our retail buyers.
                 </p>
+
+                <!-- Editorial Atelier Visual -->
+                <div class="relative rounded-3xl overflow-hidden h-56 shadow-lg border border-slate-200 group">
+                    <img src="{{ asset('images/luxury/atelier-showroom.jpg') }}"
+                         alt="Texora Sourcing Merchandising Showroom"
+                         class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/85 via-transparent to-transparent flex items-end p-5">
+                        <div class="text-white">
+                            <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold block">Direct Margin Advantage</span>
+                            <span class="text-xs font-medium text-white/95">Factory-Direct Costing with Full Technical Oversight</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- What You Gain 5 Pillars (Slide 9) -->
@@ -222,6 +243,20 @@
             <p class="text-sm text-slate-600 mt-2">
                 Clear, transparent payment modes and premier banking partners for complete financial reliability.
             </p>
+        </div>
+
+        <!-- Export Trade Logistics Visual Banner -->
+        <div class="max-w-4xl mx-auto mb-10 relative rounded-3xl overflow-hidden h-52 sm:h-60 shadow-xl border border-slate-200 group">
+            <img src="{{ asset('images/luxury/export-logistics-garments.jpg') }}"
+                 alt="Export Ready Apparel Shipments Worldwide"
+                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-navy/90 via-brand-navy/55 to-transparent flex items-center p-8">
+                <div class="max-w-md text-white space-y-1.5">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold block">International Trade Security</span>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white">Reliable L/C & Express T/T Export Fulfillment</h3>
+                    <p class="text-xs text-slate-200 leading-relaxed">Backed by BRAC Bank PLC. with seamless FOB Chittagong & Air Freight dispatch.</p>
+                </div>
+            </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -346,21 +381,28 @@
     </div>
 </section>
 
-<!-- Bottom CTA -->
-<section class="py-16 bg-white text-center border-t border-slate-200">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-brand-gold/30 text-xs uppercase font-bold tracking-widest text-brand-navy shadow-sm">
+<!-- Bottom CTA (Full-Bleed Luxury Executive Lounge Banner) -->
+<section class="relative py-20 bg-brand-navy text-white text-center border-t border-brand-gold/30 overflow-hidden">
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="{{ asset('images/luxury/executive-atelier-office.jpg') }}"
+             alt="Texora Sourcing Executive Consultation Lounge"
+             class="w-full h-full object-cover object-center opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/85 to-brand-navy/80"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 relative z-10">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/30 backdrop-blur-md border border-brand-gold/40 text-xs uppercase font-bold tracking-[0.2em] text-brand-gold shadow-sm">
             Commercial Partnership
         </span>
-        <h2 class="text-3xl font-serif font-bold text-brand-navy">Ready to Discuss Your Buying Program?</h2>
-        <p class="text-slate-600 text-sm max-w-xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Ready to Discuss Your Buying Program?</h2>
+        <p class="text-slate-200 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
             Connect directly with our Managing Director & CEO, Md. Ataul Hai, for commercial discussions, costing inquiries, or trial orders.
         </p>
         <div class="pt-2 flex flex-wrap items-center justify-center gap-4">
-            <button @click="rfqModalOpen = true" class="px-7 py-3 rounded-xl bg-brand-navy text-brand-gold font-bold uppercase tracking-wider text-xs hover:bg-brand-navy-light transition-all shadow-md">
-                Submit RFQ Inquiry
+            <button @click="rfqModalOpen = true" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-brand-gold to-amber-500 text-brand-navy font-bold uppercase tracking-wider text-xs hover:from-amber-300 hover:to-amber-400 transition-all shadow-xl">
+                <x-textile-icon name="techpack" class="w-4 h-4" />
+                <span>Submit RFQ Inquiry</span>
             </button>
-            <a href="https://wa.me/8801711234725" target="_blank" class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md">
+            <a href="https://wa.me/8801711234725" target="_blank" class="px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-xl">
                 Direct WhatsApp (+88 01711234725)
             </a>
         </div>

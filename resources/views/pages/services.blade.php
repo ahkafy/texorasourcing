@@ -4,29 +4,38 @@
 @section('meta_description', 'Discover Texora Sourcing eight pillars of customer satisfaction and our complete sourcing journey from sample development to factory inspection and on-time shipment.')
 
 @section('content')
-<!-- Header Banner (White & Off-White Blend with Watermarks) -->
-<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 sm:py-20 text-slate-900 relative overflow-hidden border-b border-slate-200/80">
-    <div class="absolute inset-0 opacity-25 pointer-events-none" style="background-image: radial-gradient(#c7972d 0.75px, transparent 0.75px); background-size: 24px 24px;"></div>
-    
+<!-- Header Banner (Full-Bleed Luxury Editorial Hero with Background Image) -->
+<section class="relative py-24 sm:py-28 bg-brand-navy text-white overflow-hidden border-b border-brand-gold/30">
+    <!-- Full-Bleed Architectural Background -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="{{ asset('images/luxury/modern-factory-floor.jpg') }}"
+             alt="Modern Compliant Apparel Manufacturing Floor"
+             class="w-full h-full object-cover object-center opacity-35">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/85 to-brand-navy/65"></div>
+    </div>
+
     <!-- Textile Atelier Watermarks -->
-    <x-textile-watermark motif="fabric-roll" class="absolute -right-12 -bottom-12 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none" />
-    <x-textile-watermark motif="sewing-machine" class="absolute -left-12 -top-12 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none" />
+    <x-textile-watermark motif="fabric-roll" class="absolute -right-12 -bottom-12 w-96 h-96 text-brand-gold/[0.06] pointer-events-none select-none z-0" />
+    <x-textile-watermark motif="sewing-machine" class="absolute -left-12 -top-12 w-80 h-80 text-white/[0.03] pointer-events-none select-none z-0" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="max-w-3xl">
-            <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">Our Services & Process</span>
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-navy mt-1">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/30 backdrop-blur-md border border-brand-gold/40 text-xs uppercase font-bold tracking-[0.2em] text-brand-gold">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+                Our Services & Process
+            </span>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-4 tracking-tight">
                 Customer Satisfaction Is Our Commitment
             </h1>
-            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mt-3 rounded-full"></div>
-            <p class="text-base text-slate-600 mt-3 leading-relaxed">
+            <div class="w-14 h-0.5 bg-gradient-to-r from-brand-gold via-amber-300 to-brand-gold mt-4 rounded-full"></div>
+            <p class="text-base sm:text-lg text-slate-200 mt-4 leading-relaxed">
                 Texora Sourcing welcomes all prospective buyers to visit and evaluate our service. Discover our 8 sourcing pillars and disciplined execution from sample to shipment.
             </p>
         </div>
     </div>
 </section>
 
-<!-- The 8 Pillars of Customer Satisfaction (Slide 6) (Crisp White with Watermark) -->
+<!-- The 8 Pillars of Customer Satisfaction (Slide 6) (Crisp White with Editorial Visuals) -->
 <section id="pillars" class="py-20 bg-white border-b border-slate-200/80 relative overflow-hidden">
     <!-- Watermarks: Multi-Motif Atelier Theme -->
     <x-textile-watermark motif="shears" class="absolute -right-16 top-10 w-96 h-96 text-brand-gold/[0.035] pointer-events-none select-none" />
@@ -34,15 +43,41 @@
     <x-textile-watermark motif="thread-spool" class="absolute left-1/2 -top-20 -translate-x-1/2 w-80 h-80 text-brand-gold/[0.025] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-12">
             <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">Service Excellence</span>
-            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy mt-1">
+            <h2 class="text-3xl sm:text-4xl font-bold text-brand-navy mt-1">
                 The 8 Core Sourcing Pillars
             </h2>
             <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mx-auto mt-3 rounded-full"></div>
             <p class="text-sm text-slate-600 mt-2">
                 Designed to deliver complete transparency, rapid communication, and zero-defect bulk execution for global retailers.
             </p>
+        </div>
+
+        <!-- Editorial Dual Photo Gallery Banner -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-12">
+            <div class="md:col-span-7 relative rounded-3xl overflow-hidden h-64 sm:h-72 shadow-lg border border-slate-200 group">
+                <img src="{{ asset('images/luxury/atelier-showroom.jpg') }}"
+                     alt="Apparel Development & Merchandising Atelier"
+                     class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-brand-navy/20 to-transparent flex items-end p-6">
+                    <div class="text-white">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold block">Merchandising & Development</span>
+                        <p class="text-sm sm:text-base font-semibold">Dedicated account merchandisers managing every tech pack and colorway.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:col-span-5 relative rounded-3xl overflow-hidden h-64 sm:h-72 shadow-lg border border-slate-200 group">
+                <img src="{{ asset('images/luxury/tailoring-craft.jpg') }}"
+                     alt="Bespoke Pattern Drafting and Sample Craftsmanship"
+                     class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-brand-navy/20 to-transparent flex items-end p-6">
+                    <div class="text-white">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold block">Technical Mastery</span>
+                        <p class="text-sm sm:text-base font-semibold">Precision pattern cutting and fit engineering before bulk launch.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -180,38 +215,46 @@
             </p>
         </div>
 
-        <div class="space-y-8 relative before:absolute before:inset-0 before:left-8 sm:before:left-1/2 before:w-0.5 before:bg-brand-gold/30">
+        <div class="space-y-10 relative before:absolute before:inset-0 before:left-8 sm:before:left-1/2 before:w-0.5 before:bg-brand-gold/30">
             
             <!-- Step 1 -->
-            <div class="relative flex flex-col sm:flex-row items-center">
-                <div class="flex items-center justify-start w-full sm:w-1/2 sm:pr-8 pl-16 sm:pl-0">
-                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
+            <div class="relative flex flex-col sm:flex-row items-center gap-6 sm:gap-0">
+                <div class="flex items-center justify-start w-full sm:w-1/2 sm:pr-10 pl-16 sm:pl-0">
+                    <div class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
                         <div class="flex items-center gap-2 mb-1">
                             <x-textile-icon name="sewing-machine" class="w-4 h-4 text-brand-gold-dark" />
                             <span class="text-xs font-bold uppercase tracking-wider text-brand-gold-dark">Milestone 01</span>
                         </div>
-                        <h3 class="text-lg font-serif font-bold text-brand-navy mt-1">Factory Matching & Due Diligence</h3>
-                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                        <h3 class="text-lg font-bold text-brand-navy mt-1">Factory Matching & Due Diligence</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
                             We evaluate each partner factory's capacity, needle lines, environmental control, electrical safety, and labor practices to confirm fit for the buyer's schedule.
                         </p>
                     </div>
                 </div>
-                <div class="absolute left-8 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-brand-navy border-4 border-brand-gold text-white font-bold text-xs flex items-center justify-center">1</div>
-                <div class="hidden sm:block w-1/2"></div>
+                <div class="absolute left-8 sm:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-brand-navy border-4 border-brand-gold text-white font-bold text-xs flex items-center justify-center shadow-md z-10">1</div>
+                <div class="w-full sm:w-1/2 sm:pl-10 pl-16">
+                    <div class="rounded-3xl overflow-hidden h-48 sm:h-52 border border-slate-200 shadow-md group">
+                        <img src="{{ asset('images/luxury/modern-factory-floor.jpg') }}" alt="Factory Floor Due Diligence" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
             </div>
 
             <!-- Step 2 -->
-            <div class="relative flex flex-col sm:flex-row items-center">
-                <div class="hidden sm:block w-1/2"></div>
-                <div class="absolute left-8 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-brand-navy border-4 border-brand-gold text-white font-bold text-xs flex items-center justify-center">2</div>
-                <div class="flex items-center justify-start w-full sm:w-1/2 sm:pl-8 pl-16">
-                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
+            <div class="relative flex flex-col sm:flex-row items-center gap-6 sm:gap-0">
+                <div class="w-full sm:w-1/2 sm:pr-10 pl-16 sm:pl-0 order-2 sm:order-1">
+                    <div class="rounded-3xl overflow-hidden h-48 sm:h-52 border border-slate-200 shadow-md group">
+                        <img src="{{ asset('images/luxury/fabric-swatches-macro.jpg') }}" alt="Luxury Fabric and Trim Sourcing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="absolute left-8 sm:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-brand-navy border-4 border-brand-gold text-white font-bold text-xs flex items-center justify-center shadow-md z-10">2</div>
+                <div class="flex items-center justify-start w-full sm:w-1/2 sm:pl-10 pl-16 order-1 sm:order-2">
+                    <div class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
                         <div class="flex items-center gap-2 mb-1">
                             <x-textile-icon name="fabric-roll" class="w-4 h-4 text-brand-gold-dark" />
                             <span class="text-xs font-bold uppercase tracking-wider text-brand-gold-dark">Milestone 02</span>
                         </div>
-                        <h3 class="text-lg font-serif font-bold text-brand-navy mt-1">Fabric & Trim Sourcing</h3>
-                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                        <h3 class="text-lg font-bold text-brand-navy mt-1">Fabric & Trim Sourcing</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
                             On order placement, we check and control yarn quality, knit/woven greige fabric, dyes, labels, zippers, and packaging trims from certified local or imported sources.
                         </p>
                     </div>
@@ -219,35 +262,43 @@
             </div>
 
             <!-- Step 3 -->
-            <div class="relative flex flex-col sm:flex-row items-center">
-                <div class="flex items-center justify-start w-full sm:w-1/2 sm:pr-8 pl-16 sm:pl-0">
-                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
+            <div class="relative flex flex-col sm:flex-row items-center gap-6 sm:gap-0">
+                <div class="flex items-center justify-start w-full sm:w-1/2 sm:pr-10 pl-16 sm:pl-0">
+                    <div class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
                         <div class="flex items-center gap-2 mb-1">
                             <x-textile-icon name="shears" class="w-4 h-4 text-brand-gold-dark" />
                             <span class="text-xs font-bold uppercase tracking-wider text-brand-gold-dark">Milestone 03</span>
                         </div>
-                        <h3 class="text-lg font-serif font-bold text-brand-navy mt-1">Proto & Pre-Production (PP) Sampling</h3>
-                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                        <h3 class="text-lg font-bold text-brand-navy mt-1">Proto & Pre-Production (PP) Sampling</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
                             Samples follow the buyer's CAD design, fabric GSM, shrinkage allowance, and color fastness. Bulk cutting starts ONLY after buyer approved "Golden Sample".
                         </p>
                     </div>
                 </div>
-                <div class="absolute left-8 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-brand-navy border-4 border-brand-gold text-white font-bold text-xs flex items-center justify-center">3</div>
-                <div class="hidden sm:block w-1/2"></div>
+                <div class="absolute left-8 sm:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-brand-navy border-4 border-brand-gold text-white font-bold text-xs flex items-center justify-center shadow-md z-10">3</div>
+                <div class="w-full sm:w-1/2 sm:pl-10 pl-16">
+                    <div class="rounded-3xl overflow-hidden h-48 sm:h-52 border border-slate-200 shadow-md group">
+                        <img src="{{ asset('images/luxury/tailoring-craft.jpg') }}" alt="Proto and Pre-Production Sampling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
             </div>
 
             <!-- Step 4 -->
-            <div class="relative flex flex-col sm:flex-row items-center">
-                <div class="hidden sm:block w-1/2"></div>
-                <div class="absolute left-8 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-brand-navy border-4 border-brand-gold text-white font-bold text-xs flex items-center justify-center">4</div>
-                <div class="flex items-center justify-start w-full sm:w-1/2 sm:pl-8 pl-16">
-                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
+            <div class="relative flex flex-col sm:flex-row items-center gap-6 sm:gap-0">
+                <div class="w-full sm:w-1/2 sm:pr-10 pl-16 sm:pl-0 order-2 sm:order-1">
+                    <div class="rounded-3xl overflow-hidden h-48 sm:h-52 border border-slate-200 shadow-md group">
+                        <img src="{{ asset('images/luxury/quality-lab-inspection.jpg') }}" alt="Bulk Production In-Line QC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+                <div class="absolute left-8 sm:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-brand-navy border-4 border-brand-gold text-white font-bold text-xs flex items-center justify-center shadow-md z-10">4</div>
+                <div class="flex items-center justify-start w-full sm:w-1/2 sm:pl-10 pl-16 order-1 sm:order-2">
+                    <div class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
                         <div class="flex items-center gap-2 mb-1">
                             <x-textile-icon name="measuring-tape" class="w-4 h-4 text-brand-gold-dark" />
                             <span class="text-xs font-bold uppercase tracking-wider text-brand-gold-dark">Milestone 04</span>
                         </div>
-                        <h3 class="text-lg font-serif font-bold text-brand-navy mt-1">Bulk Production & In-Line QC</h3>
-                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                        <h3 class="text-lg font-bold text-brand-navy mt-1">Bulk Production & In-Line QC</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
                             Continuous in-line inspections by our 12 QC specialists. Quality Control Circles monitor needle points, stitch SPI, measurements, and seam strength daily.
                         </p>
                     </div>
@@ -255,21 +306,25 @@
             </div>
 
             <!-- Step 5 -->
-            <div class="relative flex flex-col sm:flex-row items-center">
-                <div class="flex items-center justify-start w-full sm:w-1/2 sm:pr-8 pl-16 sm:pl-0">
-                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
+            <div class="relative flex flex-col sm:flex-row items-center gap-6 sm:gap-0">
+                <div class="flex items-center justify-start w-full sm:w-1/2 sm:pr-10 pl-16 sm:pl-0">
+                    <div class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
                         <div class="flex items-center gap-2 mb-1">
                             <x-textile-icon name="magnifier-fabric" class="w-4 h-4 text-brand-gold-dark" />
                             <span class="text-xs font-bold uppercase tracking-wider text-brand-gold-dark">Milestone 05</span>
                         </div>
-                        <h3 class="text-lg font-serif font-bold text-brand-navy mt-1">Final AQL 2.5 Inspection & Shipment</h3>
-                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                        <h3 class="text-lg font-bold text-brand-navy mt-1">Final AQL 2.5 Inspection & Shipment</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
                             Comprehensive random sampling according to international AQL 2.5 level II standard. Needle detection, barcode verification, carton packing, and port logistics.
                         </p>
                     </div>
                 </div>
-                <div class="absolute left-8 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-brand-navy border-4 border-brand-gold text-white font-bold text-xs flex items-center justify-center">5</div>
-                <div class="hidden sm:block w-1/2"></div>
+                <div class="absolute left-8 sm:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-brand-navy border-4 border-brand-gold text-white font-bold text-xs flex items-center justify-center shadow-md z-10">5</div>
+                <div class="w-full sm:w-1/2 sm:pl-10 pl-16">
+                    <div class="rounded-3xl overflow-hidden h-48 sm:h-52 border border-slate-200 shadow-md group">
+                        <img src="{{ asset('images/luxury/export-logistics-garments.jpg') }}" alt="Final AQL Inspection and Global Shipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -340,7 +395,15 @@
                     </div>
                 </div>
 
-                <div class="lg:col-span-5">
+                <div class="lg:col-span-5 space-y-5">
+                    <div class="relative rounded-3xl overflow-hidden h-52 shadow-lg border border-slate-200 group">
+                        <img src="{{ asset('images/luxury/executive-atelier-office.jpg') }}"
+                             alt="Texora Sourcing Executive Lounge Uttara Dhaka"
+                             class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/85 via-transparent to-transparent flex items-end p-5">
+                            <span class="text-xs font-semibold text-white">Executive Sample Review & Consultation Lounge</span>
+                        </div>
+                    </div>
                     <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4 text-xs text-slate-700">
                         <h4 class="font-bold text-brand-navy uppercase tracking-wider text-sm border-b pb-2 flex items-center justify-between">
                             <span>Dhaka Office Logistics</span>
