@@ -1,7 +1,7 @@
 @extends('layouts.public')
 
-@section('title', 'Global Retail Buyers & Commercial Terms | Texora Sourcing')
-@section('meta_description', 'Discover how Texora Sourcing serves leading retail buyers across Canada (YM INC, Ardene, Suzy Shier), Brazil (Sun Asia), and worldwide with transparent 45-90 day lead times and bank credentials.')
+@section('title', 'Global Retail Markets & Commercial Terms | Texora Sourcing')
+@section('meta_description', 'Discover how Texora Sourcing serves international retail buyers across North America, Europe, and Latin America with transparent 45-90 day lead times and tier-1 bank credentials.')
 
 @section('content')
 <!-- Header Banner (Full-Bleed Luxury Editorial Hero with Background Image) -->
@@ -29,13 +29,13 @@
             </h1>
             <div class="w-14 h-0.5 bg-gradient-to-r from-brand-gold via-amber-300 to-brand-gold mt-4 rounded-full"></div>
             <p class="text-base sm:text-lg text-slate-200 mt-4 leading-relaxed">
-                Discover our present retail buyers across North and South America, our "Minimum Price, Maximum Quality" business policy, and transparent commercial banking credentials.
+                Discover our global export markets across North America, Europe, and Latin America, our "Minimum Price, Maximum Quality" business policy, and transparent commercial banking credentials.
             </p>
         </div>
     </div>
 </section>
 
-<!-- Current Retail Partners (Slide 11) (Crisp White with Watermark) -->
+<!-- Global Export Markets & Retail Channels (Crisp White with Watermark) -->
 <section class="py-20 bg-white relative overflow-hidden">
     <!-- Watermarks: Multi-Motif Atelier Theme -->
     <x-textile-watermark motif="mannequin" class="absolute -left-16 bottom-10 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none" />
@@ -43,90 +43,96 @@
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold">Retail Partnerships</span>
-            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy mt-1">
-                Present International Retailers
+            <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold">Global Market Footprint</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-brand-navy mt-1">
+                International Retail Segments We Serve
             </h2>
             <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mx-auto mt-3 rounded-full"></div>
             <p class="text-sm text-slate-600 mt-2">
-                Delivering high-volume seasonal collections, fast-fashion replenishment, and staple basics to prominent international fashion chains.
+                Delivering high-volume seasonal collections, fast-fashion replenishment, and staple basics to prominent international retail chains under strict buyer confidentiality.
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            <!-- Buyer 1: YM INC -->
+            <!-- Segment 1 -->
             <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
-                        <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Major Fashion Retailer</span>
-                        <span class="text-xs font-semibold px-2.5 py-1 bg-white rounded-md border text-slate-700">🇨🇦 Canada</span>
+                        <span class="text-xs font-bold text-brand-gold-dark uppercase tracking-wider">Department Stores</span>
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-white rounded-md border text-slate-700">North America</span>
                     </div>
-                    <h3 class="text-2xl font-serif font-bold text-brand-navy group-hover:text-brand-gold transition-colors">YM INC</h3>
+                    <h3 class="text-xl font-bold text-brand-navy group-hover:text-brand-gold-dark transition-colors">Major Fashion Retailers</h3>
                     <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                        One of North America's leading apparel retail powerhouses operating hundreds of stores with diverse private label fashion divisions.
+                        Partnering with leading North American apparel retail powerhouses operating multi-store networks with diverse private label fashion divisions.
                     </p>
                 </div>
                 <div class="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-600 flex items-center gap-1.5 font-medium">
                     <x-textile-icon name="tshirt" class="w-4 h-4 text-brand-gold-dark" />
-                    <span>Sourcing: Knitwear, Tops & Outerwear</span>
+                    <span>Sourcing: Knitwear, Tops &amp; Outerwear</span>
                 </div>
             </div>
 
-            <!-- Buyer 2: ARDENE -->
+            <!-- Segment 2 -->
             <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
-                        <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Fast-Fashion Chain</span>
-                        <span class="text-xs font-semibold px-2.5 py-1 bg-white rounded-md border text-slate-700">🇨🇦 Canada</span>
+                        <span class="text-xs font-bold text-brand-gold-dark uppercase tracking-wider">Omnichannel Chains</span>
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-white rounded-md border text-slate-700">Canada &amp; USA</span>
                     </div>
-                    <h3 class="text-2xl font-serif font-bold text-brand-navy group-hover:text-brand-gold transition-colors">ARDENE</h3>
+                    <h3 class="text-xl font-bold text-brand-navy group-hover:text-brand-gold-dark transition-colors">Fast-Fashion &amp; Basics</h3>
                     <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                        Fast-growing Canadian omnichannel retailer known for trendy, youthful apparel, casualwear essentials, and seasonal collections.
+                        Supporting fast-growing omnichannel apparel brands known for trend-responsive casualwear essentials, loungewear, and seasonal drops.
                     </p>
                 </div>
                 <div class="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-600 flex items-center gap-1.5 font-medium">
                     <x-textile-icon name="sweater" class="w-4 h-4 text-brand-gold-dark" />
-                    <span>Sourcing: Knit Basics, Sweaters & Loungewear</span>
+                    <span>Sourcing: Knit Basics, Sweaters &amp; Lounge</span>
                 </div>
             </div>
 
-            <!-- Buyer 3: SUZY SHIER -->
+            <!-- Segment 3 -->
             <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
-                        <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Womenswear Brand</span>
-                        <span class="text-xs font-semibold px-2.5 py-1 bg-white rounded-md border text-slate-700">🇨🇦 Canada</span>
+                        <span class="text-xs font-bold text-brand-gold-dark uppercase tracking-wider">Specialty Brands</span>
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-white rounded-md border text-slate-700">Europe &amp; UK</span>
                     </div>
-                    <h3 class="text-2xl font-serif font-bold text-brand-navy group-hover:text-brand-gold transition-colors">SUZY SHIER</h3>
+                    <h3 class="text-xl font-bold text-brand-navy group-hover:text-brand-gold-dark transition-colors">Womenswear &amp; Tailored</h3>
                     <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                        Iconic Canadian women's fashion destination catering to modern working women with tailored woven separates, blouses, and refined knits.
+                        Engineering refined woven separates, tailored blouses, and fine-gauge knits for modern womenswear and contemporary fashion houses.
                     </p>
                 </div>
                 <div class="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-600 flex items-center gap-1.5 font-medium">
                     <x-textile-icon name="shirt" class="w-4 h-4 text-brand-gold-dark" />
-                    <span>Sourcing: Blouses, Sweaters & Woven Separates</span>
+                    <span>Sourcing: Blouses, Sweaters &amp; Separates</span>
                 </div>
             </div>
 
-            <!-- Buyer 4: SUN ASIA -->
+            <!-- Segment 4 -->
             <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
-                        <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Latin America Distribution</span>
-                        <span class="text-xs font-semibold px-2.5 py-1 bg-white rounded-md border text-slate-700">🇧🇷 Brazil</span>
+                        <span class="text-xs font-bold text-brand-gold-dark uppercase tracking-wider">Volume Importers</span>
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-white rounded-md border text-slate-700">Brazil &amp; LATAM</span>
                     </div>
-                    <h3 class="text-2xl font-serif font-bold text-brand-navy group-hover:text-brand-gold transition-colors">SUN ASIA</h3>
+                    <h3 class="text-xl font-bold text-brand-navy group-hover:text-brand-gold-dark transition-colors">Latin America Distribution</h3>
                     <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                        Major South American importer and apparel distributor supplying multi-store retail channels across Brazil and Latin America.
+                        Supplying established South American apparel importers and wholesalers serving multi-store retail channels across Brazil and Latin America.
                     </p>
                 </div>
                 <div class="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-600 flex items-center gap-1.5 font-medium">
                     <x-textile-icon name="denim-pocket" class="w-4 h-4 text-brand-gold-dark" />
-                    <span>Sourcing: Denim, Casual Polos & Seasonal Knits</span>
+                    <span>Sourcing: Denim, Polos &amp; Seasonal Knits</span>
                 </div>
             </div>
 
+        </div>
+
+        <div class="mt-8 text-center">
+            <p class="text-xs text-slate-500 italic">
+                Out of respect for our clients' commercial privacy and NDA commitments, individual retailer names are not disclosed publicly. Verified references are available during private consultations.
+            </p>
         </div>
     </div>
 </section>

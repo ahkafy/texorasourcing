@@ -985,7 +985,7 @@
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-            <!-- Buyers Box (Slide 11 left with Luxury Retail Boutique Visual) -->
+            <!-- Export Markets Box (Confidential Retail Footprint with Luxury Boutique Visual) -->
             <div class="lg:col-span-5 bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between">
                 <div>
                     <div class="relative h-44 overflow-hidden">
@@ -994,51 +994,51 @@
                              class="w-full h-full object-cover object-center">
                         <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent flex items-end p-6">
                             <div>
-                                <span class="text-[11px] uppercase font-bold tracking-[0.2em] text-brand-gold block">Direct Experience</span>
-                                <h3 class="text-xl font-bold text-white mt-0.5">Current Retail Buyers</h3>
+                                <span class="text-[11px] uppercase font-bold tracking-[0.2em] text-brand-gold block">Global Export Footprint</span>
+                                <h3 class="text-xl font-bold text-white mt-0.5">Markets &amp; Retail Channels</h3>
                             </div>
                         </div>
                     </div>
 
                     <div class="p-6 sm:p-8 space-y-3">
-                        <p class="text-xs text-slate-500 pb-1">Delivering seasonal collections to major department stores and fashion chains:</p>
+                        <p class="text-xs text-slate-500 pb-1">Delivering seasonal collections to major department stores, private-label brands, and fashion chains:</p>
 
                         <div class="flex items-center justify-between p-3.5 rounded-lg bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
-                            <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
+                            <span class="font-bold text-sm text-brand-navy inline-flex items-center gap-2">
                                 <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
-                                YM INC
+                                Major Fashion Retailers
                             </span>
-                            <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">🇨🇦 Canada</span>
+                            <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">Canada &amp; USA</span>
                         </div>
 
                         <div class="flex items-center justify-between p-3.5 rounded-lg bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
-                            <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
+                            <span class="font-bold text-sm text-brand-navy inline-flex items-center gap-2">
                                 <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
-                                ARDENE
+                                Omnichannel &amp; Fast-Fashion
                             </span>
-                            <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">🇨🇦 Canada</span>
+                            <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">North America</span>
                         </div>
 
                         <div class="flex items-center justify-between p-3.5 rounded-lg bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
-                            <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
+                            <span class="font-bold text-sm text-brand-navy inline-flex items-center gap-2">
                                 <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
-                                SUZY SHIER
+                                Womenswear &amp; Private Label
                             </span>
-                            <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">🇨🇦 Canada</span>
+                            <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">UK &amp; Europe</span>
                         </div>
 
                         <div class="flex items-center justify-between p-3.5 rounded-lg bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
-                            <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
+                            <span class="font-bold text-sm text-brand-navy inline-flex items-center gap-2">
                                 <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
-                                SUN ASIA
+                                Multi-Store Distribution
                             </span>
-                            <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">🇧🇷 Brazil</span>
+                            <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">Brazil &amp; LATAM</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="px-6 sm:px-8 pb-6 text-xs text-slate-500 italic">
-                    Also fulfilling volume inquiries for private label fashion brands across the United States, UK, and European Union.
+                    Client brand names are safeguarded under strict NDAs. Verified buyer references are available privately upon request.
                 </div>
             </div>
 
@@ -1365,7 +1365,7 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Brand / Company Name</label>
-                                <input type="text" name="company_name" placeholder="e.g. Nord Apparel, Montreal" 
+                                <input type="text" name="company_name" placeholder="e.g. Your Brand or Company Name" 
                                        class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-gold focus:border-brand-gold">
                             </div>
                             <div>

@@ -1,7 +1,7 @@
 @extends('layouts.public')
 
 @section('title', 'Official Company Profile Presentation | Texora Sourcing')
-@section('meta_description', 'View and download the official company profile presentation of Texora Sourcing Bangladesh. Complete 13-slide overview covering manufacturing capabilities, leadership, quality assurance, and global retail clients.')
+@section('meta_description', 'View and download the official company profile presentation of Texora Sourcing Bangladesh. Complete executive overview covering manufacturing capabilities, leadership, quality assurance, and global sourcing operations.')
 
 @section('content')
 <!-- Header Banner (Full-Bleed Luxury Editorial Hero) -->
@@ -26,7 +26,7 @@
                     Texora Sourcing Company Profile
                 </h1>
                 <p class="text-sm text-slate-200 mt-2">
-                    Established 2015 • Dhaka, Bangladesh • Comprehensive 13-Slide Executive Sourcing Deck
+                    Established 2015 • Dhaka, Bangladesh • Executive Sourcing Profile Presentation
                 </p>
             </div>
             <div class="flex items-center gap-3">
@@ -43,7 +43,7 @@
 <section class="py-16 bg-slate-100" 
          x-data="{ 
             currentSlide: 1, 
-            totalSlides: 13,
+            totalSlides: 12,
             slides: [
                 { id: 1, title: 'Company Profile Cover', file: 'slide-01-cover.jpg', desc: 'Your ultimate buying and sourcing destination in Bangladesh.' },
                 { id: 2, title: 'Your End-to-End Sourcing Partner', file: 'slide-02-introduction.jpg', desc: 'Digitization, automation, and full-spectrum manufacturing platform.' },
@@ -55,9 +55,8 @@
                 { id: 8, title: 'Quality Assurance System', file: 'slide-08-quality-assurance.jpg', desc: 'Quality you can rely on: 5-pillar QA framework.' },
                 { id: 9, title: 'Business Policy & Lead Times', file: 'slide-09-business-policy.jpg', desc: 'Minimum price, maximum quality: 45 days T/T, 60/90 days L/C.' },
                 { id: 10, title: 'From Sample to Shipment', file: 'slide-10-sample-to-shipment.jpg', desc: 'Supplier credibility, material sourcing, and sampling approval.' },
-                { id: 11, title: 'Clients & Factory Certifications', file: 'slide-11-clients-certifications.jpg', desc: 'YM INC, Ardene, Suzy Shier, Sun Asia and global accreditations.' },
-                { id: 12, title: 'Message from Managing Director & CEO', file: 'slide-12-leadership-ceo.jpg', desc: 'Md. Ataul Hai with 19+ years apparel manufacturing leadership.' },
-                { id: 13, title: 'Thank You & Corporate Office', file: 'slide-13-thank-you-contact.jpg', desc: 'Let\'s build your next collection together in Uttara, Dhaka.' }
+                { id: 11, title: 'Message from Managing Director & CEO', file: 'slide-12-leadership-ceo.jpg', desc: 'Md. Ataul Hai with 19+ years apparel manufacturing leadership.' },
+                { id: 12, title: 'Thank You & Corporate Office', file: 'slide-13-thank-you-contact.jpg', desc: 'Let\'s build your next collection together in Uttara, Dhaka.' }
             ]
          }">
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">

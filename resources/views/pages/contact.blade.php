@@ -215,7 +215,7 @@
                             </div>
                             <div>
                                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Brand / Company Name</label>
-                                <input type="text" name="company_name" placeholder="e.g. Montreal Apparel Co." 
+                                <input type="text" name="company_name" placeholder="e.g. Your Brand or Company Name" 
                                        class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-gold focus:border-brand-gold">
                             </div>
                         </div>

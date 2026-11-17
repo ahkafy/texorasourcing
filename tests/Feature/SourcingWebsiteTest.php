@@ -29,6 +29,11 @@ class SourcingWebsiteTest extends TestCase
         foreach ($routes as $route) {
             $response = $this->get($route);
             $response->assertStatus(200);
+            $response->assertDontSee('YM INC', false);
+            $response->assertDontSee('Ardene', false);
+            $response->assertDontSee('Suzy Shier', false);
+            $response->assertDontSee('Sun Asia', false);
+            $response->assertDontSee('Nordstrom', false);
         }
     }
 
@@ -43,10 +48,10 @@ class SourcingWebsiteTest extends TestCase
         $response->assertSee('Texora Sourcing');
         $response->assertSee('Md. Ataul Hai');
         $response->assertSee('19+');
-        $response->assertSee('YM INC');
-        $response->assertSee('ARDENE');
-        $response->assertSee('SUZY SHIER');
-        $response->assertSee('SUN ASIA');
+        $response->assertDontSee('YM INC');
+        $response->assertDontSee('ARDENE');
+        $response->assertDontSee('SUZY SHIER');
+        $response->assertDontSee('SUN ASIA');
         $response->assertSee('BRAKBDDH');
     }
 

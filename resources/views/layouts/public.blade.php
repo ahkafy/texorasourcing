@@ -108,9 +108,9 @@
                                 <a href="{{ route('company-profile') }}" class="flex items-center justify-between p-2.5 rounded-lg bg-brand-navy/5 hover:bg-brand-navy hover:text-white transition-all group">
                                     <div class="text-xs font-bold text-brand-navy group-hover:text-brand-gold inline-flex items-center gap-1.5">
                                         <span class="material-symbols-outlined" style="font-size: 16px;">description</span>
-                                        <span>Company Profile Slides</span>
+                                        <span>Company Profile Deck</span>
                                     </div>
-                                    <span class="text-[10px] bg-brand-gold text-brand-navy font-bold px-2 py-0.5 rounded-md">13 Slides</span>
+                                    <span class="text-[10px] bg-brand-gold text-brand-navy font-bold px-2 py-0.5 rounded-md">Overview</span>
                                 </a>
                             </div>
                         </div>
@@ -277,8 +277,8 @@
                                         <span class="material-symbols-outlined" style="font-size: 18px;">storefront</span>
                                     </div>
                                     <div>
-                                        <div class="text-xs font-bold text-slate-900 group-hover:text-brand-navy">Current Retail Buyers</div>
-                                        <div class="text-[11px] text-slate-500">YM INC, Ardene, Suzy Shier, Sun Asia.</div>
+                                        <div class="text-xs font-bold text-slate-900 group-hover:text-brand-navy">Global Retail Markets</div>
+                                        <div class="text-[11px] text-slate-500">North America, Europe & Latin America channels.</div>
                                     </div>
                                 </a>
                                 <a href="{{ route('buyers') }}#policy" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group">
@@ -356,7 +356,7 @@
                     <a href="{{ route('about') }}" class="block py-1 hover:text-brand-navy">About Texora Sourcing (Est. 2015)</a>
                     <a href="{{ route('about') }}#leadership" class="block py-1 hover:text-brand-navy">Leadership: Md. Ataul Hai, CEO</a>
                     <a href="{{ route('about') }}#team" class="block py-1 hover:text-brand-navy">Team & Organization Structure</a>
-                    <a href="{{ route('company-profile') }}" class="block py-1 font-semibold text-brand-gold">Company Profile Presentation (13 Slides)</a>
+                    <a href="{{ route('company-profile') }}" class="block py-1 font-semibold text-brand-gold">Company Profile Presentation</a>
                 </div>
             </div>
 
@@ -401,7 +401,7 @@
                     <span class="text-xs text-brand-gold font-bold" x-text="activeAccordion === 'buyers' ? '−' : '+'">+</span>
                 </button>
                 <div x-show="activeAccordion === 'buyers'" class="pl-4 py-1 space-y-1 text-xs text-slate-600">
-                    <a href="{{ route('buyers') }}" class="block py-1 hover:text-brand-navy">Retail Partners (YM Inc, Ardene, Suzy Shier, Sun Asia)</a>
+                    <a href="{{ route('buyers') }}" class="block py-1 hover:text-brand-navy">Global Retail Markets (North America, Europe & Latin America)</a>
                     <a href="{{ route('buyers') }}#policy" class="block py-1 hover:text-brand-navy">Commercial Policy & Lead Times (45d T/T, 60-90d L/C)</a>
                     <a href="{{ route('buyers') }}#banking" class="block py-1 hover:text-brand-navy">BRAC Bank Credentials & SWIFT</a>
                 </div>
@@ -528,7 +528,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Company / Brand Name</label>
-                            <input type="text" name="company_name" placeholder="e.g. Nordstrom, Ardene, YM INC..." 
+                            <input type="text" name="company_name" placeholder="e.g. Your Brand or Retail Company" 
                                    class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-gold focus:border-brand-gold">
                         </div>
                         <div>
@@ -636,11 +636,13 @@
                     </div>
 
                     <div class="pt-2">
-                        <p class="text-xs uppercase tracking-wider text-brand-gold font-bold mb-2">Trusted Retail Markets</p>
+                        <p class="text-xs uppercase tracking-wider text-brand-gold font-bold mb-2">Global Export Markets</p>
                         <div class="flex flex-wrap items-center gap-3 text-xs text-slate-200">
-                            <span class="inline-flex items-center gap-1">🇨🇦 Canada (YM Inc, Ardene, Suzy Shier)</span>
-                            <span class="inline-flex items-center gap-1">🇧🇷 Brazil (Sun Asia)</span>
-                            <span class="inline-flex items-center gap-1">🇺🇸 USA & Europe</span>
+                            <span class="inline-flex items-center gap-1">Canada &amp; North America</span>
+                            <span class="text-slate-500">•</span>
+                            <span class="inline-flex items-center gap-1">Brazil &amp; Latin America</span>
+                            <span class="text-slate-500">•</span>
+                            <span class="inline-flex items-center gap-1">USA, UK &amp; European Union</span>
                         </div>
                     </div>
                 </div>
