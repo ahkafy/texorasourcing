@@ -34,31 +34,41 @@
             setInterval(() => { this.slide = (this.slide + 1) % this.slides.length; }, 5000);
         }
     }"
-    class="relative min-h-[85vh] flex items-center overflow-hidden"
+    class="relative min-h-[80vh] lg:min-h-[85vh] flex items-center justify-center overflow-hidden bg-brand-navy text-white"
 >
-    <!-- Background Slides -->
-    <template x-for="(s, i) in slides" :key="i">
-        <div
-            x-show="slide === i"
-            x-transition:enter="transition-opacity duration-1000 ease-in-out"
-            x-transition:enter-start="opacity-0"
-            x-transition:enter-end="opacity-100"
-            x-transition:leave="transition-opacity duration-1000 ease-in-out"
-            x-transition:leave-start="opacity-100"
-            x-transition:leave-end="opacity-0"
-            class="absolute inset-0"
-            style="display: none;"
-        >
-            <img :src="s.img" :alt="s.label" class="w-full h-full object-cover object-center" />
-            <!-- Dark overlay for readability -->
-            <div class="absolute inset-0 bg-brand-navy/60"></div>
-        </div>
-    </template>
+    <!-- Background Slides (Blade Pre-rendered with Alpine Transitions) -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        @php
+            $heroSlides = [
+                ['img' => asset('images/categories/knitwear.jpg'), 'label' => 'Knitwear — T-Shirts, Polos & Hoodies'],
+                ['img' => asset('images/categories/woven.jpg'), 'label' => 'Woven — Shirts, Pants & Chinos'],
+                ['img' => asset('images/categories/sweater.jpg'), 'label' => 'Sweaters — Premium Knitwear'],
+                ['img' => asset('images/categories/denim.jpg'), 'label' => 'Denim — Jeans & Jackets'],
+                ['img' => asset('images/categories/outerwear.jpg'), 'label' => 'Outerwear — Jackets & Coats'],
+            ];
+        @endphp
+        @foreach ($heroSlides as $idx => $s)
+            <div
+                x-show="slide === {{ $idx }}"
+                x-transition:enter="transition-opacity duration-1000 ease-in-out"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="transition-opacity duration-1000 ease-in-out"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                class="absolute inset-0"
+                @if ($idx > 0) style="display: none;" @endif
+            >
+                <img src="{{ $s['img'] }}" alt="{{ $s['label'] }}" class="w-full h-full object-cover object-center" />
+                <div class="absolute inset-0 bg-brand-navy/65"></div>
+            </div>
+        @endforeach
+    </div>
 
     <!-- Prev / Next Arrow Controls -->
     <button
-        @click="slide = (slide - 1 + slides.length) % slides.length"
-        class="hidden sm:flex absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/25 hover:bg-brand-gold/80 hover:text-brand-navy backdrop-blur-md text-white items-center justify-center transition-all duration-300 border border-white/20 shadow-lg"
+        @click="slide = (slide - 1 + 5) % 5"
+        class="hidden sm:flex absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/30 hover:bg-brand-gold text-white hover:text-brand-navy backdrop-blur-md items-center justify-center transition-all duration-200 border border-white/20 shadow-xl"
         aria-label="Previous slide"
     >
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -66,8 +76,8 @@
         </svg>
     </button>
     <button
-        @click="slide = (slide + 1) % slides.length"
-        class="hidden sm:flex absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/25 hover:bg-brand-gold/80 hover:text-brand-navy backdrop-blur-md text-white items-center justify-center transition-all duration-300 border border-white/20 shadow-lg"
+        @click="slide = (slide + 1) % 5"
+        class="hidden sm:flex absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/30 hover:bg-brand-gold text-white hover:text-brand-navy backdrop-blur-md items-center justify-center transition-all duration-200 border border-white/20 shadow-xl"
         aria-label="Next slide"
     >
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -76,15 +86,15 @@
     </button>
 
     <!-- Dot Indicators -->
-    <div class="absolute bottom-5 sm:bottom-7 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
-        <template x-for="(s, i) in slides" :key="i">
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
+        @foreach ($heroSlides as $idx => $s)
             <button
-                @click="slide = i"
-                :class="slide === i ? 'bg-gradient-to-r from-brand-gold to-amber-300 w-8 shadow-md' : 'bg-white/40 hover:bg-white/70 w-2.5'"
-                class="h-2 rounded-full transition-all duration-300"
-                :aria-label="'Go to slide ' + (i + 1)"
+                @click="slide = {{ $idx }}"
+                :class="slide === {{ $idx }} ? 'bg-gradient-to-r from-brand-gold to-amber-300 w-8 shadow-md' : 'bg-white/40 hover:bg-white/70 w-2.5'"
+                class="h-2 rounded-full transition-all duration-300 {{ $idx === 0 ? 'bg-brand-gold w-8' : 'bg-white/40 w-2.5' }}"
+                aria-label="Go to slide {{ $idx + 1 }}"
             ></button>
-        </template>
+        @endforeach
     </div>
 
     <!-- Slide Label Badge -->
@@ -95,12 +105,12 @@
         ></span>
     </div>
 
-    <!-- Hero Content (overlaid, centered, perfectly responsive) -->
+    <!-- Hero Content (Centered & Mobile-Optimized) -->
     <div class="relative z-10 w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-16 sm:py-20 lg:py-28">
         <div class="max-w-3xl mx-auto text-center space-y-6 sm:space-y-7">
 
-            <!-- Luxury Foil Badge -->
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/30 backdrop-blur-md border border-brand-gold/40 text-brand-gold text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] shadow-lg">
+            <!-- Luxury Gold Status Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/35 backdrop-blur-md border border-brand-gold/40 text-brand-gold text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] shadow-lg">
                 <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
                 <span>Premier Apparel Buying House • Dhaka</span>
             </div>
@@ -115,21 +125,21 @@
                 Texora Sourcing connects global retailers with world-class garment manufacturing. From concept and tech packs to lab testing, inline QC, and on-time international shipment.
             </p>
 
-            <!-- Value Highlights (Responsive 1-col on mobile, 2-col on sm+) -->
+            <!-- Value Highlights (Responsive 1-col on phone, 2-col on sm+) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 text-xs sm:text-sm text-white/90 max-w-xl mx-auto text-left">
-                <div class="flex items-center gap-2.5 bg-black/20 backdrop-blur-sm sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-lg">
+                <div class="flex items-center gap-2.5 bg-black/25 backdrop-blur-sm sm:bg-transparent px-3.5 py-2 sm:p-0 rounded-xl">
                     <span class="w-5 h-5 rounded-full bg-brand-gold/30 border border-brand-gold text-brand-gold flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
                     <span><strong class="text-white">Minimum Price</strong>, Maximum Quality</span>
                 </div>
-                <div class="flex items-center gap-2.5 bg-black/20 backdrop-blur-sm sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-lg">
+                <div class="flex items-center gap-2.5 bg-black/25 backdrop-blur-sm sm:bg-transparent px-3.5 py-2 sm:p-0 rounded-xl">
                     <span class="w-5 h-5 rounded-full bg-brand-gold/30 border border-brand-gold text-brand-gold flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
                     <span>12 In-House QC Controllers</span>
                 </div>
-                <div class="flex items-center gap-2.5 bg-black/20 backdrop-blur-sm sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-lg">
+                <div class="flex items-center gap-2.5 bg-black/25 backdrop-blur-sm sm:bg-transparent px-3.5 py-2 sm:p-0 rounded-xl">
                     <span class="w-5 h-5 rounded-full bg-brand-gold/30 border border-brand-gold text-brand-gold flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
                     <span>45 Days T/T · 60–90 Days L/C</span>
                 </div>
-                <div class="flex items-center gap-2.5 bg-black/20 backdrop-blur-sm sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-lg">
+                <div class="flex items-center gap-2.5 bg-black/25 backdrop-blur-sm sm:bg-transparent px-3.5 py-2 sm:p-0 rounded-xl">
                     <span class="w-5 h-5 rounded-full bg-brand-gold/30 border border-brand-gold text-brand-gold flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
                     <span>Accord, BSCI &amp; WRAP Certified</span>
                 </div>
@@ -164,31 +174,31 @@
     </div>
 </section>
 
-<!-- Key Stats Counter Strip (Crisp White with Luxury Accents) -->
+<!-- Key Stats Counter Strip (Crisp White with Luxury Metric Cards) -->
 <section class="bg-white border-b border-slate-200/80 shadow-sm relative z-20">
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-8">
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
-            <div class="p-3 rounded-2xl transition-all hover:bg-slate-50/80">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 text-center">
+            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300">
                 <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-navy">2015</div>
                 <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Established in Dhaka</div>
             </div>
-            <div class="p-3 rounded-2xl transition-all hover:bg-slate-50/80">
+            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300">
                 <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-gold-dark">34</div>
                 <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">In-House Professionals</div>
             </div>
-            <div class="p-3 rounded-2xl transition-all hover:bg-slate-50/80">
+            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300">
                 <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-navy">12</div>
                 <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Quality Controllers (QC)</div>
             </div>
-            <div class="p-3 rounded-2xl transition-all hover:bg-slate-50/80">
+            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300">
                 <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-gold-dark">6</div>
                 <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Merchandisers</div>
             </div>
-            <div class="p-3 rounded-2xl transition-all hover:bg-slate-50/80">
+            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300">
                 <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-navy">45–90</div>
                 <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Days Delivery Cycles</div>
             </div>
-            <div class="p-3 rounded-2xl transition-all hover:bg-slate-50/80">
+            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300">
                 <div class="text-2xl sm:text-3xl font-serif font-bold text-emerald-600">100%</div>
                 <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Compliant Factories</div>
             </div>
@@ -786,8 +796,9 @@
             <!-- Right: 5 Quality Pillars (Slide 8) -->
             <div class="lg:col-span-7 space-y-6">
                 <div>
-                    <span class="text-xs uppercase font-bold tracking-widest text-brand-gold-dark">Quality Assurance</span>
+                    <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">Quality Assurance</span>
                     <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy mt-1">Quality You Can Rely On</h2>
+                    <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mt-2.5 rounded-full"></div>
                     <p class="text-sm text-slate-600 mt-2">
                         We safeguard your brand reputation through a 5-step quality verification cycle executed before any garment leaves the production line.
                     </p>

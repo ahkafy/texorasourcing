@@ -39,11 +39,11 @@
         <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
             <div class="flex items-center justify-between h-20 sm:h-22 md:h-24">
                 
-                <!-- Logo Only (Refined Luxury Proportions) -->
+                <!-- Logo Only (No App Name Beside - Exactly Placed) -->
                 <a href="{{ route('home') }}" class="flex-shrink-0 flex items-center py-2 group" title="Texora Sourcing Bangladesh">
                     <img src="{{ asset('images/logo.png') }}" 
                          alt="Texora Sourcing Bangladesh" 
-                         class="h-14 sm:h-16 md:h-18 lg:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                         class="h-14 sm:h-16 md:h-18 lg:h-20 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
                          loading="eager">
                 </a>
 
