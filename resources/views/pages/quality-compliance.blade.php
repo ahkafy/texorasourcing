@@ -4,17 +4,25 @@
 @section('meta_description', 'Discover Texora Sourcing 5-tier quality assurance system and certified partner factories adhering to Accord, RSC, WRAP, Sedex, BSCI, OEKO-TEX, GOTS, and ISO 9001 standards.')
 
 @section('content')
-<!-- Header Banner -->
-<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 text-slate-900 border-b border-slate-200/80">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<!-- Header Banner (White & Off-White Blend with Watermarks) -->
+<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 sm:py-20 text-slate-900 border-b border-slate-200/80 relative overflow-hidden">
+    <!-- Watermark: Quality Assurance Shield -->
+    <div class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+        </svg>
+    </div>
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="max-w-3xl">
-            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-brand-gold/30 text-xs uppercase font-bold tracking-widest text-brand-navy">
-                <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50/80 border border-brand-gold/30 text-xs uppercase font-bold tracking-[0.2em] text-brand-navy shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
                 Safety, Integrity & Standards
             </span>
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-navy mt-3">
                 Quality You Can Rely On
             </h1>
+            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mt-3 rounded-full"></div>
             <p class="text-base text-slate-600 mt-3 leading-relaxed">
                 Zero compromise on quality and international ethical standards. Discover our 5-pillar QA framework, laboratory testing protocols, and world-class factory certifications.
             </p>
@@ -22,9 +30,16 @@
     </div>
 </section>
 
-<!-- 5-Tier Quality Assurance Framework (Slide 8) -->
-<section class="py-20 bg-white">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<!-- 5-Tier Quality Assurance Framework (Slide 8) (Crisp White with Watermark) -->
+<section class="py-20 bg-white relative overflow-hidden">
+    <!-- Watermark: Certified Quality Rosette -->
+    <div class="absolute -left-16 bottom-12 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+    </div>
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div class="lg:col-span-5">

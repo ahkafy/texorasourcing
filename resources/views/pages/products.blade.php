@@ -4,15 +4,23 @@
 @section('meta_description', 'Explore Texora Sourcing apparel product categories: Knitwear (T-Shirts, Polos, Hoodies), Woven (Shirts, Chinos, Denim, Outerwear), and Sweaters (Cardigans, Pullovers, Vests).')
 
 @section('content')
-<!-- Page Header (White & Off-White Blend) -->
-<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 text-slate-900 relative overflow-hidden border-b border-slate-200/80">
+<!-- Page Header (White & Off-White Blend with Watermarks) -->
+<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 sm:py-20 text-slate-900 relative overflow-hidden border-b border-slate-200/80">
     <div class="absolute inset-0 opacity-25 pointer-events-none" style="background-image: radial-gradient(#c7972d 0.75px, transparent 0.75px); background-size: 24px 24px;"></div>
+    <!-- Watermark: Garment Hanger & Fashion Crest -->
+    <div class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4a2 2 0 10-2 2c1.5 0 2 .5 2 2v2L3.5 15.5A1.5 1.5 0 004.5 18h15a1.5 1.5 0 001-2.5L12 10"/>
+        </svg>
+    </div>
+
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="max-w-3xl">
-            <span class="text-xs uppercase font-bold tracking-widest text-brand-gold-dark">Apparel Product Portfolio</span>
+            <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">Apparel Product Portfolio</span>
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-navy mt-1">
                 Precision Manufacturing Across Knit, Woven & Sweater
             </h1>
+            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mt-3 rounded-full"></div>
             <p class="text-base text-slate-600 mt-3 leading-relaxed">
                 From lightweight summer jerseys to heavy gauge winter knits and technical denim washes, we engineer apparel to your tech pack specifications.
             </p>
@@ -20,9 +28,16 @@
     </div>
 </section>
 
-<!-- Product Category Filter & Portfolio Showcase (Alpine.js) (Off-White Blend) -->
-<section class="py-20 bg-slate-50" x-data="{ activeTab: 'all' }">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<!-- Product Category Filter & Portfolio Showcase (Alpine.js) (Off-White Blend with Watermark) -->
+<section class="py-20 bg-slate-50 relative overflow-hidden" x-data="{ activeTab: 'all' }">
+    <!-- Watermark: Fabric Loom Weave -->
+    <div class="absolute -left-16 bottom-10 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
+            <path d="M4 6h16M4 10h16M4 14h16M4 18h16M6 4v16M10 4v16M14 4v16M18 4v16"/>
+        </svg>
+    </div>
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         
         <!-- Filter Tabs -->
         <div class="flex flex-wrap items-center justify-center gap-2 mb-12">

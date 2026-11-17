@@ -37,13 +37,13 @@
     <!-- Main Navigation Bar (Grouped & Wide, Zero Overflow) -->
     <nav class="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-200">
         <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
-            <div class="flex items-center justify-between min-h-[5.5rem] sm:min-h-[6.5rem] lg:min-h-[7.5rem] py-2">
+            <div class="flex items-center justify-between h-20 sm:h-22 md:h-24">
                 
-                <!-- Logo Only (No App Name Beside - Exactly Placed) -->
-                <a href="{{ route('home') }}" class="flex-shrink-0 flex items-center py-1" title="Texora Sourcing Bangladesh">
+                <!-- Logo Only (Refined Luxury Proportions) -->
+                <a href="{{ route('home') }}" class="flex-shrink-0 flex items-center py-2 group" title="Texora Sourcing Bangladesh">
                     <img src="{{ asset('images/logo.png') }}" 
                          alt="Texora Sourcing Bangladesh" 
-                         class="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain transition-transform duration-200 hover:scale-105"
+                         class="h-14 sm:h-16 md:h-18 lg:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                          loading="eager">
                 </a>
 
@@ -318,11 +318,11 @@
                 <div class="flex items-center space-x-2 sm:space-x-3">
                     <button @click="rfqModalOpen = true" 
                             type="button"
-                            class="inline-flex items-center justify-center px-4 xl:px-5 py-2.5 text-xs uppercase tracking-wider font-bold rounded-xl text-brand-navy bg-brand-gold hover:bg-brand-gold-light active:bg-brand-gold-dark shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 whitespace-nowrap">
+                            class="inline-flex items-center justify-center px-3 sm:px-4 xl:px-5 py-2 sm:py-2.5 text-[11px] sm:text-xs uppercase tracking-wider font-bold rounded-xl text-brand-navy bg-gradient-to-r from-amber-400 via-brand-gold to-amber-500 hover:from-amber-300 hover:to-amber-400 active:bg-brand-gold-dark shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 whitespace-nowrap">
                         <svg class="w-3.5 h-3.5 mr-1.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                         </svg>
-                        Request a Quote
+                        <span><span class="hidden sm:inline">Request a </span>Quote</span>
                     </button>
 
                     <!-- Mobile Hamburger -->
@@ -620,7 +620,7 @@
                     <div class="py-1">
                         <img src="{{ asset('images/logo.png') }}" 
                              alt="Texora Sourcing Bangladesh" 
-                             class="h-24 sm:h-28 md:h-32 w-auto object-contain drop-shadow-[0_2px_8px_rgba(209,159,48,0.3)]">
+                             class="h-16 sm:h-18 md:h-20 w-auto object-contain drop-shadow-[0_2px_8px_rgba(209,159,48,0.3)]">
                     </div>
 
                     <p class="text-sm text-slate-300 leading-relaxed max-w-md pt-1">

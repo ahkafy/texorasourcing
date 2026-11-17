@@ -4,15 +4,23 @@
 @section('meta_description', 'Learn about Texora Sourcing, founded in 2015 in Dhaka, Bangladesh. Led by Md. Ataul Hai with 19+ years of apparel experience and 34 in-house textile professionals.')
 
 @section('content')
-<!-- Page Header Banner (White & Off-White Blend) -->
-<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 text-slate-900 relative overflow-hidden border-b border-slate-200/80">
+<!-- Page Header Banner (White & Off-White Blend with Watermark) -->
+<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 sm:py-20 text-slate-900 relative overflow-hidden border-b border-slate-200/80">
     <div class="absolute inset-0 opacity-25 pointer-events-none" style="background-image: radial-gradient(#c7972d 0.75px, transparent 0.75px); background-size: 24px 24px;"></div>
+    <!-- Luxury Watermark -->
+    <div class="absolute -right-10 -bottom-10 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4a2 2 0 10-2 2c1.5 0 2 .5 2 2v2L3.5 15.5A1.5 1.5 0 004.5 18h15a1.5 1.5 0 001-2.5L12 10"/>
+        </svg>
+    </div>
+
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="max-w-3xl">
-            <span class="text-xs uppercase font-bold tracking-widest text-brand-gold-dark">About Texora Sourcing</span>
+            <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">About Texora Sourcing</span>
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-navy mt-1">
                 Your Trusted Global-Local Partner in Garment Sourcing
             </h1>
+            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mt-3 rounded-full"></div>
             <p class="text-base text-slate-600 mt-3 leading-relaxed">
                 Founded in 2015 in Dhaka, Bangladesh, Texora Sourcing has built a legacy of technical precision, strict compliance, and collaborative retail partnerships.
             </p>
@@ -20,9 +28,15 @@
     </div>
 </section>
 
-<!-- Company Background & Introduction (Slide 2 & 3) (Crisp White) -->
-<section class="py-20 bg-white">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<!-- Company Background & Introduction (Slide 2 & 3) (Crisp White with Watermarks) -->
+<section class="py-20 bg-white relative overflow-hidden">
+    <!-- Watermark: Shears & Fabric -->
+    <div class="absolute -right-16 top-10 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879a3 3 0 11-4.242-4.242 3 3 0 014.242 0L12 10.586zm0 0L9.121 7.707a3 3 0 10-4.242 4.242 3 3 0 004.242 0L12 14.828z" />
+        </svg>
+    </div>
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div class="lg:col-span-6 space-y-6">
@@ -85,14 +99,28 @@
     </div>
 </section>
 
-<!-- Mission, Vision & Values (Off-White Blend Section) -->
-<section id="mission" class="py-20 bg-slate-50 border-t border-b border-slate-200">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<!-- Mission, Vision & Values (Off-White Blend Section with Watermarks) -->
+<section id="mission" class="py-20 bg-slate-50 border-t border-b border-slate-200/80 relative overflow-hidden">
+    <!-- Watermark: Values Rosette & Compass -->
+    <div class="absolute -right-16 -top-16 w-96 h-96 text-brand-gold/[0.035] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+    </div>
+    <div class="absolute -left-12 -bottom-12 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+        </svg>
+    </div>
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-xs uppercase font-bold tracking-widest text-brand-gold-dark">Guiding Principles</span>
+            <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">Guiding Principles</span>
             <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy mt-1">
                 Mission, Vision & Core Values
             </h2>
+            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mx-auto mt-3 rounded-full"></div>
             <p class="text-sm text-slate-600 mt-2">
                 A culture grounded in trust, human dignity, and long-term sustainable partnership.
             </p>

@@ -4,17 +4,27 @@
 @section('meta_description', 'Discover how Texora Sourcing serves leading retail buyers across Canada (YM INC, Ardene, Suzy Shier), Brazil (Sun Asia), and worldwide with transparent 45-90 day lead times and bank credentials.')
 
 @section('content')
-<!-- Header Banner -->
-<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 text-slate-900 border-b border-slate-200/80">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<!-- Header Banner (White & Off-White Blend with Watermarks) -->
+<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 sm:py-20 text-slate-900 border-b border-slate-200/80 relative overflow-hidden">
+    <!-- Watermark: Global World Map / Network -->
+    <div class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+        </svg>
+    </div>
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="max-w-3xl">
-            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-brand-gold/30 text-xs uppercase font-bold tracking-widest text-brand-navy">
-                <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50/80 border border-brand-gold/30 text-xs uppercase font-bold tracking-[0.2em] text-brand-navy shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
                 Global Footprint & Commercial Policy
             </span>
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-navy mt-3">
                 Trusted by Global Retailers
             </h1>
+            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mt-3 rounded-full"></div>
             <p class="text-base text-slate-600 mt-3 leading-relaxed">
                 Discover our present retail buyers across North and South America, our "Minimum Price, Maximum Quality" business policy, and transparent commercial banking credentials.
             </p>
@@ -22,14 +32,22 @@
     </div>
 </section>
 
-<!-- Current Retail Partners (Slide 11) -->
-<section class="py-20 bg-white">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<!-- Current Retail Partners (Slide 11) (Crisp White with Watermark) -->
+<section class="py-20 bg-white relative overflow-hidden">
+    <!-- Watermark: Handshake / Partnership Shield -->
+    <div class="absolute -left-16 bottom-10 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+    </div>
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-xs uppercase font-bold tracking-widest text-brand-gold">Retail Partnerships</span>
+            <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold">Retail Partnerships</span>
             <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy mt-1">
                 Present International Retailers
             </h2>
+            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mx-auto mt-3 rounded-full"></div>
             <p class="text-sm text-slate-600 mt-2">
                 Delivering high-volume seasonal collections, fast-fashion replenishment, and staple basics to prominent international fashion chains.
             </p>

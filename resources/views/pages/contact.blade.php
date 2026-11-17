@@ -4,17 +4,25 @@
 @section('meta_description', 'Contact Texora Sourcing corporate office in Uttara, Dhaka, Bangladesh. Inquire about apparel sourcing, book factory visits, or contact Managing Director & CEO Md. Ataul Hai on WhatsApp (+88 01711234725).')
 
 @section('content')
-<!-- Header Banner -->
-<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 text-slate-900 border-b border-slate-200/80">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<!-- Header Banner (White & Off-White Blend with Watermarks) -->
+<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 sm:py-20 text-slate-900 border-b border-slate-200/80 relative overflow-hidden">
+    <!-- Watermark: Contact Envelope & Location Marker Motif -->
+    <div class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+    </div>
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="max-w-3xl">
-            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-brand-gold/30 text-xs uppercase font-bold tracking-widest text-brand-navy">
-                <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50/80 border border-brand-gold/30 text-xs uppercase font-bold tracking-[0.2em] text-brand-navy shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
                 Get In Touch
             </span>
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-navy mt-3">
                 Let's Build Your Next Collection Together
             </h1>
+            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mt-3 rounded-full"></div>
             <p class="text-base text-slate-600 mt-3 leading-relaxed">
                 Connect directly with our corporate office in Uttara, Dhaka. We provide rapid price quotations, sample development, and foreign buyer visit coordination.
             </p>
@@ -22,9 +30,17 @@
     </div>
 </section>
 
-<!-- Main Contact & Inquiry Section -->
-<section class="py-20 bg-slate-50">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<!-- Main Contact & Inquiry Section (Off-White with Watermark) -->
+<section class="py-20 bg-slate-50 relative overflow-hidden">
+    <!-- Watermark: Location Pin -->
+    <div class="absolute -left-16 bottom-10 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+    </div>
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             
             <!-- Left Column: Corporate Office & Direct Contacts (Slide 5 & 13) -->

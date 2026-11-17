@@ -4,15 +4,24 @@
 @section('meta_description', 'Discover Texora Sourcing eight pillars of customer satisfaction and our complete sourcing journey from sample development to factory inspection and on-time shipment.')
 
 @section('content')
-<!-- Header Banner (White & Off-White Blend) -->
-<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 text-slate-900 relative overflow-hidden border-b border-slate-200/80">
+<!-- Header Banner (White & Off-White Blend with Watermarks) -->
+<section class="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 sm:py-20 text-slate-900 relative overflow-hidden border-b border-slate-200/80">
     <div class="absolute inset-0 opacity-25 pointer-events-none" style="background-image: radial-gradient(#c7972d 0.75px, transparent 0.75px); background-size: 24px 24px;"></div>
+    <!-- Watermark: Global Logistics Compass -->
+    <div class="absolute -right-12 -bottom-12 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
+            <circle cx="12" cy="12" r="10"/>
+            <polygon points="12 4 14 11 21 12 14 13 12 20 10 13 3 12 10 11 12 4" fill="currentColor" fill-opacity="0.3"/>
+        </svg>
+    </div>
+
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="max-w-3xl">
-            <span class="text-xs uppercase font-bold tracking-widest text-brand-gold-dark">Our Services & Process</span>
+            <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">Our Services & Process</span>
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-navy mt-1">
                 Customer Satisfaction Is Our Commitment
             </h1>
+            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mt-3 rounded-full"></div>
             <p class="text-base text-slate-600 mt-3 leading-relaxed">
                 Texora Sourcing welcomes all prospective buyers to visit and evaluate our service. Discover our 8 sourcing pillars and disciplined execution from sample to shipment.
             </p>
@@ -20,14 +29,22 @@
     </div>
 </section>
 
-<!-- The 8 Pillars of Customer Satisfaction (Slide 6) (Crisp White) -->
-<section id="pillars" class="py-20 bg-white border-b border-slate-200">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<!-- The 8 Pillars of Customer Satisfaction (Slide 6) (Crisp White with Watermark) -->
+<section id="pillars" class="py-20 bg-white border-b border-slate-200/80 relative overflow-hidden">
+    <!-- Watermark: Service Pillars -->
+    <div class="absolute -left-16 bottom-10 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+    </div>
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-xs uppercase font-bold tracking-widest text-brand-gold-dark">Service Excellence</span>
+            <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">Service Excellence</span>
             <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy mt-1">
                 The 8 Core Sourcing Pillars
             </h2>
+            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mx-auto mt-3 rounded-full"></div>
             <p class="text-sm text-slate-600 mt-2">
                 Designed to deliver complete transparency, rapid communication, and zero-defect bulk execution for global retailers.
             </p>

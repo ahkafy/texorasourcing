@@ -58,7 +58,7 @@
     <!-- Prev / Next Arrow Controls -->
     <button
         @click="slide = (slide - 1 + slides.length) % slides.length"
-        class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white flex items-center justify-center transition-all border border-white/30"
+        class="hidden sm:flex absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/25 hover:bg-brand-gold/80 hover:text-brand-navy backdrop-blur-md text-white items-center justify-center transition-all duration-300 border border-white/20 shadow-lg"
         aria-label="Previous slide"
     >
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,7 +67,7 @@
     </button>
     <button
         @click="slide = (slide + 1) % slides.length"
-        class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white flex items-center justify-center transition-all border border-white/30"
+        class="hidden sm:flex absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/25 hover:bg-brand-gold/80 hover:text-brand-navy backdrop-blur-md text-white items-center justify-center transition-all duration-300 border border-white/20 shadow-lg"
         aria-label="Next slide"
     >
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -76,11 +76,11 @@
     </button>
 
     <!-- Dot Indicators -->
-    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
+    <div class="absolute bottom-5 sm:bottom-7 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
         <template x-for="(s, i) in slides" :key="i">
             <button
                 @click="slide = i"
-                :class="slide === i ? 'bg-brand-gold w-6' : 'bg-white/50 w-2'"
+                :class="slide === i ? 'bg-gradient-to-r from-brand-gold to-amber-300 w-8 shadow-md' : 'bg-white/40 hover:bg-white/70 w-2.5'"
                 class="h-2 rounded-full transition-all duration-300"
                 :aria-label="'Go to slide ' + (i + 1)"
             ></button>
@@ -91,49 +91,55 @@
     <div class="absolute bottom-6 right-6 z-20 hidden md:block">
         <span
             x-text="slides[slide].label"
-            class="text-[11px] font-semibold text-white/80 bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded-full tracking-wide"
+            class="text-[11px] font-semibold text-white/90 bg-black/40 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10 tracking-wider uppercase shadow-lg"
         ></span>
     </div>
 
-    <!-- Hero Content (overlaid, centered) -->
-    <div class="relative z-10 w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-20 lg:py-28">
-        <div class="max-w-3xl mx-auto text-center space-y-7">
+    <!-- Hero Content (overlaid, centered, perfectly responsive) -->
+    <div class="relative z-10 w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-16 sm:py-20 lg:py-28">
+        <div class="max-w-3xl mx-auto text-center space-y-6 sm:space-y-7">
 
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white leading-tight tracking-tight drop-shadow-lg">
+            <!-- Luxury Foil Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/30 backdrop-blur-md border border-brand-gold/40 text-brand-gold text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+                <span>Premier Apparel Buying House • Dhaka</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight tracking-tight drop-shadow-xl">
                 Your Strategic
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-amber-300">Apparel Sourcing</span>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-brand-gold to-amber-400">Apparel Sourcing</span>
                 Partner in Bangladesh
             </h1>
 
-            <p class="text-base sm:text-lg text-white/80 font-normal leading-relaxed drop-shadow">
+            <p class="text-sm sm:text-base md:text-lg text-white/85 font-normal leading-relaxed max-w-2xl mx-auto drop-shadow">
                 Texora Sourcing connects global retailers with world-class garment manufacturing. From concept and tech packs to lab testing, inline QC, and on-time international shipment.
             </p>
 
-            <!-- Value Highlights -->
-            <div class="grid grid-cols-2 gap-3 text-sm text-white/90 max-w-xl mx-auto">
-                <div class="flex items-center gap-2">
+            <!-- Value Highlights (Responsive 1-col on mobile, 2-col on sm+) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 text-xs sm:text-sm text-white/90 max-w-xl mx-auto text-left">
+                <div class="flex items-center gap-2.5 bg-black/20 backdrop-blur-sm sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-lg">
                     <span class="w-5 h-5 rounded-full bg-brand-gold/30 border border-brand-gold text-brand-gold flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
                     <span><strong class="text-white">Minimum Price</strong>, Maximum Quality</span>
                 </div>
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-2.5 bg-black/20 backdrop-blur-sm sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-lg">
                     <span class="w-5 h-5 rounded-full bg-brand-gold/30 border border-brand-gold text-brand-gold flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
                     <span>12 In-House QC Controllers</span>
                 </div>
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-2.5 bg-black/20 backdrop-blur-sm sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-lg">
                     <span class="w-5 h-5 rounded-full bg-brand-gold/30 border border-brand-gold text-brand-gold flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
                     <span>45 Days T/T · 60–90 Days L/C</span>
                 </div>
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-2.5 bg-black/20 backdrop-blur-sm sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-lg">
                     <span class="w-5 h-5 rounded-full bg-brand-gold/30 border border-brand-gold text-brand-gold flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
                     <span>Accord, BSCI &amp; WRAP Certified</span>
                 </div>
             </div>
 
             <!-- CTAs -->
-            <div class="flex flex-wrap justify-center items-center gap-4 pt-2">
+            <div class="flex flex-wrap justify-center items-center gap-3 sm:gap-4 pt-2">
                 <button @click="rfqModalOpen = true"
                         type="button"
-                        class="px-7 py-3.5 rounded-xl bg-brand-gold hover:bg-amber-400 text-brand-navy font-bold uppercase tracking-wider text-xs shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 inline-flex items-center gap-2">
+                        class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-brand-gold to-amber-500 hover:from-amber-300 hover:to-amber-400 text-brand-navy font-bold uppercase tracking-wider text-xs shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-0.5 inline-flex items-center justify-center gap-2">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
@@ -141,14 +147,14 @@
                 </button>
 
                 <a href="{{ route('products') }}"
-                   class="px-6 py-3.5 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold text-xs uppercase tracking-wider border border-white/40 backdrop-blur-sm transition-all">
+                   class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold text-xs uppercase tracking-wider border border-white/40 backdrop-blur-md transition-all text-center">
                     Browse Products &rarr;
                 </a>
 
                 <a href="{{ asset('files/TEXORA_SOURCING_PROFILE.pdf') }}"
                    download="TEXORA_SOURCING_PROFILE.pdf"
-                   class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-gold hover:text-amber-300 transition-colors underline underline-offset-4">
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                   class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-brand-gold hover:text-amber-300 transition-colors underline underline-offset-4 py-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a2 2 0 002 2h14a2 2 0 002-2v-3"/>
                     </svg>
                     Download Company Profile (PDF)
@@ -158,46 +164,61 @@
     </div>
 </section>
 
-<!-- Key Stats Counter Strip (Crisp White) -->
-<section class="bg-white border-b border-slate-200 shadow-sm relative z-20">
+<!-- Key Stats Counter Strip (Crisp White with Luxury Accents) -->
+<section class="bg-white border-b border-slate-200/80 shadow-sm relative z-20">
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-8">
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-slate-100">
-            <div class="pt-2 md:pt-0">
-                <div class="text-3xl font-serif font-bold text-brand-navy">2015</div>
-                <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Established in Dhaka</div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+            <div class="p-3 rounded-2xl transition-all hover:bg-slate-50/80">
+                <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-navy">2015</div>
+                <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Established in Dhaka</div>
             </div>
-            <div class="pt-2 md:pt-0">
-                <div class="text-3xl font-serif font-bold text-brand-gold-dark">34</div>
-                <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">In-House Professionals</div>
+            <div class="p-3 rounded-2xl transition-all hover:bg-slate-50/80">
+                <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-gold-dark">34</div>
+                <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">In-House Professionals</div>
             </div>
-            <div class="pt-2 md:pt-0">
-                <div class="text-3xl font-serif font-bold text-brand-navy">12</div>
-                <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Quality Controllers (QC)</div>
+            <div class="p-3 rounded-2xl transition-all hover:bg-slate-50/80">
+                <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-navy">12</div>
+                <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Quality Controllers (QC)</div>
             </div>
-            <div class="pt-2 md:pt-0">
-                <div class="text-3xl font-serif font-bold text-brand-gold-dark">6</div>
-                <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Merchandisers</div>
+            <div class="p-3 rounded-2xl transition-all hover:bg-slate-50/80">
+                <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-gold-dark">6</div>
+                <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Merchandisers</div>
             </div>
-            <div class="pt-2 md:pt-0">
-                <div class="text-3xl font-serif font-bold text-brand-navy">45–90</div>
-                <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Days Delivery Cycles</div>
+            <div class="p-3 rounded-2xl transition-all hover:bg-slate-50/80">
+                <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-navy">45–90</div>
+                <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Days Delivery Cycles</div>
             </div>
-            <div class="pt-2 md:pt-0">
-                <div class="text-3xl font-serif font-bold text-emerald-600">100%</div>
-                <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Compliant Factories</div>
+            <div class="p-3 rounded-2xl transition-all hover:bg-slate-50/80">
+                <div class="text-2xl sm:text-3xl font-serif font-bold text-emerald-600">100%</div>
+                <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Compliant Factories</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Core Value Proposition: Minimum Price, Maximum Quality (Off-White Section) -->
-<section class="py-20 bg-slate-50 border-b border-slate-200">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<!-- Core Value Proposition: Minimum Price, Maximum Quality (Off-White Section with Watermarks) -->
+<section class="py-20 sm:py-24 bg-slate-50 border-b border-slate-200/80 relative overflow-hidden">
+    <!-- Background Watermark Icons: Craftsmanship Shears & Fabric Grid -->
+    <div class="absolute -right-16 -bottom-16 w-96 h-96 text-brand-navy/[0.03] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879a3 3 0 11-4.242-4.242 3 3 0 014.242 0L12 10.586zm0 0L9.121 7.707a3 3 0 10-4.242 4.242 3 3 0 004.242 0L12 14.828z" />
+        </svg>
+    </div>
+    <div class="absolute -left-12 -top-12 w-80 h-80 text-brand-gold/[0.04] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 3v18M3 12h18"/>
+            <path d="M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/>
+        </svg>
+    </div>
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-xs uppercase font-bold tracking-widest text-brand-gold-dark">Our Business Policy</span>
+            <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">Our Business Policy</span>
             <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy mt-1">
                 Minimum Price, Maximum Quality
             </h2>
+            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mx-auto mt-3 rounded-full"></div>
             <p class="text-base text-slate-600 mt-3 leading-relaxed">
                 Build long-term business relationships by offering the minimum price and providing maximum quality, serving as your dedicated, transparent buying partner in Bangladesh.
             </p>
@@ -290,18 +311,32 @@
     </div>
 </section>
 
-<!-- Product Portfolio Section: What We Source (Crisp White Section) -->
-<section class="py-20 bg-white border-b border-slate-200">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<!-- Product Portfolio Section: What We Source (Crisp White Section with Watermarks) -->
+<section class="py-20 sm:py-24 bg-white border-b border-slate-200/80 relative overflow-hidden">
+    <!-- Background Watermark Icons: Garment Hanger & Textile Loom Weave -->
+    <div class="absolute -right-20 top-24 w-[460px] h-[460px] text-brand-gold/[0.035] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4a2 2 0 10-2 2c1.5 0 2 .5 2 2v2L3.5 15.5A1.5 1.5 0 004.5 18h15a1.5 1.5 0 001-2.5L12 10"/>
+        </svg>
+    </div>
+    <div class="absolute -left-20 bottom-16 w-[400px] h-[400px] text-brand-navy/[0.025] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
+            <path d="M4 6h16M4 10h16M4 14h16M4 18h16M6 4v16M10 4v16M14 4v16M18 4v16"/>
+        </svg>
+    </div>
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div>
-                <span class="text-xs uppercase font-bold tracking-widest text-brand-gold-dark">Product Portfolio</span>
+                <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">Product Portfolio</span>
                 <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy mt-1">What We Source</h2>
+                <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mt-2.5 rounded-full"></div>
                 <p class="text-sm text-slate-600 mt-2">Comprehensive garment categories engineered to international retail specifications.</p>
             </div>
             <div class="mt-4 md:mt-0">
-                <a href="{{ route('products') }}" class="inline-flex items-center text-sm font-bold text-brand-navy hover:text-brand-gold-dark transition-colors">
-                    View Full Product Lineup &rarr;
+                <a href="{{ route('products') }}" class="inline-flex items-center text-sm font-bold text-brand-navy hover:text-brand-gold-dark transition-colors group">
+                    <span>View Full Product Lineup</span>
+                    <span class="ml-1 transition-transform group-hover:translate-x-1">&rarr;</span>
                 </a>
             </div>
         </div>
@@ -602,14 +637,28 @@
     </div>
 </section>
 
-<!-- Sourcing Process: From Sample to Shipment (Off-White Section) -->
-<section class="py-20 bg-slate-50 border-b border-slate-200">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<!-- Sourcing Process: From Sample to Shipment (Off-White Section with Watermarks) -->
+<section class="py-20 sm:py-24 bg-slate-50 border-b border-slate-200/80 relative overflow-hidden">
+    <!-- Background Watermark Icons: Sourcing Compass & International Logistics -->
+    <div class="absolute -right-16 top-10 w-96 h-96 text-brand-navy/[0.03] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
+            <circle cx="12" cy="12" r="10"/>
+            <polygon points="12 4 14 11 21 12 14 13 12 20 10 13 3 12 10 11 12 4" fill="currentColor" fill-opacity="0.3"/>
+        </svg>
+    </div>
+    <div class="absolute -left-12 -bottom-10 w-80 h-80 text-brand-gold/[0.04] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+        </svg>
+    </div>
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-xs uppercase font-bold tracking-widest text-brand-gold-dark">Business Detail</span>
+            <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">Business Detail</span>
             <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy mt-1">
                 From Sample to Shipment
             </h2>
+            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mx-auto mt-3 rounded-full"></div>
             <p class="text-sm text-slate-600 mt-2">
                 A disciplined, milestone-driven sourcing workflow designed to protect your quality standards, delivery timeline, and commercial terms.
             </p>
@@ -699,9 +748,22 @@
     </div>
 </section>
 
-<!-- Quality Assurance: Quality You Can Rely On (Crisp White Section) -->
-<section class="py-20 bg-white border-b border-slate-200">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<!-- Quality Assurance: Quality You Can Rely On (Crisp White Section with Watermarks) -->
+<section class="py-20 sm:py-24 bg-white border-b border-slate-200/80 relative overflow-hidden">
+    <!-- Background Watermark Icons: Quality Assurance Shield & Rosette -->
+    <div class="absolute -right-24 top-16 w-[450px] h-[450px] text-brand-gold/[0.035] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+        </svg>
+    </div>
+    <div class="absolute -left-20 bottom-10 w-96 h-96 text-brand-navy/[0.025] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+        </svg>
+    </div>
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <!-- Left: Sewing Machine Inspection Photo -->
@@ -784,14 +846,29 @@
     </div>
 </section>
 
-<!-- Clients & Certifications: Trusted by Global Retailers (Off-White Section) -->
-<section class="py-20 bg-slate-50 border-b border-slate-200">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<!-- Clients & Certifications: Trusted by Global Retailers (Off-White Section with Watermarks) -->
+<section class="py-20 sm:py-24 bg-slate-50 border-b border-slate-200/80 relative overflow-hidden">
+    <!-- Background Watermark Icons: Global Retail Network & World Map Weave -->
+    <div class="absolute left-1/2 -translate-x-1/2 -bottom-20 w-[580px] h-[580px] text-brand-navy/[0.025] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+        </svg>
+    </div>
+    <div class="absolute -right-10 top-10 w-72 h-72 text-brand-gold/[0.035] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+    </div>
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-xs uppercase font-bold tracking-widest text-brand-gold-dark">Clients & Certifications</span>
+            <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">Clients & Certifications</span>
             <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy mt-1">
                 Trusted by Global Retailers
             </h2>
+            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mx-auto mt-3 rounded-full"></div>
             <p class="text-sm text-slate-600 mt-2">
                 Our long-standing partnerships with top-tier Bangladeshi manufacturers combine expert craftsmanship, modern technology, and prestigious global certifications.
             </p>
@@ -866,15 +943,23 @@
     </div>
 </section>
 
-<!-- Leadership Quote: Message from MD & CEO (Luminous Off-White & Ivory Section) -->
-<section class="py-20 bg-white border-b border-slate-200 relative overflow-hidden">
+<!-- Leadership Quote: Message from MD & CEO (Luminous Off-White & Ivory Section with Watermarks) -->
+<section class="py-20 sm:py-24 bg-white border-b border-slate-200/80 relative overflow-hidden">
+    <!-- Background Watermark: Quotation & Textile Monogram Motif -->
+    <div class="absolute right-6 -bottom-10 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+        </svg>
+    </div>
+
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
             <!-- Left: Stat & Bio -->
             <div class="lg:col-span-4 space-y-4">
-                <span class="text-xs uppercase font-bold tracking-widest text-brand-gold-dark">Leadership</span>
+                <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">Leadership</span>
                 <div class="text-6xl font-serif font-bold text-brand-navy">19+</div>
+                <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 rounded-full"></div>
                 <div class="text-base text-slate-600 font-medium">
                     years of hands-on experience in textiles and apparel manufacturing.
                 </div>
@@ -922,14 +1007,28 @@
     </div>
 </section>
 
-<!-- Sourcing Lead-Time & Banking Due Diligence (Off-White Section) -->
-<section class="py-20 bg-slate-50 border-b border-slate-200">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<!-- Sourcing Lead-Time & Banking Due Diligence (Off-White Section with Watermarks) -->
+<section class="py-20 sm:py-24 bg-slate-50 border-b border-slate-200/80 relative overflow-hidden">
+    <!-- Background Watermark Icons: Commercial Vault & Production Timing Clock -->
+    <div class="absolute -right-12 top-6 w-80 h-80 text-brand-navy/[0.03] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+        </svg>
+    </div>
+    <div class="absolute -left-12 -bottom-10 w-80 h-80 text-brand-gold/[0.035] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/>
+        </svg>
+    </div>
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-xs uppercase font-bold tracking-widest text-brand-gold-dark">Commercial Confidence</span>
+            <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">Commercial Confidence</span>
             <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy mt-1">
                 Transparent Lead Times & Banking Credentials
             </h2>
+            <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 mx-auto mt-3 rounded-full"></div>
             <p class="text-sm text-slate-600 mt-2">
                 We know the value of time and keep our commitment. Full commercial terms designed for international trade security.
             </p>
@@ -1006,16 +1105,29 @@
     </div>
 </section>
 
-<!-- Direct Sourcing Quote (RFQ) Section (Crisp White and Off-White Blend) -->
-<section id="rfq" class="py-20 bg-gradient-to-b from-white via-slate-50 to-white text-slate-800 relative">
-    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+<!-- Direct Sourcing Quote (RFQ) Section (Crisp White and Off-White Blend with Watermarks) -->
+<section id="rfq" class="py-20 sm:py-24 bg-gradient-to-b from-white via-slate-50 to-white text-slate-800 relative overflow-hidden">
+    <!-- Background Watermark: RFQ Contract & Wax Seal Motif -->
+    <div class="absolute -left-12 -bottom-12 w-96 h-96 text-brand-gold/[0.04] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+    </div>
+    <div class="absolute -right-16 top-12 w-80 h-80 text-brand-navy/[0.03] pointer-events-none select-none">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+    </div>
+
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div class="lg:col-span-5 space-y-6">
-                <span class="text-xs uppercase font-bold tracking-widest text-brand-gold-dark">Fast Sourcing Consultation</span>
+                <span class="text-xs uppercase font-bold tracking-[0.2em] text-brand-gold-dark">Fast Sourcing Consultation</span>
                 <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy">
                     Let's Build Your Next Collection Together
                 </h2>
+                <div class="w-12 h-0.5 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-amber-300 rounded-full"></div>
                 <p class="text-sm text-slate-600 leading-relaxed">
                     Submit your garment specifications, target unit pricing, or tech packs. Our merchandising and sampling team will analyze feasibility and revert within 24 hours.
                 </p>
