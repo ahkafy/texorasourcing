@@ -81,18 +81,14 @@
         class="hidden sm:flex absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/30 hover:bg-brand-gold text-white hover:text-brand-navy backdrop-blur-md items-center justify-center transition-all duration-200 border border-white/20 shadow-xl"
         aria-label="Previous slide"
     >
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-        </svg>
+        <span class="material-symbols-outlined" style="font-size: 22px;">chevron_left</span>
     </button>
     <button
         @click="slide = (slide + 1) % slides.length"
         class="hidden sm:flex absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/30 hover:bg-brand-gold text-white hover:text-brand-navy backdrop-blur-md items-center justify-center transition-all duration-200 border border-white/20 shadow-xl"
         aria-label="Next slide"
     >
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-        </svg>
+        <span class="material-symbols-outlined" style="font-size: 22px;">chevron_right</span>
     </button>
 
     <!-- Dot Indicators -->
@@ -193,42 +189,42 @@
 <section class="bg-white border-b border-slate-200/80 shadow-sm relative z-20">
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-8">
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 text-center">
-            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300 group">
+            <div class="p-4 rounded-lg bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300 group">
                 <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-navy mx-auto mb-2.5 flex items-center justify-center group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
                     <x-textile-icon name="sewing-machine" class="w-5 h-5" />
                 </div>
                 <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-navy">2015</div>
                 <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Established in Dhaka</div>
             </div>
-            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300 group">
+            <div class="p-4 rounded-lg bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300 group">
                 <div class="w-10 h-10 rounded-xl bg-brand-gold/10 text-brand-gold-dark mx-auto mb-2.5 flex items-center justify-center group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
                     <x-textile-icon name="mannequin" class="w-5 h-5" />
                 </div>
                 <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-gold-dark">34</div>
                 <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">In-House Professionals</div>
             </div>
-            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300 group">
+            <div class="p-4 rounded-lg bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300 group">
                 <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-navy mx-auto mb-2.5 flex items-center justify-center group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
                     <x-textile-icon name="magnifier-fabric" class="w-5 h-5" />
                 </div>
                 <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-navy">12</div>
                 <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Quality Controllers (QC)</div>
             </div>
-            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300 group">
+            <div class="p-4 rounded-lg bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300 group">
                 <div class="w-10 h-10 rounded-xl bg-brand-gold/10 text-brand-gold-dark mx-auto mb-2.5 flex items-center justify-center group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
                     <x-textile-icon name="techpack" class="w-5 h-5" />
                 </div>
                 <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-gold-dark">6</div>
                 <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Merchandisers</div>
             </div>
-            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300 group">
+            <div class="p-4 rounded-lg bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300 group">
                 <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-navy mx-auto mb-2.5 flex items-center justify-center group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
                     <x-textile-icon name="thread-spool" class="w-5 h-5" />
                 </div>
                 <div class="text-2xl sm:text-3xl font-serif font-bold text-brand-navy">45–90</div>
                 <div class="text-[11px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Days Delivery Cycles</div>
             </div>
-            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300 group">
+            <div class="p-4 rounded-lg bg-slate-50/80 border border-slate-100 hover:border-brand-gold/40 hover:bg-white hover:shadow-md transition-all duration-300 group">
                 <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 mx-auto mb-2.5 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                     <x-textile-icon name="cotton-boll" class="w-5 h-5" />
                 </div>
@@ -262,7 +258,7 @@
         <!-- 5 Buyer Benefits Grid (Slide 9 with Textile & Fashion Icons) -->
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
             
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+            <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
                 <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold-dark flex items-center justify-center font-bold text-lg mb-4 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
                     <x-textile-icon name="shears" class="w-6 h-6" />
                 </div>
@@ -272,7 +268,7 @@
                 </p>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+            <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
                 <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold-dark flex items-center justify-center font-bold text-lg mb-4 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
                     <x-textile-icon name="sewing-machine" class="w-6 h-6" />
                 </div>
@@ -282,7 +278,7 @@
                 </p>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+            <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
                 <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold-dark flex items-center justify-center font-bold text-lg mb-4 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
                     <x-textile-icon name="cotton-boll" class="w-6 h-6" />
                 </div>
@@ -292,7 +288,7 @@
                 </p>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+            <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
                 <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold-dark flex items-center justify-center font-bold text-lg mb-4 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
                     <x-textile-icon name="fabric-roll" class="w-6 h-6" />
                 </div>
@@ -302,7 +298,7 @@
                 </p>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
+            <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
                 <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold-dark flex items-center justify-center font-bold text-lg mb-4 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
                     <x-textile-icon name="measuring-tape" class="w-6 h-6" />
                 </div>
@@ -315,7 +311,7 @@
         </div>
 
         <!-- Banner: End-to-End Statement (Luxury 2-Column Editorial Split Showcase) -->
-        <div class="mt-14 bg-white rounded-3xl overflow-hidden text-slate-800 border border-brand-gold/35 shadow-xl grid grid-cols-1 lg:grid-cols-12">
+        <div class="mt-14 bg-white rounded-lg overflow-hidden text-slate-800 border border-slate-200 shadow-lg grid grid-cols-1 lg:grid-cols-12">
             <div class="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-center space-y-4">
                 <span class="inline-flex items-center gap-2 text-brand-gold-dark text-xs font-bold uppercase tracking-[0.2em]">
                     <span class="w-6 h-px bg-brand-gold"></span>
@@ -349,7 +345,7 @@
                      alt="Texora Sourcing Luxury Dhaka Atelier Showroom"
                      class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-brand-navy/15 to-transparent flex items-end p-6">
-                    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-4 py-3 text-white w-full">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-3 text-white w-full">
                         <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold block">Dhaka Buying Atelier</span>
                         <span class="text-xs font-medium text-white/95">Curated Showroom, Live Patternmaking & Mill Sourcing</span>
                     </div>
@@ -386,7 +382,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- Knitwear -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 hover:border-brand-gold/60 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group">
+            <div class="bg-white rounded-lg overflow-hidden border border-slate-200 hover:border-brand-gold/60 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group">
                 <div class="relative w-full h-56 sm:h-64 overflow-hidden bg-slate-100">
                     <img src="{{ asset('images/categories/knitwear.jpg') }}" 
                          alt="Knitwear Apparel Manufacturing Texora Sourcing" 
@@ -433,7 +429,7 @@
             </div>
 
             <!-- Woven -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 hover:border-brand-gold/60 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group">
+            <div class="bg-white rounded-lg overflow-hidden border border-slate-200 hover:border-brand-gold/60 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group">
                 <div class="relative w-full h-56 sm:h-64 overflow-hidden bg-slate-100">
                     <img src="{{ asset('images/categories/woven.jpg') }}" 
                          alt="Woven Garments Shirts and Pants Texora Sourcing" 
@@ -480,7 +476,7 @@
             </div>
 
             <!-- Sweater -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 hover:border-brand-gold/60 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group">
+            <div class="bg-white rounded-lg overflow-hidden border border-slate-200 hover:border-brand-gold/60 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group">
                 <div class="relative w-full h-56 sm:h-64 overflow-hidden bg-slate-100">
                     <img src="{{ asset('images/categories/sweater.jpg') }}" 
                          alt="Sweaters and Knitwear Pullovers Texora Sourcing" 
@@ -527,7 +523,7 @@
             </div>
 
             <!-- Denim & Jeanswear -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 hover:border-brand-gold/60 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group">
+            <div class="bg-white rounded-lg overflow-hidden border border-slate-200 hover:border-brand-gold/60 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group">
                 <div class="relative w-full h-56 sm:h-64 overflow-hidden bg-slate-100">
                     <img src="{{ asset('images/categories/denim.jpg') }}" 
                          alt="Denim Jeanswear Apparel Texora Sourcing" 
@@ -574,7 +570,7 @@
             </div>
 
             <!-- Outerwear & Jackets -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 hover:border-brand-gold/60 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group">
+            <div class="bg-white rounded-lg overflow-hidden border border-slate-200 hover:border-brand-gold/60 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group">
                 <div class="relative w-full h-56 sm:h-64 overflow-hidden bg-slate-100">
                     <img src="{{ asset('images/categories/outerwear.jpg') }}" 
                          alt="Outerwear Jackets Parkas Texora Sourcing" 
@@ -621,7 +617,7 @@
             </div>
 
             <!-- Workwear & Uniforms -->
-            <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 hover:border-brand-gold/60 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group">
+            <div class="bg-white rounded-lg overflow-hidden border border-slate-200 hover:border-brand-gold/60 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group">
                 <div class="relative w-full h-56 sm:h-64 overflow-hidden bg-slate-100">
                     <img src="{{ asset('images/categories/workwear.jpg') }}" 
                          alt="Workwear Uniforms Industrial Apparel Texora Sourcing" 
@@ -670,7 +666,7 @@
         </div>
 
         <!-- Collections Strip (Slide 7 footer) -->
-        <div class="mt-10 bg-slate-50 rounded-3xl p-6 text-slate-800 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4 border border-slate-200">
+        <div class="mt-10 bg-slate-50 rounded-lg p-6 text-slate-800 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4 border border-slate-200">
             <div>
                 <span class="text-xs uppercase font-bold tracking-widest text-brand-gold-dark block">Versatile Range</span>
                 <p class="text-lg font-serif font-bold text-brand-navy mt-0.5">
@@ -708,7 +704,7 @@
         <!-- 3 Primary Milestones (Slide 10 with Luxury Editorial Photography & Textile Icons) -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             
-            <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm relative group hover:border-brand-gold hover:shadow-xl transition-all duration-300 flex flex-col">
+            <div class="bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm relative group hover:border-brand-gold hover:shadow-xl transition-all duration-300 flex flex-col">
                 <div class="relative h-52 overflow-hidden bg-slate-100">
                     <img src="{{ asset('images/luxury/modern-factory-floor.jpg') }}"
                          alt="Compliant Modern Garment Factory Floor"
@@ -732,7 +728,7 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm relative group hover:border-brand-gold hover:shadow-xl transition-all duration-300 flex flex-col">
+            <div class="bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm relative group hover:border-brand-gold hover:shadow-xl transition-all duration-300 flex flex-col">
                 <div class="relative h-52 overflow-hidden bg-slate-100">
                     <img src="{{ asset('images/luxury/fabric-swatches-macro.jpg') }}"
                          alt="Luxury Combed Cotton, Cashmere & Twill Fabrics"
@@ -756,7 +752,7 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm relative group hover:border-brand-gold hover:shadow-xl transition-all duration-300 flex flex-col">
+            <div class="bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm relative group hover:border-brand-gold hover:shadow-xl transition-all duration-300 flex flex-col">
                 <div class="relative h-52 overflow-hidden bg-slate-100">
                     <img src="{{ asset('images/luxury/tailoring-craft.jpg') }}"
                          alt="Bespoke Garment Pattern Drafting & Sampling"
@@ -782,8 +778,8 @@
 
         </div>
 
-        <!-- 4 Supporting Pillars (White Card with Subtle Gold Border & Textile Icons) -->
-        <div class="bg-white rounded-3xl p-6 sm:p-8 text-slate-800 border-2 border-brand-gold/30 shadow-md grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 4 Supporting Pillars (Clean Straight White Card with Textile Icons) -->
+        <div class="bg-white rounded-lg p-6 sm:p-8 text-slate-800 border border-slate-200 shadow-sm grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div class="flex items-start space-x-3">
                 <div class="w-7 h-7 rounded-full bg-brand-gold/20 text-brand-gold-dark flex-shrink-0 flex items-center justify-center font-bold text-xs mt-0.5">
                     <x-textile-icon name="mannequin" class="w-3.5 h-3.5" />
@@ -843,7 +839,7 @@
             
             <!-- Left: Editorial Luxury QA Lab Composition -->
             <div class="lg:col-span-5 relative space-y-4">
-                <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 group">
+                <div class="relative rounded-lg overflow-hidden shadow-2xl border border-slate-200 group">
                     <img src="{{ asset('images/luxury/quality-lab-inspection.jpg') }}" 
                          alt="Quality Assurance Textile Laboratory Inspection Texora Sourcing" 
                          class="w-full h-[420px] sm:h-[460px] object-cover object-center group-hover:scale-105 transition-transform duration-700">
@@ -860,7 +856,7 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-2 gap-4">
-                    <div class="relative rounded-2xl overflow-hidden h-32 border border-slate-200 shadow-md group">
+                    <div class="relative rounded-lg overflow-hidden h-32 border border-slate-200 shadow-md group">
                         <img src="{{ asset('images/extracted/quality-sewing-inspection.jpg') }}"
                              alt="In-Line Sewing Floor Audit"
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -868,7 +864,7 @@
                             <span class="text-[11px] font-semibold text-white">Sewing Line QC</span>
                         </div>
                     </div>
-                    <div class="relative rounded-2xl overflow-hidden h-32 border border-slate-200 shadow-md group">
+                    <div class="relative rounded-lg overflow-hidden h-32 border border-slate-200 shadow-md group">
                         <img src="{{ asset('images/luxury/tailoring-craft.jpg') }}"
                              alt="Precision Measurement & Pattern Check"
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -891,7 +887,7 @@
                 </div>
 
                 <div class="space-y-3.5">
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold/60 transition-colors group">
+                    <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-slate-200 hover:border-brand-gold/60 transition-colors group">
                         <div class="w-9 h-9 rounded-xl bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center flex-shrink-0 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
                             <x-textile-icon name="techpack" class="w-4 h-4" />
                         </div>
@@ -904,7 +900,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold/60 transition-colors group">
+                    <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-slate-200 hover:border-brand-gold/60 transition-colors group">
                         <div class="w-9 h-9 rounded-xl bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center flex-shrink-0 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
                             <x-textile-icon name="magnifier-fabric" class="w-4 h-4" />
                         </div>
@@ -917,7 +913,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold/60 transition-colors group">
+                    <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-slate-200 hover:border-brand-gold/60 transition-colors group">
                         <div class="w-9 h-9 rounded-xl bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center flex-shrink-0 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
                             <x-textile-icon name="sewing-machine" class="w-4 h-4" />
                         </div>
@@ -930,7 +926,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold/60 transition-colors group">
+                    <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-slate-200 hover:border-brand-gold/60 transition-colors group">
                         <div class="w-9 h-9 rounded-xl bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center flex-shrink-0 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
                             <x-textile-icon name="measuring-tape" class="w-4 h-4" />
                         </div>
@@ -943,7 +939,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold/60 transition-colors group">
+                    <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-slate-200 hover:border-brand-gold/60 transition-colors group">
                         <div class="w-9 h-9 rounded-xl bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center flex-shrink-0 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
                             <x-textile-icon name="hanger" class="w-4 h-4" />
                         </div>
@@ -990,7 +986,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             <!-- Buyers Box (Slide 11 left with Luxury Retail Boutique Visual) -->
-            <div class="lg:col-span-5 bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between">
+            <div class="lg:col-span-5 bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between">
                 <div>
                     <div class="relative h-44 overflow-hidden">
                         <img src="{{ asset('images/luxury/global-retail-boutique.jpg') }}"
@@ -1007,7 +1003,7 @@
                     <div class="p-6 sm:p-8 space-y-3">
                         <p class="text-xs text-slate-500 pb-1">Delivering seasonal collections to major department stores and fashion chains:</p>
 
-                        <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
+                        <div class="flex items-center justify-between p-3.5 rounded-lg bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
                             <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
                                 <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
                                 YM INC
@@ -1015,7 +1011,7 @@
                             <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">🇨🇦 Canada</span>
                         </div>
 
-                        <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
+                        <div class="flex items-center justify-between p-3.5 rounded-lg bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
                             <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
                                 <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
                                 ARDENE
@@ -1023,7 +1019,7 @@
                             <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">🇨🇦 Canada</span>
                         </div>
 
-                        <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
+                        <div class="flex items-center justify-between p-3.5 rounded-lg bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
                             <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
                                 <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
                                 SUZY SHIER
@@ -1031,7 +1027,7 @@
                             <span class="text-xs font-semibold px-3 py-1 bg-white rounded-md border text-slate-700">🇨🇦 Canada</span>
                         </div>
 
-                        <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
+                        <div class="flex items-center justify-between p-3.5 rounded-lg bg-slate-50 border border-slate-100 hover:border-brand-gold transition-colors">
                             <span class="font-bold text-base text-brand-navy inline-flex items-center gap-2">
                                 <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
                                 SUN ASIA
@@ -1047,7 +1043,7 @@
             </div>
 
             <!-- Certifications Box (Slide 11 right) -->
-            <div class="lg:col-span-7 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6 flex flex-col justify-between">
+            <div class="lg:col-span-7 bg-white p-8 rounded-lg border border-slate-200 shadow-sm space-y-6 flex flex-col justify-between">
                 <div class="space-y-6">
                     <div>
                         <span class="inline-flex items-center gap-1.5 text-xs uppercase font-bold tracking-wider text-brand-gold-dark">
@@ -1061,7 +1057,7 @@
                     </div>
 
                     <!-- Extracted Certifications Image from Slide 11 -->
-                    <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-center justify-center">
+                    <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 flex items-center justify-center">
                         <img src="{{ asset('images/extracted/certifications-card-v2.png') }}" 
                              alt="Certified Partner Factories Logos: Accord, RSC, WRAP, Sedex, Higg Index, ISO, OEKO-TEX, GOTS" 
                              class="w-full max-h-36 object-contain">
@@ -1081,7 +1077,7 @@
                 </div>
 
                 <!-- Factory Compliance Preview Strip -->
-                <div class="relative rounded-2xl overflow-hidden h-36 border border-slate-200 group">
+                <div class="relative rounded-lg overflow-hidden h-36 border border-slate-200 group">
                     <img src="{{ asset('images/luxury/modern-factory-floor.jpg') }}"
                          alt="Green Certified Compliant Factory Partners"
                          class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
@@ -1139,7 +1135,7 @@
             </div>
 
             <!-- Right: Statement Card (Frosted Luxury Glass Card with Champagne Gold Border) -->
-            <div class="lg:col-span-8 bg-white/10 backdrop-blur-xl rounded-3xl p-8 sm:p-10 border border-brand-gold/40 shadow-2xl space-y-5">
+            <div class="lg:col-span-8 bg-white/10 backdrop-blur-xl rounded-lg p-8 sm:p-10 border border-brand-gold/40 shadow-2xl space-y-5">
                 <blockquote class="text-lg sm:text-2xl font-semibold italic text-white leading-relaxed">
                     "My journey has been built on precision, partnership and a deep technical understanding of garment manufacturing."
                 </blockquote>
@@ -1188,7 +1184,7 @@
         </div>
 
         <!-- Editorial Export Readiness Visual Strip -->
-        <div class="mb-10 relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 h-56 sm:h-64 group">
+        <div class="mb-10 relative rounded-lg overflow-hidden shadow-xl border border-slate-200 h-56 sm:h-64 group">
             <img src="{{ asset('images/luxury/export-logistics-garments.jpg') }}"
                  alt="Export-Ready Garments on Brass Rolling Racks"
                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
@@ -1209,7 +1205,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- Lead Time Card 1 -->
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between group hover:border-brand-gold/60 transition-colors">
+            <div class="bg-white p-8 rounded-lg border border-slate-200 shadow-sm flex flex-col justify-between group hover:border-brand-gold/60 transition-colors">
                 <div>
                     <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-navy mb-4 flex items-center justify-center group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
                         <x-textile-icon name="fabric-roll" class="w-5 h-5" />
@@ -1229,7 +1225,7 @@
             </div>
 
             <!-- Lead Time Card 2 -->
-            <div class="bg-white p-8 rounded-3xl border-2 border-brand-gold/40 shadow-lg flex flex-col justify-between relative overflow-hidden group">
+            <div class="bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:border-brand-gold/60 hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
                 <div class="relative z-10">
                     <div class="w-10 h-10 rounded-xl bg-brand-gold/15 text-brand-gold-dark mb-4 flex items-center justify-center group-hover:bg-brand-gold group-hover:text-brand-navy transition-colors">
                         <x-textile-icon name="measuring-tape" class="w-5 h-5" />
@@ -1249,7 +1245,7 @@
             </div>
 
             <!-- Due Diligence / Bank Details Card (Slide 5) -->
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between group hover:border-brand-gold/60 transition-colors">
+            <div class="bg-white p-8 rounded-lg border border-slate-200 shadow-sm flex flex-col justify-between group hover:border-brand-gold/60 transition-colors">
                 <div>
                     <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-navy mb-4 flex items-center justify-center group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
                         <x-textile-icon name="techpack" class="w-5 h-5" />
@@ -1329,7 +1325,7 @@
 
                 <!-- Luxury Consultation Lounge Photo -->
                 <div class="pt-4">
-                    <div class="relative rounded-3xl overflow-hidden border border-slate-200 shadow-lg max-w-md group">
+                    <div class="relative rounded-lg overflow-hidden border border-slate-200 shadow-lg max-w-md group">
                         <img src="{{ asset('images/luxury/executive-atelier-office.jpg') }}" 
                              alt="Texora Sourcing Executive Consultation Lounge Dhaka" 
                              class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-700">
@@ -1345,7 +1341,7 @@
 
             <!-- RFQ Form Column -->
             <div class="lg:col-span-7">
-                <div class="bg-white text-slate-800 rounded-3xl p-8 sm:p-10 shadow-xl border border-slate-200">
+                <div class="bg-white text-slate-800 rounded-lg p-8 sm:p-10 shadow-xl border border-slate-200">
                     <h3 class="text-2xl font-serif font-bold text-brand-navy">Request a Sourcing Quote</h3>
                     <p class="text-xs text-slate-500 mt-1 mb-6">Fill in your specifications below for a guaranteed response.</p>
 

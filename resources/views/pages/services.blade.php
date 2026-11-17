@@ -56,7 +56,7 @@
 
         <!-- Editorial Dual Photo Gallery Banner -->
         <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-12">
-            <div class="md:col-span-7 relative rounded-3xl overflow-hidden h-64 sm:h-72 shadow-lg border border-slate-200 group">
+            <div class="md:col-span-7 relative rounded-lg overflow-hidden h-64 sm:h-72 shadow-lg border border-slate-200 group">
                 <img src="{{ asset('images/luxury/atelier-showroom.jpg') }}"
                      alt="Apparel Development & Merchandising Atelier"
                      class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
@@ -67,7 +67,7 @@
                     </div>
                 </div>
             </div>
-            <div class="md:col-span-5 relative rounded-3xl overflow-hidden h-64 sm:h-72 shadow-lg border border-slate-200 group">
+            <div class="md:col-span-5 relative rounded-lg overflow-hidden h-64 sm:h-72 shadow-lg border border-slate-200 group">
                 <img src="{{ asset('images/luxury/tailoring-craft.jpg') }}"
                      alt="Bespoke Pattern Drafting and Sample Craftsmanship"
                      class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
@@ -83,7 +83,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
             <!-- 01 Enquiries & Orders -->
-            <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group">
+            <div class="bg-slate-50 rounded-lg p-6 border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
                         <x-textile-icon name="techpack" class="w-5 h-5 text-brand-gold-dark" />
@@ -97,7 +97,7 @@
             </div>
 
             <!-- 02 Buyer Visits -->
-            <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group">
+            <div class="bg-slate-50 rounded-lg p-6 border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
                         <x-textile-icon name="mannequin" class="w-5 h-5 text-brand-gold-dark" />
@@ -111,7 +111,7 @@
             </div>
 
             <!-- 03 Vendor Arrangement -->
-            <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group">
+            <div class="bg-slate-50 rounded-lg p-6 border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
                         <x-textile-icon name="sewing-machine" class="w-5 h-5 text-brand-gold-dark" />
@@ -125,7 +125,7 @@
             </div>
 
             <!-- 04 Factory Inspection -->
-            <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group">
+            <div class="bg-slate-50 rounded-lg p-6 border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
                         <x-textile-icon name="magnifier-fabric" class="w-5 h-5 text-brand-gold-dark" />
@@ -139,7 +139,7 @@
             </div>
 
             <!-- 05 Material Sourcing -->
-            <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group">
+            <div class="bg-slate-50 rounded-lg p-6 border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
                         <x-textile-icon name="fabric-roll" class="w-5 h-5 text-brand-gold-dark" />
@@ -153,7 +153,7 @@
             </div>
 
             <!-- 06 Production & QC -->
-            <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group">
+            <div class="bg-slate-50 rounded-lg p-6 border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
                         <x-textile-icon name="measuring-tape" class="w-5 h-5 text-brand-gold-dark" />
@@ -167,7 +167,7 @@
             </div>
 
             <!-- 07 On-Time Shipment -->
-            <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group">
+            <div class="bg-slate-50 rounded-lg p-6 border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
                         <x-textile-icon name="hanger" class="w-5 h-5 text-brand-gold-dark" />
@@ -181,7 +181,7 @@
             </div>
 
             <!-- 08 Care for Every Buyer -->
-            <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group">
+            <div class="bg-slate-50 rounded-lg p-6 border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center font-bold group-hover:scale-110 transition-transform">
                         <x-textile-icon name="cotton-boll" class="w-5 h-5 text-brand-gold-dark" />
@@ -220,7 +220,7 @@
             <!-- Step 1 -->
             <div class="relative flex flex-col sm:flex-row items-center gap-6 sm:gap-0">
                 <div class="flex items-center justify-start w-full sm:w-1/2 sm:pr-10 pl-16 sm:pl-0">
-                    <div class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
+                    <div class="bg-white p-6 sm:p-7 rounded-lg border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
                         <div class="flex items-center gap-2 mb-1">
                             <x-textile-icon name="sewing-machine" class="w-4 h-4 text-brand-gold-dark" />
                             <span class="text-xs font-bold uppercase tracking-wider text-brand-gold-dark">Milestone 01</span>
@@ -233,7 +233,7 @@
                 </div>
                 <div class="absolute left-8 sm:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-brand-navy border-4 border-brand-gold text-white font-bold text-xs flex items-center justify-center shadow-md z-10">1</div>
                 <div class="w-full sm:w-1/2 sm:pl-10 pl-16">
-                    <div class="rounded-3xl overflow-hidden h-48 sm:h-52 border border-slate-200 shadow-md group">
+                    <div class="rounded-lg overflow-hidden h-48 sm:h-52 border border-slate-200 shadow-md group">
                         <img src="{{ asset('images/luxury/modern-factory-floor.jpg') }}" alt="Factory Floor Due Diligence" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
                 </div>
@@ -242,13 +242,13 @@
             <!-- Step 2 -->
             <div class="relative flex flex-col sm:flex-row items-center gap-6 sm:gap-0">
                 <div class="w-full sm:w-1/2 sm:pr-10 pl-16 sm:pl-0 order-2 sm:order-1">
-                    <div class="rounded-3xl overflow-hidden h-48 sm:h-52 border border-slate-200 shadow-md group">
+                    <div class="rounded-lg overflow-hidden h-48 sm:h-52 border border-slate-200 shadow-md group">
                         <img src="{{ asset('images/luxury/fabric-swatches-macro.jpg') }}" alt="Luxury Fabric and Trim Sourcing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
                 </div>
                 <div class="absolute left-8 sm:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-brand-navy border-4 border-brand-gold text-white font-bold text-xs flex items-center justify-center shadow-md z-10">2</div>
                 <div class="flex items-center justify-start w-full sm:w-1/2 sm:pl-10 pl-16 order-1 sm:order-2">
-                    <div class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
+                    <div class="bg-white p-6 sm:p-7 rounded-lg border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
                         <div class="flex items-center gap-2 mb-1">
                             <x-textile-icon name="fabric-roll" class="w-4 h-4 text-brand-gold-dark" />
                             <span class="text-xs font-bold uppercase tracking-wider text-brand-gold-dark">Milestone 02</span>
@@ -264,7 +264,7 @@
             <!-- Step 3 -->
             <div class="relative flex flex-col sm:flex-row items-center gap-6 sm:gap-0">
                 <div class="flex items-center justify-start w-full sm:w-1/2 sm:pr-10 pl-16 sm:pl-0">
-                    <div class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
+                    <div class="bg-white p-6 sm:p-7 rounded-lg border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
                         <div class="flex items-center gap-2 mb-1">
                             <x-textile-icon name="shears" class="w-4 h-4 text-brand-gold-dark" />
                             <span class="text-xs font-bold uppercase tracking-wider text-brand-gold-dark">Milestone 03</span>
@@ -277,7 +277,7 @@
                 </div>
                 <div class="absolute left-8 sm:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-brand-navy border-4 border-brand-gold text-white font-bold text-xs flex items-center justify-center shadow-md z-10">3</div>
                 <div class="w-full sm:w-1/2 sm:pl-10 pl-16">
-                    <div class="rounded-3xl overflow-hidden h-48 sm:h-52 border border-slate-200 shadow-md group">
+                    <div class="rounded-lg overflow-hidden h-48 sm:h-52 border border-slate-200 shadow-md group">
                         <img src="{{ asset('images/luxury/tailoring-craft.jpg') }}" alt="Proto and Pre-Production Sampling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
                 </div>
@@ -286,13 +286,13 @@
             <!-- Step 4 -->
             <div class="relative flex flex-col sm:flex-row items-center gap-6 sm:gap-0">
                 <div class="w-full sm:w-1/2 sm:pr-10 pl-16 sm:pl-0 order-2 sm:order-1">
-                    <div class="rounded-3xl overflow-hidden h-48 sm:h-52 border border-slate-200 shadow-md group">
+                    <div class="rounded-lg overflow-hidden h-48 sm:h-52 border border-slate-200 shadow-md group">
                         <img src="{{ asset('images/luxury/quality-lab-inspection.jpg') }}" alt="Bulk Production In-Line QC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
                 </div>
                 <div class="absolute left-8 sm:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-brand-navy border-4 border-brand-gold text-white font-bold text-xs flex items-center justify-center shadow-md z-10">4</div>
                 <div class="flex items-center justify-start w-full sm:w-1/2 sm:pl-10 pl-16 order-1 sm:order-2">
-                    <div class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
+                    <div class="bg-white p-6 sm:p-7 rounded-lg border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
                         <div class="flex items-center gap-2 mb-1">
                             <x-textile-icon name="measuring-tape" class="w-4 h-4 text-brand-gold-dark" />
                             <span class="text-xs font-bold uppercase tracking-wider text-brand-gold-dark">Milestone 04</span>
@@ -308,7 +308,7 @@
             <!-- Step 5 -->
             <div class="relative flex flex-col sm:flex-row items-center gap-6 sm:gap-0">
                 <div class="flex items-center justify-start w-full sm:w-1/2 sm:pr-10 pl-16 sm:pl-0">
-                    <div class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
+                    <div class="bg-white p-6 sm:p-7 rounded-lg border border-slate-200 shadow-sm w-full hover:border-brand-gold transition-colors">
                         <div class="flex items-center gap-2 mb-1">
                             <x-textile-icon name="magnifier-fabric" class="w-4 h-4 text-brand-gold-dark" />
                             <span class="text-xs font-bold uppercase tracking-wider text-brand-gold-dark">Milestone 05</span>
@@ -321,7 +321,7 @@
                 </div>
                 <div class="absolute left-8 sm:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-brand-navy border-4 border-brand-gold text-white font-bold text-xs flex items-center justify-center shadow-md z-10">5</div>
                 <div class="w-full sm:w-1/2 sm:pl-10 pl-16">
-                    <div class="rounded-3xl overflow-hidden h-48 sm:h-52 border border-slate-200 shadow-md group">
+                    <div class="rounded-lg overflow-hidden h-48 sm:h-52 border border-slate-200 shadow-md group">
                         <img src="{{ asset('images/luxury/export-logistics-garments.jpg') }}" alt="Final AQL Inspection and Global Shipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
                 </div>
@@ -338,7 +338,7 @@
     <x-textile-watermark motif="measuring-tape" class="absolute -left-16 -top-16 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
-        <div class="bg-slate-50 text-slate-800 rounded-3xl p-8 sm:p-12 border-2 border-brand-gold/30 shadow-xl relative overflow-hidden">
+        <div class="bg-slate-50 text-slate-800 rounded-lg p-8 sm:p-12 border border-slate-200 shadow-md relative overflow-hidden">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 
                 <div class="lg:col-span-7 space-y-4">
@@ -351,28 +351,28 @@
                     </p>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs">
-                        <div class="p-3.5 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="p-3.5 bg-white rounded-lg border border-slate-200 shadow-sm">
                             <div class="flex items-center gap-1.5 mb-1 text-brand-navy font-bold">
                                 <x-textile-icon name="hanger" class="w-4 h-4 text-brand-gold-dark" />
                                 <strong>Airport Reception:</strong>
                             </div>
                             <span class="text-slate-600">Pick-up & drop-off from Hazrat Shahjalal International Airport (DAC), just 10 mins from our Uttara office.</span>
                         </div>
-                        <div class="p-3.5 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="p-3.5 bg-white rounded-lg border border-slate-200 shadow-sm">
                             <div class="flex items-center gap-1.5 mb-1 text-brand-navy font-bold">
                                 <x-textile-icon name="care-label" class="w-4 h-4 text-brand-gold-dark" />
                                 <strong>Hotel Arrangements:</strong>
                             </div>
                             <span class="text-slate-600">Recommendations and corporate rates at international 5-star hotels in Uttara / Gulshan / Banani.</span>
                         </div>
-                        <div class="p-3.5 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="p-3.5 bg-white rounded-lg border border-slate-200 shadow-sm">
                             <div class="flex items-center gap-1.5 mb-1 text-brand-navy font-bold">
                                 <x-textile-icon name="sewing-machine" class="w-4 h-4 text-brand-gold-dark" />
                                 <strong>Factory Floor Audits:</strong>
                             </div>
                             <span class="text-slate-600">Escorted site visits to knitting, weaving, dyeing, printing, and automated laundry facilities.</span>
                         </div>
-                        <div class="p-3.5 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="p-3.5 bg-white rounded-lg border border-slate-200 shadow-sm">
                             <div class="flex items-center gap-1.5 mb-1 text-brand-navy font-bold">
                                 <x-textile-icon name="mannequin" class="w-4 h-4 text-brand-gold-dark" />
                                 <strong>Sample Showroom Reviews:</strong>
@@ -396,7 +396,7 @@
                 </div>
 
                 <div class="lg:col-span-5 space-y-5">
-                    <div class="relative rounded-3xl overflow-hidden h-52 shadow-lg border border-slate-200 group">
+                    <div class="relative rounded-lg overflow-hidden h-52 shadow-lg border border-slate-200 group">
                         <img src="{{ asset('images/luxury/executive-atelier-office.jpg') }}"
                              alt="Texora Sourcing Executive Lounge Uttara Dhaka"
                              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
@@ -404,7 +404,7 @@
                             <span class="text-xs font-semibold text-white">Executive Sample Review & Consultation Lounge</span>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4 text-xs text-slate-700">
+                    <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm space-y-4 text-xs text-slate-700">
                         <h4 class="font-bold text-brand-navy uppercase tracking-wider text-sm border-b pb-2 flex items-center justify-between">
                             <span>Dhaka Office Logistics</span>
                             <x-textile-icon name="cotton-boll" class="w-4 h-4 text-brand-gold-dark" />

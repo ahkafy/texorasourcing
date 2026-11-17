@@ -56,7 +56,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
             <!-- Buyer 1: YM INC -->
-            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group flex flex-col justify-between">
+            <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Major Fashion Retailer</span>
@@ -74,7 +74,7 @@
             </div>
 
             <!-- Buyer 2: ARDENE -->
-            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group flex flex-col justify-between">
+            <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Fast-Fashion Chain</span>
@@ -92,7 +92,7 @@
             </div>
 
             <!-- Buyer 3: SUZY SHIER -->
-            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group flex flex-col justify-between">
+            <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Womenswear Brand</span>
@@ -110,7 +110,7 @@
             </div>
 
             <!-- Buyer 4: SUN ASIA -->
-            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group flex flex-col justify-between">
+            <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:border-brand-gold hover:shadow-lg transition-all duration-300 group flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Latin America Distribution</span>
@@ -145,9 +145,12 @@
                 <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-navy">
                     Minimum Price, Maximum Quality
                 </h2>
-                <div class="p-6 bg-white rounded-2xl border border-slate-200 border-l-4 border-l-brand-gold shadow-sm space-y-2">
-                    <span class="text-xs uppercase font-bold tracking-wider text-brand-gold">The Texora Commitment</span>
-                    <p class="text-sm text-slate-700 leading-relaxed italic font-serif">
+                <div class="p-6 bg-white rounded-lg border border-slate-200 shadow-sm space-y-2">
+                    <div class="flex items-center gap-2">
+                        <span class="w-5 h-0.5 bg-brand-gold rounded-full"></span>
+                        <span class="text-xs uppercase font-bold tracking-wider text-brand-gold-dark">The Texora Commitment</span>
+                    </div>
+                    <p class="text-sm text-slate-700 leading-relaxed italic">
                         "Build long-term business relationships by offering the minimum price and providing the maximum quality, as a buying partner to clients worldwide."
                     </p>
                 </div>
@@ -156,7 +159,7 @@
                 </p>
 
                 <!-- Editorial Atelier Visual -->
-                <div class="relative rounded-3xl overflow-hidden h-56 shadow-lg border border-slate-200 group">
+                <div class="relative rounded-lg overflow-hidden h-56 shadow-lg border border-slate-200 group">
                     <img src="{{ asset('images/luxury/atelier-showroom.jpg') }}"
                          alt="Texora Sourcing Merchandising Showroom"
                          class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
@@ -246,7 +249,7 @@
         </div>
 
         <!-- Export Trade Logistics Visual Banner -->
-        <div class="max-w-4xl mx-auto mb-10 relative rounded-3xl overflow-hidden h-52 sm:h-60 shadow-xl border border-slate-200 group">
+        <div class="max-w-4xl mx-auto mb-10 relative rounded-lg overflow-hidden h-52 sm:h-60 shadow-xl border border-slate-200 group">
             <img src="{{ asset('images/luxury/export-logistics-garments.jpg') }}"
                  alt="Export Ready Apparel Shipments Worldwide"
                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
@@ -262,7 +265,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             
             <!-- Payment Methods Card -->
-            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+            <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 shadow-sm space-y-4">
                 <span class="text-xs font-bold uppercase tracking-wider text-brand-gold">Mode of Payment</span>
                 <h3 class="text-2xl font-serif font-bold text-brand-navy">Accepted Payment Modes</h3>
                 
@@ -288,7 +291,7 @@
             </div>
 
             <!-- Official Bank Details Card (Slide 5) -->
-            <div class="bg-slate-50 p-8 rounded-2xl border-2 border-brand-gold/40 shadow-sm space-y-4">
+            <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 shadow-sm space-y-4">
                 <div class="flex items-center justify-between">
                     <span class="text-xs font-bold uppercase tracking-wider text-brand-gold">Banking Due Diligence</span>
                     <span class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 text-[11px] font-bold">Tier-1 Bank</span>
@@ -337,7 +340,7 @@
 
         <div class="space-y-4" x-data="{ openFaq: null }">
             
-            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+            <div class="bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm">
                 <button @click="openFaq = openFaq === 1 ? null : 1" class="w-full p-5 text-left flex items-center justify-between font-bold text-sm text-brand-navy">
                     <span>What are your standard Minimum Order Quantities (MOQ)?</span>
                     <span class="text-brand-gold font-bold text-base" x-text="openFaq === 1 ? '−' : '+'">+</span>
@@ -347,7 +350,7 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+            <div class="bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm">
                 <button @click="openFaq = openFaq === 2 ? null : 2" class="w-full p-5 text-left flex items-center justify-between font-bold text-sm text-brand-navy">
                     <span>How long does counter-sampling and lab dip approval take?</span>
                     <span class="text-brand-gold font-bold text-base" x-text="openFaq === 2 ? '−' : '+'">+</span>
@@ -357,7 +360,7 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+            <div class="bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm">
                 <button @click="openFaq = openFaq === 3 ? null : 3" class="w-full p-5 text-left flex items-center justify-between font-bold text-sm text-brand-navy">
                     <span>What shipping incoterms do you operate under?</span>
                     <span class="text-brand-gold font-bold text-base" x-text="openFaq === 3 ? '−' : '+'">+</span>
@@ -367,7 +370,7 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+            <div class="bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm">
                 <button @click="openFaq = openFaq === 4 ? null : 4" class="w-full p-5 text-left flex items-center justify-between font-bold text-sm text-brand-navy">
                     <span>Can our third-party auditing agency inspect the factory?</span>
                     <span class="text-brand-gold font-bold text-base" x-text="openFaq === 4 ? '−' : '+'">+</span>

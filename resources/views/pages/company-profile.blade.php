@@ -63,7 +63,7 @@
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
         
         <!-- Viewer Container -->
-        <div class="bg-white rounded-3xl border border-slate-300 shadow-2xl overflow-hidden">
+        <div class="bg-white rounded-lg border border-slate-300 shadow-2xl overflow-hidden">
             
             <!-- Viewer Top Controls Bar -->
             <div class="bg-brand-navy px-6 py-4 text-white flex flex-wrap items-center justify-between gap-4 border-b border-brand-navy-light">
@@ -119,7 +119,7 @@
 
         <!-- Quick Summary Cards from the Slides -->
         <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
+            <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center gap-1.5 text-brand-gold font-bold text-xs uppercase">
                     <x-textile-icon name="mannequin" class="w-4 h-4 text-brand-gold-dark" />
                     <span>Leadership (Slide 12)</span>
@@ -130,7 +130,7 @@
                 </p>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
+            <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center gap-1.5 text-brand-gold font-bold text-xs uppercase">
                     <x-textile-icon name="magnifier-fabric" class="w-4 h-4 text-brand-gold-dark" />
                     <span>Capacity & QA (Slide 4 & 8)</span>
@@ -141,7 +141,7 @@
                 </p>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
+            <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center gap-1.5 text-brand-gold font-bold text-xs uppercase">
                     <x-textile-icon name="fabric-roll" class="w-4 h-4 text-brand-gold-dark" />
                     <span>Commercial Delivery (Slide 9)</span>

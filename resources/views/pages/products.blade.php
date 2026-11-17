@@ -85,7 +85,7 @@
         </div>
 
         <!-- Knitwear Detailed Section (Slide 7) -->
-        <div id="knit" x-show="activeTab === 'all' || activeTab === 'knit'" class="mb-16 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm relative overflow-hidden">
+        <div id="knit" x-show="activeTab === 'all' || activeTab === 'knit'" class="mb-16 bg-white rounded-lg p-8 sm:p-10 border border-slate-200 shadow-sm relative overflow-hidden">
             <x-textile-watermark motif="cotton-boll" class="absolute -right-10 -bottom-10 w-72 h-72 text-brand-gold/[0.03] pointer-events-none select-none" />
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                 <div class="lg:col-span-5 space-y-4">
@@ -98,7 +98,7 @@
                         Our knitwear manufacturing covers everything from basic promotional tees to premium retail heavyweight hoodies and luxury combed cotton polos.
                     </p>
                     
-                    <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                    <div class="rounded-lg overflow-hidden shadow-md border border-slate-200">
                         <img src="{{ asset('images/categories/knitwear.jpg') }}" 
                              alt="Knitwear Products: T-shirts, Polos, Tops" 
                              class="w-full h-64 object-cover object-center">
@@ -117,28 +117,28 @@
                     </h3>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
                             <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
                                 <x-textile-icon name="hanger" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                 <span>Product Lines:</span>
                             </h4>
                             <p class="text-slate-600">Basic & Fashion T-Shirts, Polo Shirts with Flat-Knit Collars, Pullover Hoodies, Zip Sweatshirts, Henley Tops, Tank Tops, Jogger Pants, Long Sleeve Tops.</p>
                         </div>
-                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
                             <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
                                 <x-textile-icon name="cotton-boll" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                 <span>Fabric Compositions:</span>
                             </h4>
                             <p class="text-slate-600">100% Combed/Carded Cotton, CVC (60/40), TC (65/35), 95/5 Cotton Spandex, Viscose, Modal, Recycled Polyester (GRS), Organic Cotton (GOTS).</p>
                         </div>
-                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
                             <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
                                 <x-textile-icon name="fabric-roll" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                 <span>Fabric Weights (GSM):</span>
                             </h4>
                             <p class="text-slate-600">Single Jersey (130–220 GSM), Pique (180–240 GSM), Interlock (200–260 GSM), French Terry (240–320 GSM), Heavy Fleece (300–420 GSM).</p>
                         </div>
-                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
                             <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
                                 <x-textile-icon name="care-label" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                 <span>Washes & Finishes:</span>
@@ -147,7 +147,7 @@
                         </div>
                     </div>
 
-                    <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 text-xs text-slate-700 flex items-center justify-between">
+                    <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 text-xs text-slate-700 flex items-center justify-between">
                         <span><strong>Minimum Order Quantity (MOQ):</strong> 1,000 pcs per style (Flexible for test orders)</span>
                         <span class="font-semibold text-brand-gold-dark">Lead Time: 45–60 Days</span>
                     </div>
@@ -156,7 +156,7 @@
         </div>
 
         <!-- Woven Detailed Section (Slide 7) -->
-        <div id="woven" x-show="activeTab === 'all' || activeTab === 'woven'" class="mb-16 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm relative overflow-hidden">
+        <div id="woven" x-show="activeTab === 'all' || activeTab === 'woven'" class="mb-16 bg-white rounded-lg p-8 sm:p-10 border border-slate-200 shadow-sm relative overflow-hidden">
             <x-textile-watermark motif="shears" class="absolute -right-10 -bottom-10 w-72 h-72 text-brand-gold/[0.03] pointer-events-none select-none" />
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                 <div class="lg:col-span-5 space-y-4">
@@ -169,7 +169,7 @@
                         Pants, dress shirts, casual button-downs, cargo trousers, and utility bottom wear executed with crisp stitching and reliable dimensional stability.
                     </p>
                     
-                    <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                    <div class="rounded-lg overflow-hidden shadow-md border border-slate-200">
                         <img src="{{ asset('images/categories/woven.jpg') }}" 
                              alt="Woven Products: Pants, Shirts, Jackets" 
                              class="w-full h-64 object-cover object-center">
@@ -188,28 +188,28 @@
                     </h3>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
                             <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
                                 <x-textile-icon name="hanger" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                 <span>Product Lines:</span>
                             </h4>
                             <p class="text-slate-600">Formal Dress Shirts, Casual Oxford Button-Downs, Chino Pants, Cargo Trousers, Bermuda Shorts, Work Trousers, Lightweight Beach Shirts.</p>
                         </div>
-                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
                             <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
                                 <x-textile-icon name="weave" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                 <span>Woven Fabric Base:</span>
                             </h4>
                             <p class="text-slate-600">100% Cotton Poplin, Oxford Weave, Cotton Twill, Cotton/Linen blends, Flannel yarn-dyed checks, Dobby structures, Stretch Twill (98/2).</p>
                         </div>
-                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
                             <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
                                 <x-textile-icon name="needle-thread" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                 <span>Sewing & Stitching:</span>
                             </h4>
                             <p class="text-slate-600">18–20 SPI dress shirt precision, clean french seams, reinforced pocket corners, non-iron taped seams, pearlized buttons.</p>
                         </div>
-                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
                             <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
                                 <x-textile-icon name="care-label" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                 <span>Garment Finishes:</span>
@@ -218,7 +218,7 @@
                         </div>
                     </div>
 
-                    <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 text-xs text-slate-700 flex items-center justify-between">
+                    <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 text-xs text-slate-700 flex items-center justify-between">
                         <span><strong>Minimum Order Quantity (MOQ):</strong> 1,200 pcs per style</span>
                         <span class="font-semibold text-brand-gold-dark">Lead Time: 60–75 Days</span>
                     </div>
@@ -227,7 +227,7 @@
         </div>
 
         <!-- Sweaters Detailed Section (Slide 7) -->
-        <div id="sweater" x-show="activeTab === 'all' || activeTab === 'sweater'" class="mb-16 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm relative overflow-hidden">
+        <div id="sweater" x-show="activeTab === 'all' || activeTab === 'sweater'" class="mb-16 bg-white rounded-lg p-8 sm:p-10 border border-slate-200 shadow-sm relative overflow-hidden">
             <x-textile-watermark motif="thread-spool" class="absolute -right-10 -bottom-10 w-72 h-72 text-brand-gold/[0.03] pointer-events-none select-none" />
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                 <div class="lg:col-span-5 space-y-4">
@@ -240,7 +240,7 @@
                         Vests, pullovers, cardigans, and chunky winter knits produced on automated computerized flat knitting machines for flawless jacquard and cable execution.
                     </p>
                     
-                    <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                    <div class="rounded-lg overflow-hidden shadow-md border border-slate-200">
                         <img src="{{ asset('images/categories/sweater.jpg') }}" 
                              alt="Sweater Products: Vests, Pullovers, Cardigans" 
                              class="w-full h-64 object-cover object-center">
@@ -259,28 +259,28 @@
                     </h3>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
                             <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
                                 <x-textile-icon name="hanger" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                 <span>Product Lines:</span>
                             </h4>
                             <p class="text-slate-600">Crewneck Pullovers, V-Neck Jumpers, Buttoned Cardigans, Knitted Vests, Turtlenecks, Cable Knits, Patterned Fair Isle Sweaters, Ponchos.</p>
                         </div>
-                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
                             <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
                                 <x-textile-icon name="measuring-tape" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                 <span>Knitting Gauges:</span>
                             </h4>
                             <p class="text-slate-600">3GG, 5GG, 7GG (Chunky / Heavy knits), 12GG, 14GG (Fine gauge retail sweaters) on computerized Shima Seiki / Stoll machines.</p>
                         </div>
-                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
                             <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
                                 <x-textile-icon name="cotton-boll" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                 <span>Yarn Types:</span>
                             </h4>
                             <p class="text-slate-600">100% Combed Cotton, Acrylic (Regular / Cashmilon), Cotton/Acrylic blends, Lambswool blends, Viscose/Nylon, Chenille, Bouclé yarns.</p>
                         </div>
-                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
                             <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
                                 <x-textile-icon name="button" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                 <span>Stitch Structures:</span>
@@ -289,7 +289,7 @@
                         </div>
                     </div>
 
-                    <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 text-xs text-slate-700 flex items-center justify-between">
+                    <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 text-xs text-slate-700 flex items-center justify-between">
                         <span><strong>Minimum Order Quantity (MOQ):</strong> 800 pcs per style / colorway</span>
                         <span class="font-semibold text-brand-gold-dark">Lead Time: 60–90 Days</span>
                     </div>
@@ -298,7 +298,7 @@
         </div>
 
         <!-- Denim & Outerwear -->
-        <div id="denim" x-show="activeTab === 'all' || activeTab === 'denim'" class="mb-16 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm relative overflow-hidden">
+        <div id="denim" x-show="activeTab === 'all' || activeTab === 'denim'" class="mb-16 bg-white rounded-lg p-8 sm:p-10 border border-slate-200 shadow-sm relative overflow-hidden">
             <x-textile-watermark motif="fabric-roll" class="absolute -right-10 -bottom-10 w-72 h-72 text-brand-gold/[0.03] pointer-events-none select-none" />
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                 <div class="lg:col-span-5 space-y-4">
@@ -311,13 +311,13 @@
                         Modern denim bottoms and outerwear jackets produced in facilities with sustainable ozone washing, laser whisker technology, and eco-friendly water recycling.
                     </p>
                     
-                    <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                    <div class="rounded-lg overflow-hidden shadow-md border border-slate-200">
                         <img src="{{ asset('images/categories/denim.jpg') }}" 
                              alt="Denim Jeanswear Apparel Texora Sourcing" 
                              class="w-full h-64 object-cover object-center">
                     </div>
 
-                    <div class="p-4 bg-slate-50 text-slate-800 rounded-2xl space-y-2 text-xs border border-slate-200">
+                    <div class="p-4 bg-slate-50 text-slate-800 rounded-lg space-y-2 text-xs border border-slate-200">
                         <div class="flex items-center justify-between">
                             <span class="text-slate-500">Denim Weights:</span>
                             <span class="font-bold text-brand-navy">8.5 oz to 14.5 oz</span>
@@ -345,28 +345,28 @@
                     </h3>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
                             <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
                                 <x-textile-icon name="hanger" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                 <span>Denim Fits & Styles:</span>
                             </h4>
                             <p class="text-slate-600">Skinny, Slim, Regular, Relaxed, Wide-leg, Cargo denim, Mom jeans, Trucker denim jackets, Distressed denim shorts.</p>
                         </div>
-                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
                             <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
                                 <x-textile-icon name="care-label" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                 <span>Wet & Dry Processing:</span>
                             </h4>
                             <p class="text-slate-600">Stone wash, Enzyme bleach, Hand scraping whiskers, Chevron effects, PP spray, 3D resin oven baking, Tinting, Laser patterning.</p>
                         </div>
-                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
                             <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
                                 <x-textile-icon name="jacket" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                 <span>Outerwear Shells:</span>
                             </h4>
                             <p class="text-slate-600">Polyester micro-ripstop, Taslan nylon, Memory fabric, Sherpa fleece linings, TPU waterproof breathable membranes.</p>
                         </div>
-                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
                             <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
                                 <x-textile-icon name="button" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                 <span>Hardware & Trims:</span>
@@ -375,7 +375,7 @@
                         </div>
                     </div>
 
-                    <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 text-xs text-slate-700 flex items-center justify-between">
+                    <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 text-xs text-slate-700 flex items-center justify-between">
                         <span><strong>Minimum Order Quantity (MOQ):</strong> 1,500 pcs per style / wash</span>
                         <span class="font-semibold text-brand-gold-dark">Lead Time: 60–90 Days</span>
                     </div>
@@ -384,7 +384,7 @@
         </div>
 
         <!-- Workwear & Seasonal Collections -->
-        <div id="workwear" x-show="activeTab === 'all' || activeTab === 'workwear'" class="mb-16 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm relative overflow-hidden">
+        <div id="workwear" x-show="activeTab === 'all' || activeTab === 'workwear'" class="mb-16 bg-white rounded-lg p-8 sm:p-10 border border-slate-200 shadow-sm relative overflow-hidden">
             <x-textile-watermark motif="sewing-machine" class="absolute -right-10 -bottom-10 w-72 h-72 text-brand-gold/[0.03] pointer-events-none select-none" />
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                 <div class="lg:col-span-5 space-y-4">
@@ -397,7 +397,7 @@
                         High-durability utility apparel, heavy twill coveralls, high-visibility reflective clothing, and seasonal capsule collections designed for heavy-duty commercial wear.
                     </p>
 
-                    <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                    <div class="rounded-lg overflow-hidden shadow-md border border-slate-200">
                         <img src="{{ asset('images/categories/workwear.jpg') }}" 
                              alt="Workwear Uniforms Industrial Apparel Texora Sourcing" 
                              class="w-full h-64 object-cover object-center">
@@ -411,14 +411,14 @@
 
                 <div class="lg:col-span-7 space-y-4">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
                             <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
                                 <x-textile-icon name="hanger" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                 <span>Workwear Items:</span>
                             </h4>
                             <p class="text-slate-600">Heavy Twill Cargo Work Pants, Industrial Coveralls, High-Vis Reflective Vests (EN 20471), Medical Scrubs, Hospitality Aprons, Security Jackets.</p>
                         </div>
-                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
                             <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
                                 <x-textile-icon name="care-label" class="w-3.5 h-3.5 text-brand-gold-dark" />
                                 <span>Technical Finishes:</span>
@@ -442,7 +442,7 @@
             <p class="text-xs text-slate-500 mt-1">Standard lead times, sampling turn-around, and order sizes.</p>
         </div>
 
-        <div class="overflow-x-auto shadow-sm rounded-3xl border border-slate-200">
+        <div class="overflow-x-auto shadow-sm rounded-lg border border-slate-200">
             <table class="w-full text-left text-xs sm:text-sm text-slate-700">
                 <thead class="bg-slate-50 text-brand-navy border-b border-slate-200 text-xs uppercase tracking-wider font-bold">
                     <tr>

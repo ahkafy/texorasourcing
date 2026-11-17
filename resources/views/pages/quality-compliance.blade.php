@@ -45,7 +45,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div class="lg:col-span-5 space-y-4">
-                <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 group">
+                <div class="relative rounded-lg overflow-hidden shadow-2xl border border-slate-200 group">
                     <img src="{{ asset('images/luxury/quality-lab-inspection.jpg') }}" 
                          alt="Quality Assurance Lab Inspection Texora Sourcing" 
                          class="w-full h-[420px] sm:h-[460px] object-cover object-center group-hover:scale-105 transition-transform duration-700">
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="relative rounded-2xl overflow-hidden h-36 border border-slate-200 shadow-md group">
+                <div class="relative rounded-lg overflow-hidden h-36 border border-slate-200 shadow-md group">
                     <img src="{{ asset('images/extracted/quality-sewing-inspection.jpg') }}"
                          alt="In-Line Sewing Machine Floor Inspection"
                          class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="space-y-4">
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold transition-colors">
+                    <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-slate-200 hover:border-brand-gold transition-colors">
                         <div class="w-10 h-10 rounded-xl bg-brand-navy text-brand-gold flex items-center justify-center flex-shrink-0 shadow-sm">
                             <x-textile-icon name="techpack" class="w-5 h-5 text-brand-gold" />
                         </div>
@@ -98,7 +98,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold transition-colors">
+                    <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-slate-200 hover:border-brand-gold transition-colors">
                         <div class="w-10 h-10 rounded-xl bg-brand-navy text-brand-gold flex items-center justify-center flex-shrink-0 shadow-sm">
                             <x-textile-icon name="magnifier-fabric" class="w-5 h-5 text-brand-gold" />
                         </div>
@@ -113,7 +113,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold transition-colors">
+                    <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-slate-200 hover:border-brand-gold transition-colors">
                         <div class="w-10 h-10 rounded-xl bg-brand-navy text-brand-gold flex items-center justify-center flex-shrink-0 shadow-sm">
                             <x-textile-icon name="sewing-machine" class="w-5 h-5 text-brand-gold" />
                         </div>
@@ -128,7 +128,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold transition-colors">
+                    <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-slate-200 hover:border-brand-gold transition-colors">
                         <div class="w-10 h-10 rounded-xl bg-brand-navy text-brand-gold flex items-center justify-center flex-shrink-0 shadow-sm">
                             <x-textile-icon name="measuring-tape" class="w-5 h-5 text-brand-gold" />
                         </div>
@@ -143,7 +143,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-gold transition-colors">
+                    <div class="flex items-start space-x-4 p-4 rounded-lg bg-slate-50 border border-slate-200 hover:border-brand-gold transition-colors">
                         <div class="w-10 h-10 rounded-xl bg-brand-navy text-brand-gold flex items-center justify-center flex-shrink-0 shadow-sm">
                             <x-textile-icon name="hanger" class="w-5 h-5 text-brand-gold" />
                         </div>
@@ -183,7 +183,7 @@
 
         <!-- Editorial Textile Lab Visual Strip -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-            <div class="relative rounded-3xl overflow-hidden h-56 shadow-lg border border-slate-200 group">
+            <div class="relative rounded-lg overflow-hidden h-56 shadow-lg border border-slate-200 group">
                 <img src="{{ asset('images/luxury/fabric-swatches-macro.jpg') }}"
                      alt="Fiber Composition & Color Fastness Verification"
                      class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
@@ -194,7 +194,7 @@
                     </div>
                 </div>
             </div>
-            <div class="relative rounded-3xl overflow-hidden h-56 shadow-lg border border-slate-200 group">
+            <div class="relative rounded-lg overflow-hidden h-56 shadow-lg border border-slate-200 group">
                 <img src="{{ asset('images/luxury/tailoring-craft.jpg') }}"
                      alt="Dimensional Stability and Spec Tolerance Measurement"
                      class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
@@ -208,7 +208,7 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-xs text-slate-700">
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center gap-2">
                     <x-textile-icon name="thread-spool" class="w-4 h-4 text-brand-gold-dark" />
                     <span class="font-bold text-brand-navy text-sm block">Color Fastness</span>
@@ -217,7 +217,7 @@
                 <span class="text-brand-gold-dark font-semibold block text-[11px]">Rating: Minimum Grade 4.0</span>
             </div>
 
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center gap-2">
                     <x-textile-icon name="measuring-tape" class="w-4 h-4 text-brand-gold-dark" />
                     <span class="font-bold text-brand-navy text-sm block">Dimensional Stability</span>
@@ -226,7 +226,7 @@
                 <span class="text-brand-gold-dark font-semibold block text-[11px]">Tolerance: Max ±3% to ±5%</span>
             </div>
 
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center gap-2">
                     <x-textile-icon name="fabric-roll" class="w-4 h-4 text-brand-gold-dark" />
                     <span class="font-bold text-brand-navy text-sm block">Fabric Physical Tests</span>
@@ -235,7 +235,7 @@
                 <span class="text-brand-gold-dark font-semibold block text-[11px]">Rating: Grade 3–4 after 2000 revs</span>
             </div>
 
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
+            <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center gap-2">
                     <x-textile-icon name="care-label" class="w-4 h-4 text-brand-gold-dark" />
                     <span class="font-bold text-brand-navy text-sm block">Safety & Chemical Limits</span>
@@ -265,7 +265,7 @@
         </div>
 
         <!-- Certifications Image from Slide 11 -->
-        <div class="max-w-3xl mx-auto mb-12 p-6 bg-slate-50 rounded-3xl border border-slate-200 flex items-center justify-center">
+        <div class="max-w-3xl mx-auto mb-12 p-6 bg-slate-50 rounded-lg border border-slate-200 flex items-center justify-center">
             <img src="{{ asset('images/extracted/certifications-card-v2.png') }}" 
                  alt="Certified Partner Factories: Accord, RSC, WRAP, Sedex, BSCI, Higg Index, ISO, OEKO-TEX, GOTS" 
                  class="w-full max-h-40 object-contain">
@@ -274,7 +274,7 @@
         <!-- Detailed Breakdown of 8 Key Certifications -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
+            <div class="p-6 bg-slate-50 rounded-lg border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center justify-between">
                     <span class="font-bold text-brand-navy text-base flex items-center gap-1.5">
                         <x-textile-icon name="sewing-machine" class="w-4 h-4 text-brand-gold-dark" />
@@ -287,7 +287,7 @@
                 </p>
             </div>
 
-            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
+            <div class="p-6 bg-slate-50 rounded-lg border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center justify-between">
                     <span class="font-bold text-brand-navy text-base flex items-center gap-1.5">
                         <x-textile-icon name="mannequin" class="w-4 h-4 text-brand-gold-dark" />
@@ -300,7 +300,7 @@
                 </p>
             </div>
 
-            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
+            <div class="p-6 bg-slate-50 rounded-lg border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center justify-between">
                     <span class="font-bold text-brand-navy text-base flex items-center gap-1.5">
                         <x-textile-icon name="care-label" class="w-4 h-4 text-brand-gold-dark" />
@@ -313,7 +313,7 @@
                 </p>
             </div>
 
-            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
+            <div class="p-6 bg-slate-50 rounded-lg border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center justify-between">
                     <span class="font-bold text-brand-navy text-base flex items-center gap-1.5">
                         <x-textile-icon name="techpack" class="w-4 h-4 text-brand-gold-dark" />
@@ -326,7 +326,7 @@
                 </p>
             </div>
 
-            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
+            <div class="p-6 bg-slate-50 rounded-lg border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center justify-between">
                     <span class="font-bold text-brand-navy text-base flex items-center gap-1.5">
                         <x-textile-icon name="cotton-boll" class="w-4 h-4 text-brand-gold-dark" />
@@ -339,7 +339,7 @@
                 </p>
             </div>
 
-            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
+            <div class="p-6 bg-slate-50 rounded-lg border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center justify-between">
                     <span class="font-bold text-brand-navy text-base flex items-center gap-1.5">
                         <x-textile-icon name="fabric-roll" class="w-4 h-4 text-brand-gold-dark" />
@@ -352,7 +352,7 @@
                 </p>
             </div>
 
-            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
+            <div class="p-6 bg-slate-50 rounded-lg border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center justify-between">
                     <span class="font-bold text-brand-navy text-base flex items-center gap-1.5">
                         <x-textile-icon name="measuring-tape" class="w-4 h-4 text-brand-gold-dark" />
@@ -365,7 +365,7 @@
                 </p>
             </div>
 
-            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
+            <div class="p-6 bg-slate-50 rounded-lg border border-slate-200 space-y-2 hover:border-brand-gold transition-colors">
                 <div class="flex items-center justify-between">
                     <span class="font-bold text-brand-navy text-base flex items-center gap-1.5">
                         <x-textile-icon name="shears" class="w-4 h-4 text-brand-gold-dark" />

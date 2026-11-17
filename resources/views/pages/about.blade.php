@@ -57,7 +57,7 @@
                     We bridge the critical gap between overseas retail buyers and high-capacity Bangladeshi production units. Apparel sourcing is not merely transactional; it requires disciplined hands-on execution, constant on-site technical inspection, and transparent supply chain management.
                 </p>
 
-                <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+                <div class="p-5 bg-slate-50 rounded-lg border border-slate-200 space-y-2">
                     <h4 class="font-bold text-sm text-brand-navy flex items-center gap-1.5">
                         <x-textile-icon name="cotton-boll" class="w-4 h-4 text-brand-gold-dark" />
                         <span>Strategic Dhaka Location</span>
@@ -95,7 +95,7 @@
             </div>
 
             <div class="lg:col-span-6 space-y-4">
-                <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 group">
+                <div class="relative rounded-lg overflow-hidden shadow-2xl border border-slate-200 group">
                     <img src="{{ asset('images/luxury/atelier-showroom.jpg') }}" 
                          alt="Apparel Textiles Showroom Texora Sourcing" 
                          class="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-700">
@@ -110,13 +110,13 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-2 gap-4">
-                    <div class="relative rounded-2xl overflow-hidden h-36 border border-slate-200 shadow-md group">
+                    <div class="relative rounded-lg overflow-hidden h-36 border border-slate-200 shadow-md group">
                         <img src="{{ asset('images/luxury/tailoring-craft.jpg') }}" alt="Tailoring Craftsmanship" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent flex items-end p-3.5">
                             <span class="text-xs font-semibold text-white">Pattern & Craft Mastery</span>
                         </div>
                     </div>
-                    <div class="relative rounded-2xl overflow-hidden h-36 border border-slate-200 shadow-md group">
+                    <div class="relative rounded-lg overflow-hidden h-36 border border-slate-200 shadow-md group">
                         <img src="{{ asset('images/luxury/modern-factory-floor.jpg') }}" alt="Compliant Partner Factories" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent flex items-end p-3.5">
                             <span class="text-xs font-semibold text-white">Certified Production Units</span>
@@ -158,9 +158,9 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             <!-- Mission Card -->
-            <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:border-brand-gold transition-colors group">
+            <div class="bg-white rounded-lg p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:border-brand-gold transition-colors group">
                 <div>
-                    <div class="w-12 h-12 rounded-2xl bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center font-bold mb-6 group-hover:scale-110 transition-transform">
+                    <div class="w-12 h-12 rounded-lg bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center font-bold mb-6 group-hover:scale-110 transition-transform">
                         <x-textile-icon name="techpack" class="w-6 h-6 text-brand-gold-dark" />
                     </div>
                     <span class="text-xs font-bold uppercase tracking-wider text-brand-gold-dark">Our Mission</span>
@@ -175,9 +175,9 @@
             </div>
 
             <!-- Vision Card -->
-            <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:border-brand-gold transition-colors group">
+            <div class="bg-white rounded-lg p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:border-brand-gold transition-colors group">
                 <div>
-                    <div class="w-12 h-12 rounded-2xl bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center font-bold mb-6 group-hover:scale-110 transition-transform">
+                    <div class="w-12 h-12 rounded-lg bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center font-bold mb-6 group-hover:scale-110 transition-transform">
                         <x-textile-icon name="mannequin" class="w-6 h-6 text-brand-gold-dark" />
                     </div>
                     <span class="text-xs font-bold uppercase tracking-wider text-brand-gold-dark">Our Vision</span>
@@ -192,9 +192,9 @@
             </div>
 
             <!-- Values Card -->
-            <div class="bg-white rounded-3xl p-8 border-2 border-brand-gold/40 shadow-lg flex flex-col justify-between hover:border-brand-gold transition-colors group">
+            <div class="bg-white rounded-lg p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:border-brand-gold/60 hover:shadow-md transition-all group">
                 <div>
-                    <div class="w-12 h-12 rounded-2xl bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center font-bold mb-6 group-hover:scale-110 transition-transform">
+                    <div class="w-12 h-12 rounded-lg bg-brand-gold/15 text-brand-gold-dark flex items-center justify-center font-bold mb-6 group-hover:scale-110 transition-transform">
                         <x-textile-icon name="cotton-boll" class="w-6 h-6 text-brand-gold-dark" />
                     </div>
                     <span class="text-xs font-bold uppercase tracking-wider text-brand-gold-dark">Foundational Values</span>
@@ -239,7 +239,7 @@
     <x-textile-watermark motif="shears" class="absolute -left-16 -top-16 w-80 h-80 text-brand-navy/[0.025] pointer-events-none select-none" />
 
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
-        <div class="bg-brand-navy rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden shadow-2xl border border-brand-gold/40">
+        <div class="bg-brand-navy rounded-lg p-8 sm:p-12 text-white relative overflow-hidden shadow-2xl border border-brand-gold/40">
             <div class="absolute inset-0 z-0 pointer-events-none">
                 <img src="{{ asset('images/luxury/executive-atelier-office.jpg') }}"
                      alt="Executive Consultation Studio"
@@ -267,7 +267,7 @@
                     </div>
                 </div>
 
-                <div class="lg:col-span-8 bg-white/10 backdrop-blur-xl p-8 sm:p-10 rounded-2xl border border-brand-gold/30 shadow-xl space-y-4">
+                <div class="lg:col-span-8 bg-white/10 backdrop-blur-xl p-8 sm:p-10 rounded-lg border border-brand-gold/30 shadow-xl space-y-4">
                     <blockquote class="text-xl sm:text-2xl font-semibold italic text-white leading-relaxed">
                         "My journey has been built on precision, partnership and a deep technical understanding of garment manufacturing."
                     </blockquote>
@@ -303,22 +303,22 @@
 
         <!-- 3 Big Team Stats -->
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
-            <div class="bg-white text-slate-800 p-6 rounded-3xl text-center border-t-4 border-brand-gold shadow-sm hover:shadow-md transition-shadow">
-                <div class="text-4xl font-serif font-bold text-brand-navy flex items-center justify-center gap-2">
+            <div class="bg-white text-slate-800 p-6 rounded-lg text-center border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-gold/60 transition-all">
+                <div class="text-4xl font-bold text-brand-navy flex items-center justify-center gap-2">
                     <x-textile-icon name="mannequin" class="w-8 h-8 text-brand-gold-dark" />
                     <span>34</span>
                 </div>
                 <div class="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1">In-House Professionals</div>
             </div>
-            <div class="bg-white text-slate-800 p-6 rounded-3xl text-center border-t-4 border-brand-gold shadow-sm hover:shadow-md transition-shadow">
-                <div class="text-4xl font-serif font-bold text-brand-gold-dark flex items-center justify-center gap-2">
+            <div class="bg-white text-slate-800 p-6 rounded-lg text-center border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-gold/60 transition-all">
+                <div class="text-4xl font-bold text-brand-gold-dark flex items-center justify-center gap-2">
                     <x-textile-icon name="magnifier-fabric" class="w-8 h-8 text-brand-gold" />
                     <span>12</span>
                 </div>
                 <div class="text-xs uppercase tracking-wider font-semibold text-slate-500 mt-1">Quality Controllers (QC)</div>
             </div>
-            <div class="bg-white text-slate-800 p-6 rounded-3xl text-center border-t-4 border-brand-gold shadow-sm hover:shadow-md transition-shadow">
-                <div class="text-4xl font-serif font-bold text-brand-navy flex items-center justify-center gap-2">
+            <div class="bg-white text-slate-800 p-6 rounded-lg text-center border border-slate-200 shadow-sm hover:shadow-md hover:border-brand-gold/60 transition-all">
+                <div class="text-4xl font-bold text-brand-navy flex items-center justify-center gap-2">
                     <x-textile-icon name="techpack" class="w-8 h-8 text-brand-navy" />
                     <span>6</span>
                 </div>
@@ -329,7 +329,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
             <!-- Org Hierarchy Chart (Slide 4 Left) -->
-            <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+            <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-lg border border-slate-200 shadow-sm space-y-4">
                 <div class="border-b border-slate-100 pb-3 flex items-center justify-between">
                     <div>
                         <span class="text-xs uppercase font-bold tracking-wider text-brand-gold-dark">Management Hierarchy</span>
@@ -338,7 +338,7 @@
                     <x-textile-icon name="sewing-machine" class="w-5 h-5 text-brand-gold-dark" />
                 </div>
                 
-                <div class="p-2 bg-slate-50 rounded-2xl border border-slate-200">
+                <div class="p-2 bg-slate-50 rounded-lg border border-slate-200">
                     <img src="{{ asset('images/extracted/org-structure-chart.png') }}" 
                          alt="Texora Sourcing Organization Chart" 
                          class="w-full object-contain">
@@ -370,7 +370,7 @@
             </div>
 
             <!-- Team by Function Breakdown (Slide 4 Right) -->
-            <div class="lg:col-span-5 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+            <div class="lg:col-span-5 bg-white p-6 sm:p-8 rounded-lg border border-slate-200 shadow-sm space-y-4">
                 <div class="border-b border-slate-100 pb-3 flex items-center justify-between">
                     <div>
                         <span class="text-xs uppercase font-bold tracking-wider text-brand-gold-dark">Operational Allocation</span>
@@ -379,7 +379,7 @@
                     <x-textile-icon name="measuring-tape" class="w-5 h-5 text-brand-gold-dark" />
                 </div>
 
-                <div class="p-2 bg-slate-50 rounded-2xl border border-slate-200">
+                <div class="p-2 bg-slate-50 rounded-lg border border-slate-200">
                     <img src="{{ asset('images/extracted/team-function-chart.png') }}" 
                          alt="Team by Function Bar Chart" 
                          class="w-full object-contain">

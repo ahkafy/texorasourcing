@@ -48,7 +48,7 @@
             <div class="lg:col-span-5 space-y-6">
                 
                 <!-- Contact Card -->
-                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6 relative overflow-hidden">
+                <div class="bg-white p-8 rounded-lg border border-slate-200 shadow-sm space-y-6 relative overflow-hidden">
                     <x-textile-watermark motif="cotton-boll" class="absolute -right-8 -bottom-8 w-48 h-48 text-brand-gold/[0.03] pointer-events-none select-none" />
                     <div class="relative z-10">
                         <span class="text-xs font-bold uppercase tracking-wider text-brand-gold">Headquarters</span>
@@ -82,9 +82,7 @@
 
                         <div class="flex items-start space-x-3">
                             <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.077-1.137-.066-.35-.114-.764-.287-1.341-.536-1.523-.655-2.502-2.185-2.58-2.287-.075-.104-.616-.821-.616-1.565 0-.745.39-1.111.529-1.261.14-.15.304-.188.406-.188.102 0 .204.001.293.006.095.004.221-.036.346.264.128.307.439 1.071.478 1.15.039.078.065.17.013.272-.051.102-.078.167-.154.257-.077.09-.162.2-.232.269-.077.076-.157.16-.068.313.09.153.398.658.854 1.064.588.524 1.084.686 1.238.762.153.076.243.064.333-.04.09-.103.385-.448.487-.601.103-.154.205-.129.346-.077.141.051.897.423 1.05.5.154.077.256.115.295.18.038.064.038.371-.106.776z"/>
-                                </svg>
+                                <span class="material-symbols-outlined" style="font-size: 18px;">chat</span>
                             </div>
                             <div>
                                 <span class="font-bold text-slate-900 block">Direct WhatsApp & Mobile:</span>
@@ -96,10 +94,8 @@
                         </div>
 
                         <div class="flex items-start space-x-3">
-                            <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                </svg>
+                            <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <span class="material-symbols-outlined" style="font-size: 18px;">mail</span>
                             </div>
                             <div>
                                 <span class="font-bold text-slate-900 block">Corporate Email:</span>
@@ -113,10 +109,8 @@
                         </div>
 
                         <div class="flex items-start space-x-3">
-                            <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                                </svg>
+                            <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-gold-dark flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <span class="material-symbols-outlined" style="font-size: 18px;">public</span>
                             </div>
                             <div>
                                 <span class="font-bold text-slate-900 block">Official Website:</span>
@@ -127,7 +121,7 @@
 
                     <!-- Luxury Atelier Showroom Image -->
                     <div class="pt-4 border-t border-slate-100 relative z-10">
-                        <div class="relative rounded-2xl overflow-hidden shadow-lg group">
+                        <div class="relative rounded-lg overflow-hidden shadow-lg group">
                             <img src="{{ asset('images/luxury/atelier-showroom.jpg') }}" 
                                  alt="Texora Sourcing Corporate Showroom Uttara Dhaka" 
                                  class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-700">
@@ -139,7 +133,7 @@
                 </div>
 
                 <!-- Banking Credentials Card (Slide 5) -->
-                <div class="bg-white p-6 rounded-3xl border-2 border-brand-gold/40 shadow-sm space-y-3 relative overflow-hidden">
+                <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm space-y-3 relative overflow-hidden">
                     <x-textile-watermark motif="thread-spool" class="absolute -right-8 -bottom-8 w-44 h-44 text-brand-gold/[0.03] pointer-events-none select-none" />
                     <div class="flex items-center justify-between relative z-10">
                         <span class="text-xs uppercase font-bold tracking-wider text-brand-gold">Banking Information</span>
@@ -159,7 +153,7 @@
 
             <!-- Right Column: Sourcing Inquiry & Visit Booking Form -->
             <div class="lg:col-span-7">
-                <div class="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-xl space-y-6">
+                <div class="bg-white p-8 sm:p-10 rounded-lg border border-slate-200 shadow-xl space-y-6">
                     <div>
                         <span class="text-xs font-bold uppercase tracking-wider text-brand-gold">Direct Inquiry</span>
                         <h2 class="text-3xl font-serif font-bold text-brand-navy mt-1">Submit Your Sourcing Requirements</h2>
@@ -291,7 +285,7 @@
         </div>
 
         <!-- Google Maps & Dhaka Airport Proximity -->
-        <div class="mt-16 bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+        <div class="mt-16 bg-white p-6 rounded-lg border border-slate-200 shadow-sm space-y-4">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b pb-4">
                 <div>
                     <span class="text-xs uppercase font-bold text-brand-gold">Location Map</span>
@@ -305,7 +299,7 @@
             </div>
 
             <!-- Embed Map -->
-            <div class="w-full h-80 rounded-2xl overflow-hidden border border-slate-200 relative">
+            <div class="w-full h-80 rounded-lg overflow-hidden border border-slate-200 relative">
                 <iframe 
                     title="Texora Sourcing Location Map Uttara Dhaka"
                     class="w-full h-full border-0" 

@@ -15,10 +15,11 @@
     <meta property="og:description" content="Your strategic apparel sourcing partner in Dhaka, Bangladesh. End-to-end garment manufacturing from sample to shipment.">
     <meta property="og:image" content="{{ asset('images/logo.png') }}">
 
-    <!-- Google Fonts: Inter (Primary Typography Across Entire Site) -->
+    <!-- Google Fonts: Inter & Material Symbols Outlined Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..900;1,14..32,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
@@ -60,11 +61,9 @@
                     <div class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
                         <button type="button" 
                                 @click="open = !open"
-                                class="px-3.5 py-2 text-sm font-semibold rounded-lg transition-all inline-flex items-center gap-1.5 whitespace-nowrap {{ request()->routeIs('about') || request()->routeIs('company-profile') ? 'text-brand-navy bg-slate-100 font-bold' : 'text-slate-600 hover:text-brand-navy hover:bg-slate-50' }}">
+                                class="px-3.5 py-2 text-sm font-semibold rounded-lg transition-all inline-flex items-center gap-1 whitespace-nowrap {{ request()->routeIs('about') || request()->routeIs('company-profile') ? 'text-brand-navy bg-slate-100 font-bold' : 'text-slate-600 hover:text-brand-navy hover:bg-slate-50' }}">
                             <span>Company</span>
-                            <svg class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200" :class="open ? 'rotate-180 text-brand-navy' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <span class="material-symbols-outlined text-slate-400 transition-transform duration-200" :class="open ? 'rotate-180 text-brand-navy' : ''" style="font-size: 18px;">expand_more</span>
                         </button>
                         
                         <div x-show="open" 
@@ -74,30 +73,30 @@
                              x-transition:leave="transition ease-in duration-100"
                              x-transition:leave-start="opacity-100 translate-y-0"
                              x-transition:leave-end="opacity-0 translate-y-1"
-                             class="absolute left-0 mt-1 w-72 bg-white rounded-2xl shadow-2xl border border-slate-100 p-2 z-50 divide-y divide-slate-100"
+                             class="absolute left-0 mt-1 w-72 bg-white rounded-xl shadow-2xl border border-slate-200 p-2 z-50 divide-y divide-slate-100"
                              style="display: none;">
                             <div class="p-1 space-y-1">
-                                <a href="{{ route('about') }}" class="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group">
-                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                                <a href="{{ route('about') }}" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors">
+                                        <span class="material-symbols-outlined" style="font-size: 18px;">business</span>
                                     </div>
                                     <div>
                                         <div class="text-xs font-bold text-slate-900 group-hover:text-brand-navy">About Texora Sourcing</div>
                                         <div class="text-[11px] text-slate-500">Established 2015 in Dhaka, mission & values.</div>
                                     </div>
                                 </a>
-                                <a href="{{ route('about') }}#leadership" class="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group">
-                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                                <a href="{{ route('about') }}#leadership" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors">
+                                        <span class="material-symbols-outlined" style="font-size: 18px;">person</span>
                                     </div>
                                     <div>
                                         <div class="text-xs font-bold text-slate-900 group-hover:text-brand-navy">Executive Leadership</div>
                                         <div class="text-[11px] text-slate-500">Md. Ataul Hai, MD & CEO (19+ Yrs experience).</div>
                                     </div>
                                 </a>
-                                <a href="{{ route('about') }}#team" class="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group">
-                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                                <a href="{{ route('about') }}#team" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors">
+                                        <span class="material-symbols-outlined" style="font-size: 18px;">groups</span>
                                     </div>
                                     <div>
                                         <div class="text-xs font-bold text-slate-900 group-hover:text-brand-navy">Team & Organization</div>
@@ -106,9 +105,12 @@
                                 </a>
                             </div>
                             <div class="p-1 pt-2">
-                                <a href="{{ route('company-profile') }}" class="flex items-center justify-between p-2.5 rounded-xl bg-brand-navy/5 hover:bg-brand-navy hover:text-white transition-all group">
-                                    <div class="text-xs font-bold text-brand-navy group-hover:text-brand-gold">Company Profile Slides</div>
-                                    <span class="text-[10px] bg-brand-gold text-brand-navy font-bold px-2 py-0.5 rounded-full">13 Slides</span>
+                                <a href="{{ route('company-profile') }}" class="flex items-center justify-between p-2.5 rounded-lg bg-brand-navy/5 hover:bg-brand-navy hover:text-white transition-all group">
+                                    <div class="text-xs font-bold text-brand-navy group-hover:text-brand-gold inline-flex items-center gap-1.5">
+                                        <span class="material-symbols-outlined" style="font-size: 16px;">description</span>
+                                        <span>Company Profile Slides</span>
+                                    </div>
+                                    <span class="text-[10px] bg-brand-gold text-brand-navy font-bold px-2 py-0.5 rounded-md">13 Slides</span>
                                 </a>
                             </div>
                         </div>
@@ -118,11 +120,9 @@
                     <div class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
                         <button type="button" 
                                 @click="open = !open"
-                                class="px-3.5 py-2 text-sm font-semibold rounded-lg transition-all inline-flex items-center gap-1.5 whitespace-nowrap {{ request()->routeIs('products') ? 'text-brand-navy bg-slate-100 font-bold' : 'text-slate-600 hover:text-brand-navy hover:bg-slate-50' }}">
+                                class="px-3.5 py-2 text-sm font-semibold rounded-lg transition-all inline-flex items-center gap-1 whitespace-nowrap {{ request()->routeIs('products') ? 'text-brand-navy bg-slate-100 font-bold' : 'text-slate-600 hover:text-brand-navy hover:bg-slate-50' }}">
                             <span>Products</span>
-                            <svg class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200" :class="open ? 'rotate-180 text-brand-navy' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <span class="material-symbols-outlined text-slate-400 transition-transform duration-200" :class="open ? 'rotate-180 text-brand-navy' : ''" style="font-size: 18px;">expand_more</span>
                         </button>
                         
                         <div x-show="open" 
@@ -132,48 +132,48 @@
                              x-transition:leave="transition ease-in duration-100"
                              x-transition:leave-start="opacity-100 translate-y-0"
                              x-transition:leave-end="opacity-0 translate-y-1"
-                             class="absolute left-0 mt-1 w-80 bg-white rounded-2xl shadow-2xl border border-slate-100 p-2 z-50 divide-y divide-slate-100"
+                             class="absolute left-0 mt-1 w-80 bg-white rounded-xl shadow-2xl border border-slate-200 p-2 z-50 divide-y divide-slate-100"
                              style="display: none;">
                             <div class="p-1 space-y-1">
-                                <a href="{{ route('products') }}#knit" class="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group">
-                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        👕
+                                <a href="{{ route('products') }}#knit" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors">
+                                        <span class="material-symbols-outlined" style="font-size: 18px;">apparel</span>
                                     </div>
                                     <div>
                                         <div class="text-xs font-bold text-slate-900 group-hover:text-brand-navy">Knitwear Collection</div>
                                         <div class="text-[11px] text-slate-500">T-Shirts, Polos, Hoodies, Sweatshirts & Tops.</div>
                                     </div>
                                 </a>
-                                <a href="{{ route('products') }}#woven" class="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group">
-                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        👔
+                                <a href="{{ route('products') }}#woven" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors">
+                                        <span class="material-symbols-outlined" style="font-size: 18px;">dry_cleaning</span>
                                     </div>
                                     <div>
                                         <div class="text-xs font-bold text-slate-900 group-hover:text-brand-navy">Woven Garments</div>
                                         <div class="text-[11px] text-slate-500">Dress Shirts, Casual Shirts, Pants & Chinos.</div>
                                     </div>
                                 </a>
-                                <a href="{{ route('products') }}#sweater" class="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group">
-                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        🧶
+                                <a href="{{ route('products') }}#sweater" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors">
+                                        <span class="material-symbols-outlined" style="font-size: 18px;">iron</span>
                                     </div>
                                     <div>
                                         <div class="text-xs font-bold text-slate-900 group-hover:text-brand-navy">Sweater Collection</div>
                                         <div class="text-[11px] text-slate-500">Vests, Pullovers, Cardigans & Turtlenecks (3–14GG).</div>
                                     </div>
                                 </a>
-                                <a href="{{ route('products') }}#denim" class="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group">
-                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        👖
+                                <a href="{{ route('products') }}#denim" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors">
+                                        <span class="material-symbols-outlined" style="font-size: 18px;">laundry</span>
                                     </div>
                                     <div>
                                         <div class="text-xs font-bold text-slate-900 group-hover:text-brand-navy">Denim & Outerwear</div>
                                         <div class="text-[11px] text-slate-500">Jeans, Denim Jackets, Puffers & Parkas.</div>
                                     </div>
                                 </a>
-                                <a href="{{ route('products') }}#workwear" class="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group">
-                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        🦺
+                                <a href="{{ route('products') }}#workwear" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors">
+                                        <span class="material-symbols-outlined" style="font-size: 18px;">work</span>
                                     </div>
                                     <div>
                                         <div class="text-xs font-bold text-slate-900 group-hover:text-brand-navy">Workwear & Uniforms</div>
@@ -193,11 +193,9 @@
                     <div class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
                         <button type="button" 
                                 @click="open = !open"
-                                class="px-3.5 py-2 text-sm font-semibold rounded-lg transition-all inline-flex items-center gap-1.5 whitespace-nowrap {{ request()->routeIs('services') || request()->routeIs('quality-compliance') ? 'text-brand-navy bg-slate-100 font-bold' : 'text-slate-600 hover:text-brand-navy hover:bg-slate-50' }}">
+                                class="px-3.5 py-2 text-sm font-semibold rounded-lg transition-all inline-flex items-center gap-1 whitespace-nowrap {{ request()->routeIs('services') || request()->routeIs('quality-compliance') ? 'text-brand-navy bg-slate-100 font-bold' : 'text-slate-600 hover:text-brand-navy hover:bg-slate-50' }}">
                             <span>Sourcing & Quality</span>
-                            <svg class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200" :class="open ? 'rotate-180 text-brand-navy' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <span class="material-symbols-outlined text-slate-400 transition-transform duration-200" :class="open ? 'rotate-180 text-brand-navy' : ''" style="font-size: 18px;">expand_more</span>
                         </button>
                         
                         <div x-show="open" 
@@ -207,39 +205,39 @@
                              x-transition:leave="transition ease-in duration-100"
                              x-transition:leave-start="opacity-100 translate-y-0"
                              x-transition:leave-end="opacity-0 translate-y-1"
-                             class="absolute left-0 mt-1 w-80 bg-white rounded-2xl shadow-2xl border border-slate-100 p-2 z-50 divide-y divide-slate-100"
+                             class="absolute left-0 mt-1 w-80 bg-white rounded-xl shadow-2xl border border-slate-200 p-2 z-50 divide-y divide-slate-100"
                              style="display: none;">
                             <div class="p-1 space-y-1">
-                                <a href="{{ route('services') }}" class="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group">
-                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+                                <a href="{{ route('services') }}" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors">
+                                        <span class="material-symbols-outlined" style="font-size: 18px;">local_shipping</span>
                                     </div>
                                     <div>
                                         <div class="text-xs font-bold text-slate-900 group-hover:text-brand-navy">From Sample to Shipment</div>
                                         <div class="text-[11px] text-slate-500">Step-by-step milestone sourcing journey.</div>
                                     </div>
                                 </a>
-                                <a href="{{ route('services') }}#pillars" class="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group">
-                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
+                                <a href="{{ route('services') }}#pillars" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors">
+                                        <span class="material-symbols-outlined" style="font-size: 18px;">checklist</span>
                                     </div>
                                     <div>
                                         <div class="text-xs font-bold text-slate-900 group-hover:text-brand-navy">The 8 Sourcing Pillars</div>
                                         <div class="text-[11px] text-slate-500">Customer satisfaction commitment.</div>
                                     </div>
                                 </a>
-                                <a href="{{ route('quality-compliance') }}" class="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group">
-                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                <a href="{{ route('quality-compliance') }}" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors">
+                                        <span class="material-symbols-outlined" style="font-size: 18px;">verified_user</span>
                                     </div>
                                     <div>
                                         <div class="text-xs font-bold text-slate-900 group-hover:text-brand-navy">Quality Assurance (5-Tier QA)</div>
                                         <div class="text-[11px] text-slate-500">In-line, yarn lab-testing & AQL 2.5 standard.</div>
                                     </div>
                                 </a>
-                                <a href="{{ route('quality-compliance') }}#certifications" class="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group">
-                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138z" /></svg>
+                                <a href="{{ route('quality-compliance') }}#certifications" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors">
+                                        <span class="material-symbols-outlined" style="font-size: 18px;">workspace_premium</span>
                                     </div>
                                     <div>
                                         <div class="text-xs font-bold text-slate-900 group-hover:text-brand-navy">Factory Certifications</div>
@@ -259,11 +257,9 @@
                     <div class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
                         <button type="button" 
                                 @click="open = !open"
-                                class="px-3.5 py-2 text-sm font-semibold rounded-lg transition-all inline-flex items-center gap-1.5 whitespace-nowrap {{ request()->routeIs('buyers') ? 'text-brand-navy bg-slate-100 font-bold' : 'text-slate-600 hover:text-brand-navy hover:bg-slate-50' }}">
+                                class="px-3.5 py-2 text-sm font-semibold rounded-lg transition-all inline-flex items-center gap-1 whitespace-nowrap {{ request()->routeIs('buyers') ? 'text-brand-navy bg-slate-100 font-bold' : 'text-slate-600 hover:text-brand-navy hover:bg-slate-50' }}">
                             <span>Global Buyers</span>
-                            <svg class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200" :class="open ? 'rotate-180 text-brand-navy' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <span class="material-symbols-outlined text-slate-400 transition-transform duration-200" :class="open ? 'rotate-180 text-brand-navy' : ''" style="font-size: 18px;">expand_more</span>
                         </button>
                         
                         <div x-show="open" 
@@ -273,30 +269,30 @@
                              x-transition:leave="transition ease-in duration-100"
                              x-transition:leave-start="opacity-100 translate-y-0"
                              x-transition:leave-end="opacity-0 translate-y-1"
-                             class="absolute left-0 mt-1 w-72 bg-white rounded-2xl shadow-2xl border border-slate-100 p-2 z-50 divide-y divide-slate-100"
+                             class="absolute left-0 mt-1 w-72 bg-white rounded-xl shadow-2xl border border-slate-200 p-2 z-50 divide-y divide-slate-100"
                              style="display: none;">
                             <div class="p-1 space-y-1">
-                                <a href="{{ route('buyers') }}" class="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group">
-                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
+                                <a href="{{ route('buyers') }}" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors">
+                                        <span class="material-symbols-outlined" style="font-size: 18px;">storefront</span>
                                     </div>
                                     <div>
                                         <div class="text-xs font-bold text-slate-900 group-hover:text-brand-navy">Current Retail Buyers</div>
                                         <div class="text-[11px] text-slate-500">YM INC, Ardene, Suzy Shier, Sun Asia.</div>
                                     </div>
                                 </a>
-                                <a href="{{ route('buyers') }}#policy" class="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group">
-                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                <a href="{{ route('buyers') }}#policy" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors">
+                                        <span class="material-symbols-outlined" style="font-size: 18px;">payments</span>
                                     </div>
                                     <div>
                                         <div class="text-xs font-bold text-slate-900 group-hover:text-brand-navy">Commercial Policy & Terms</div>
                                         <div class="text-[11px] text-slate-500">45 Days T/T & 60–90 Days L/C.</div>
                                     </div>
                                 </a>
-                                <a href="{{ route('buyers') }}#banking" class="flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group">
-                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" /></svg>
+                                <a href="{{ route('buyers') }}#banking" class="flex items-start gap-2.5 p-2.5 rounded-lg hover:bg-slate-50 transition-colors group">
+                                    <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors">
+                                        <span class="material-symbols-outlined" style="font-size: 18px;">account_balance</span>
                                     </div>
                                     <div>
                                         <div class="text-xs font-bold text-slate-900 group-hover:text-brand-navy">BRAC Bank Credentials</div>
@@ -318,24 +314,18 @@
                 <div class="flex items-center space-x-2 sm:space-x-3">
                     <button @click="rfqModalOpen = true" 
                             type="button"
-                            class="inline-flex items-center justify-center px-3 sm:px-4 xl:px-5 py-2 sm:py-2.5 text-[11px] sm:text-xs uppercase tracking-wider font-bold rounded-xl text-brand-navy bg-gradient-to-r from-amber-400 via-brand-gold to-amber-500 hover:from-amber-300 hover:to-amber-400 active:bg-brand-gold-dark shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 whitespace-nowrap">
-                        <svg class="w-3.5 h-3.5 mr-1.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
+                            class="inline-flex items-center justify-center gap-1.5 px-3 sm:px-4 xl:px-5 py-2 sm:py-2.5 text-[11px] sm:text-xs uppercase tracking-wider font-bold rounded-lg text-brand-navy bg-gradient-to-r from-amber-400 via-brand-gold to-amber-500 hover:from-amber-300 hover:to-amber-400 active:bg-brand-gold-dark shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 whitespace-nowrap">
+                        <span class="material-symbols-outlined flex-shrink-0" style="font-size: 16px;">request_quote</span>
                         <span><span class="hidden sm:inline">Request a </span>Quote</span>
                     </button>
 
                     <!-- Mobile Hamburger -->
                     <button @click="mobileMenuOpen = !mobileMenuOpen" 
                             type="button" 
-                            class="lg:hidden p-2 rounded-xl text-slate-700 hover:text-brand-navy hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-gold"
+                            class="lg:hidden p-2 rounded-lg text-slate-700 hover:text-brand-navy hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-gold"
                             aria-label="Toggle Navigation">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" x-show="!mobileMenuOpen">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" x-show="mobileMenuOpen" style="display:none;">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
+                        <span class="material-symbols-outlined" x-show="!mobileMenuOpen" style="font-size: 24px;">menu</span>
+                        <span class="material-symbols-outlined" x-show="mobileMenuOpen" style="display:none; font-size: 24px;">close</span>
                     </button>
                 </div>
             </div>
@@ -437,16 +427,12 @@
         <div class="bg-emerald-600 text-white shadow-lg sticky top-20 sm:top-24 z-50 transition-all duration-300">
             <div class="max-w-screen-2xl mx-auto py-3.5 px-4 sm:px-6 lg:px-10 xl:px-12 flex items-center justify-between">
                 <div class="flex items-center space-x-3">
-                    <svg class="h-6 w-6 text-emerald-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
+                    <span class="material-symbols-outlined text-emerald-200 flex-shrink-0" style="font-size: 22px;">check_circle</span>
                     <p class="font-medium text-sm sm:text-base">{{ session('success') }}</p>
                 </div>
                 <button onclick="this.parentElement.parentElement.remove()" class="text-emerald-100 hover:text-white p-1">
                     <span class="sr-only">Dismiss</span>
-                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                    </svg>
+                    <span class="material-symbols-outlined" style="font-size: 20px;">close</span>
                 </button>
             </div>
         </div>
@@ -470,9 +456,7 @@
            rel="noopener noreferrer" 
            class="flex items-center justify-center w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl hover:scale-110 transition-transform duration-200 group relative"
            aria-label="Direct WhatsApp with Managing Director">
-            <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
-                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.077-1.137-.066-.35-.114-.764-.287-1.341-.536-1.523-.655-2.502-2.185-2.58-2.287-.075-.104-.616-.821-.616-1.565 0-.745.39-1.111.529-1.261.14-.15.304-.188.406-.188.102 0 .204.001.293.006.095.004.221-.036.346.264.128.307.439 1.071.478 1.15.039.078.065.17.013.272-.051.102-.078.167-.154.257-.077.09-.162.2-.232.269-.077.076-.157.16-.068.313.09.153.398.658.854 1.064.588.524 1.084.686 1.238.762.153.076.243.064.333-.04.09-.103.385-.448.487-.601.103-.154.205-.129.346-.077.141.051.897.423 1.05.5.154.077.256.115.295.18.038.064.038.371-.106.776z"/>
-            </svg>
+            <span class="material-symbols-outlined" style="font-size: 26px;">chat</span>
             <span class="absolute right-16 bg-slate-900 text-white text-xs font-semibold py-1 px-3 rounded shadow-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
                 Chat on WhatsApp (+88 01711234725)
             </span>
@@ -508,7 +492,7 @@
                  x-transition:leave="ease-in duration-200" 
                  x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" 
                  x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" 
-                 class="inline-block align-bottom bg-white rounded-3xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full border border-slate-200">
+                 class="inline-block align-bottom bg-white rounded-xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full border border-slate-200">
                 
                 <div class="bg-brand-navy px-6 py-5 text-white flex items-center justify-between">
                     <div>
@@ -516,13 +500,11 @@
                             <x-textile-icon name="techpack" class="w-4 h-4 text-brand-gold" />
                             <span class="text-xs uppercase font-bold tracking-widest text-brand-gold">Direct Sourcing RFQ</span>
                         </div>
-                        <h3 class="text-xl font-serif font-bold text-white mt-0.5">Request a Formal Sourcing Quote</h3>
+                        <h3 class="text-xl font-bold text-white mt-0.5">Request a Formal Sourcing Quote</h3>
                         <p class="text-xs text-slate-300 mt-1">Receive technical feasibility, costing & sample schedule within 24 hours.</p>
                     </div>
                     <button @click="rfqModalOpen = false" class="text-slate-400 hover:text-white p-2 rounded-lg hover:bg-white/10 transition-colors">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
+                        <span class="material-symbols-outlined" style="font-size: 22px;">close</span>
                     </button>
                 </div>
 
@@ -593,10 +575,8 @@
                                   class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-gold focus:border-brand-gold"></textarea>
                     </div>
 
-                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-xs text-slate-500 flex items-start gap-2">
-                        <svg class="w-4 h-4 text-brand-gold mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
-                        </svg>
+                    <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 text-xs text-slate-500 flex items-start gap-2">
+                        <span class="material-symbols-outlined text-brand-gold mt-0.5 flex-shrink-0" style="font-size: 18px;">info</span>
                         <span>We respect buyer confidentiality. Tech packs, styling details, and pricing discussions are strictly protected under non-disclosure terms.</span>
                     </div>
 
@@ -614,7 +594,7 @@
     </div>
 
     <!-- Corporate Footer (Wide Container) -->
-    <footer class="bg-brand-navy text-slate-300 border-t-4 border-brand-gold mt-auto relative overflow-hidden">
+    <footer class="bg-brand-navy text-slate-300 border-t border-brand-gold/40 mt-auto relative overflow-hidden">
         <!-- Subtle Tactile Fabric Background Texture -->
         <div class="absolute inset-0 z-0 pointer-events-none">
             <img src="{{ asset('images/luxury/fabric-swatches-macro.jpg') }}" alt="" aria-hidden="true" class="w-full h-full object-cover object-center opacity-[0.07]">
