@@ -37,13 +37,13 @@
     <!-- Main Navigation Bar (Grouped & Wide, Zero Overflow) -->
     <nav class="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-200">
         <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
-            <div class="flex items-center justify-between h-20 sm:h-24">
+            <div class="flex items-center justify-between min-h-[5.5rem] sm:min-h-[6.5rem] lg:min-h-[7.5rem] py-2">
                 
                 <!-- Logo Only (No App Name Beside - Exactly Placed) -->
-                <a href="{{ route('home') }}" class="flex-shrink-0 flex items-center py-2" title="Texora Sourcing Bangladesh">
+                <a href="{{ route('home') }}" class="flex-shrink-0 flex items-center py-1" title="Texora Sourcing Bangladesh">
                     <img src="{{ asset('images/logo.png') }}" 
                          alt="Texora Sourcing Bangladesh" 
-                         class="h-14 sm:h-16 md:h-18 w-auto object-contain transition-transform duration-200 hover:scale-105"
+                         class="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain transition-transform duration-200 hover:scale-105"
                          loading="eager">
                 </a>
 
@@ -620,7 +620,7 @@
                     <div class="py-1">
                         <img src="{{ asset('images/logo.png') }}" 
                              alt="Texora Sourcing Bangladesh" 
-                             class="h-16 sm:h-20 w-auto object-contain drop-shadow-[0_2px_8px_rgba(209,159,48,0.3)]">
+                             class="h-24 sm:h-28 md:h-32 w-auto object-contain drop-shadow-[0_2px_8px_rgba(209,159,48,0.3)]">
                     </div>
 
                     <p class="text-sm text-slate-300 leading-relaxed max-w-md pt-1">

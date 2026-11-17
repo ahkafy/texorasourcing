@@ -5,10 +5,10 @@
 
 @php
     $heightClass = match($size) {
-        'sm' => 'h-10 sm:h-12',
-        'lg' => 'h-16 sm:h-20',
-        'xl' => 'h-20 sm:h-24',
-        default => 'h-14 sm:h-16',
+        'sm' => 'h-14 sm:h-16',
+        'lg' => 'h-24 sm:h-28',
+        'xl' => 'h-28 sm:h-32 md:h-36',
+        default => 'h-20 sm:h-24 md:h-28 lg:h-32',
     };
 @endphp
 
